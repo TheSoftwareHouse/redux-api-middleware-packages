@@ -1,0 +1,11 @@
+// @flow
+
+export type Config = {|
+  apiUrl: string,
+  excluded: string[],
+|};
+
+export type Options = {
+  apiUrl?: string,
+  excluded?: string[],
+};

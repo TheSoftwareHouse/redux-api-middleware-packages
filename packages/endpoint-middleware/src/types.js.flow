@@ -1,0 +1,9 @@
+// @flow
+
+import type { RSAAction } from 'redux-api-middleware';
+
+type AnyAction = {
+  type: string,
+};
+
+export type Action = RSAAction<any, any, any> | AnyAction;
