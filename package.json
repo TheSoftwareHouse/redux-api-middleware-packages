@@ -2,6 +2,9 @@
   "name": "react-packages",
   "version": "0.1.0",
   "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
   "authors": [
     "Łukasz Golder <lukasz.golder@tsh.io>"
   ],
@@ -10,8 +13,9 @@
     "url": "https://github.com/TheSoftwareHouse/react-packages.git"
   },
   "scripts": {
+    "bootstrap": "lerna bootstrap",
     "test": "lerna run test --stream",
-    "flow": "lerna run flow --stream"
+    "flow": "lerna run flow"
   },
   "devDependencies": {
     "husky": "^1.0.0-rc.14",

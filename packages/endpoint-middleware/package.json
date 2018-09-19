@@ -1,0 +1,37 @@
+{
+  "name": "@tsh/endpoint-middleware",
+  "version": "0.1.0",
+  "private": true,
+  "authors": [
+    "Łukasz Golder <lukasz.golder@tsh.io>"
+  ],
+  "main": "index.js",
+  "module": "es/index.js",
+  "scripts": {
+    "build": "node scripts/build.js",
+    "test": "jest",
+    "flow": "flow",
+    "prepublishOnly": "node scripts/build.js"
+  },
+  "peerDependencies": {
+    "redux": ">=4.0.0",
+    "redux-api-middleware": ">=2.0.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.1.0",
+    "@babel/core": "^7.1.0",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-flow": "^7.0.0",
+    "babel-core": "^7.0.0-0",
+    "babel-jest": "^23.6.0",
+    "flow-bin": "^0.81.0",
+    "jest": "^23.6.0",
+    "redux": "^4.0.0",
+    "redux-api-middleware": "^2.3.0"
+  },
+  "files": [
+    "es",
+    "index.js",
+    "middleware.js"
+  ]
+}

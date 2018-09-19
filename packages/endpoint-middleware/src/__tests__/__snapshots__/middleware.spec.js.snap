@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Endpoint middleware factory throws an error if API url is not specified 1`] = `"You must specify API url either via options or REACT_APP_API_URL environment variable"`;
