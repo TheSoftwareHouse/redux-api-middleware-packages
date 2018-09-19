@@ -9,6 +9,10 @@
     "type": "git",
     "url": "https://github.com/TheSoftwareHouse/react-packages.git"
   },
+  "scripts": {
+    "test": "lerna run test --stream",
+    "flow": "lerna run flow --stream"
+  },
   "devDependencies": {
     "husky": "^1.0.0-rc.14",
     "lerna": "^3.4.0",
