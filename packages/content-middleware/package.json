@@ -12,7 +12,7 @@
   },
   "scripts": {
     "build": "node scripts/build.js",
-    "test": "jest",
+    "test": "node scripts/test.js",
     "flow": "flow",
     "prepublishOnly": "node scripts/build.js"
   },
@@ -30,6 +30,7 @@
     "@babel/preset-flow": "^7.0.0",
     "babel-core": "^7.0.0-0",
     "babel-jest": "^23.6.0",
+    "codecov": "^3.1.0",
     "flow-bin": "^0.81.0",
     "jest": "^23.6.0",
     "redux": "^4.0.0",
@@ -39,5 +40,15 @@
     "es",
     "index.js",
     "middleware.js"
-  ]
+  ],
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.js?(x)",
+      "!src/**/index.js"
+    ],
+    "testMatch": [
+      "<rootDir>/src/__tests__/**/*.js?(x)",
+      "<rootDir>/src/?(*.)+(spec|test).js?(x)"
+    ]
+  }
 }
