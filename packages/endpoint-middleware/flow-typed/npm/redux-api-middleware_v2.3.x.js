@@ -1,5 +1,3 @@
-import type { RSAAction } from 'redux-api-middleware';
-
 declare module 'redux-api-middleware' {
   import type { Middleware } from 'redux';
 

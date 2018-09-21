@@ -26,16 +26,16 @@ export default function endpointMiddlewareFactory(options: Options = {}) {
 
   function endpointMiddleware() {
     return (next: Dispatch<Action>) => (action: Action) => {
-      const apiMiddleware = action[RSAA];
+      const apiCall = action[RSAA];
 
-      if (!apiMiddleware) {
+      if (!apiCall) {
         return next(action);
       }
 
       return next({
         [RSAA]: {
-          ...apiMiddleware,
-          endpoint: prefixEndpoint(apiMiddleware.endpoint, config),
+          ...apiCall,
+          endpoint: prefixEndpoint(apiCall.endpoint, config),
         },
       });
     };
