@@ -1,6 +1,9 @@
 {
-  "name": "@tsh/endpoint-middleware",
+  "name": "@tshio/content-middleware",
   "version": "0.1.0",
+  "description": "",
+  "license": "MIT",
+  "repository": "TheSoftwareHouse/react-packages",
   "author": "Łukasz Golder <lukasz.golder@tsh.io>",
   "main": "index.js",
   "module": "es/index.js",
@@ -12,6 +15,9 @@
     "test": "jest",
     "flow": "flow",
     "prepublishOnly": "node scripts/build.js"
+  },
+  "dependencies": {
+    "lodash.isplainobject": "^4.0.6"
   },
   "peerDependencies": {
     "redux": ">=4.0.0",
