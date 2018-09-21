@@ -24,3 +24,24 @@ const middlewares = [paramsMiddleware, apiMiddleware];
 
 const store = createStore(appReducer, applyMiddleware(...middlewares));
 ```
+
+## Usage example
+
+In order to add query params to the endpoint of the RSAA we have to add the `params` property on the same level as `endpoint`.
+
+```js
+export const FETCH_USERS_REQUEST = 'users/FETCH_USERS_REQUEST';
+export const FETCH_USERS_SUCCESS = 'users/FETCH_USERS_SUCCESS';
+export const FETCH_USERS_FAILURE = 'users/FETCH_USERS_FAILURE';
+
+export const fetchUsers = () => ({
+  [RSAA]: {
+    endpoint: '/users?scope=email',
+    method: 'GET',
+    types: [FETCH_USERS_REQUEST, FETCH_USERS_SUCCESS, FETCH_USERS_FAILURE],
+    params: {
+      ids: [1, 2, 3],
+    },
+  },
+});
+```
