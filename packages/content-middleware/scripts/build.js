@@ -1,3 +1,7 @@
+process.on('unhandledRejection', err => {
+  throw err;
+});
+
 const execSync = require('child_process').execSync;
 
 const exec = (command, extraEnv) =>
