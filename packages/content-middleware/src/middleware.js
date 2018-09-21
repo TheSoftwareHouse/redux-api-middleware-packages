@@ -12,25 +12,25 @@ function isJSONLikeObject(value: any): boolean {
 
 export default function contentMiddleware() {
   return (next: Dispatch<Action>) => (action: Action) => {
-    const apiMiddleware = action[RSAA];
+    const apiCall = action[RSAA];
 
-    if (!apiMiddleware) {
+    if (!apiCall) {
       return next(action);
     }
 
-    const isJSON = isJSONLikeObject(apiMiddleware.body);
+    const isJSON = isJSONLikeObject(apiCall.body);
 
     return next({
       [RSAA]: {
-        ...apiMiddleware,
+        ...apiCall,
         headers:
-          isJSON && typeof apiMiddleware.headers !== 'function'
+          isJSON && typeof apiCall.headers !== 'function'
             ? {
-                ...apiMiddleware.headers,
+                ...apiCall.headers,
                 'Content-Type': 'application/json',
               }
-            : apiMiddleware.headers,
-        body: isJSON ? JSON.stringify(apiMiddleware.body) : apiMiddleware.body,
+            : apiCall.headers,
+        body: isJSON ? JSON.stringify(apiCall.body) : apiCall.body,
       },
     });
   };

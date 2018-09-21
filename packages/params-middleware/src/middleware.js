@@ -21,13 +21,13 @@ function parametriseEndpoint(endpoint, params) {
 
 export default function paramsMiddleware() {
   return (next: Dispatch<Action>) => (action: Action) => {
-    const apiMiddleware = action[RSAA];
+    const apiCall = action[RSAA];
 
-    if (!apiMiddleware || !apiMiddleware.params || typeof apiMiddleware.endpoint === 'function') {
+    if (!apiCall || !apiCall.params || typeof apiCall.endpoint === 'function') {
       return next(action);
     }
 
-    const { endpoint, params, ...rest } = apiMiddleware;
+    const { endpoint, params, ...rest } = apiCall;
 
     return next({
       [RSAA]: {
