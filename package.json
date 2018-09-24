@@ -24,7 +24,7 @@
     "prettier": "^1.14.2"
   },
   "lint-staged": {
-    "*.js": [
+    "*.(js|md)": [
       "prettier --print-width 120 --single-quote --trailing-comma all --write",
       "git add"
     ]
