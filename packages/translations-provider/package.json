@@ -1,0 +1,60 @@
+{
+  "name": "@tshio/translations-provider",
+  "version": "0.0.0",
+  "description": "",
+  "license": "MIT",
+  "repository": "TheSoftwareHouse/react-packages",
+  "author": "Łukasz Golder <lukasz.golder@tsh.io>",
+  "main": "index.js",
+  "module": "es/index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "node scripts/build.js",
+    "test": "node scripts/test.js",
+    "flow": "flow",
+    "prepublishOnly": "node scripts/build.js"
+  },
+  "dependencies": {
+    "flat": "^4.1.0"
+  },
+  "peerDependencies": {
+    "react": "^16.5.2",
+    "react-intl": "^2.6.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.1.0",
+    "@babel/core": "^7.1.0",
+    "@babel/plugin-proposal-class-properties": "^7.1.0",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-flow": "^7.0.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-core": "^7.0.0-0",
+    "babel-jest": "^23.6.0",
+    "enzyme": "^3.6.0",
+    "enzyme-adapter-react-16": "^1.5.0",
+    "flow-bin": "^0.81.0",
+    "jest": "^23.6.0",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "react-intl": "^2.6.0",
+    "react-test-renderer": "^16.5.2"
+  },
+  "files": [
+    "es",
+    "index.js",
+    "provider.js"
+  ],
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.js?(x)",
+      "!src/**/index.js"
+    ],
+    "setupTestFrameworkScriptFile": "<rootDir>/src/setupTests.js",
+    "testMatch": [
+      "<rootDir>/src/__tests__/**/*.js?(x)",
+      "<rootDir>/src/?(*.)+(spec|test).js?(x)"
+    ]
+  }
+}
