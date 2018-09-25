@@ -4,11 +4,11 @@
 
 Using [yarn](https://yarnpkg.com/lang/en/):
 
-    $ yarn add @tsh/endpoint-middleware
+    $ yarn add @tshio/endpoint-middleware
 
 Using [npm](https://www.npmjs.com/):
 
-    $ npm install --save @tsh/endpoint-middleware
+    $ npm install --save @tshio/endpoint-middleware
 
 Then, to enable endpointMiddleware, use [`applyMiddleware`](https://redux.js.org/api-reference/applymiddleware):
 
@@ -16,7 +16,7 @@ Then, to enable endpointMiddleware, use [`applyMiddleware`](https://redux.js.org
 import { applyMiddleware, createStore } from 'redux';
 
 import { apiMiddleware } from 'redux-api-middleware';
-import createEndpointMiddleware from '@tsh/endpoint-middleware';
+import createEndpointMiddleware from '@tshio/endpoint-middleware';
 
 import { appReducer } from 'app/app.reducer';
 
@@ -39,7 +39,7 @@ const endpointMiddleware = createEndpointMiddleware({
 });
 ```
 
-Endpoints starting with `http://` and `https://` won't be prefixed. In order to change the list of the prefixes that 
+Endpoints starting with `http://` and `https://` won't be prefixed. In order to change the list of the prefixes that
 should be excluded the configuration object should have property `excluded` with desired list:
 
 ```js
