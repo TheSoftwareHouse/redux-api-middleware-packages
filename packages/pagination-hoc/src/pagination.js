@@ -1,6 +1,6 @@
 // @flow
 
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 
 import type { Options, Props, State } from './types';
 import type { ComponentType } from 'react';
@@ -41,13 +41,8 @@ const withPagination = (options: Options) => (WrapperComponent: ComponentType<Pr
       return (
         <WrapperComponent
           {...this.props}
-          render={customizeOptions => (
-            <options.renderComponent
-              page={+this.state.page}
-              onPageChange={this.onPageChange}
-              {...this.props.pagination}
-              {...customizeOptions}
-            />
+          pagination={customizeOptions => (
+            <options.renderComponent page={+this.state.page} onPageChange={this.onPageChange} {...customizeOptions} />
           )}
         />
       );
