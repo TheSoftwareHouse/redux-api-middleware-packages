@@ -1,0 +1,17 @@
+// @flow
+
+import type { RSAAction } from 'redux-api-middleware';
+
+type State = {
+  auth: {
+    token: string,
+  },
+};
+
+
+type AnyAction = {
+  type: string,
+};
+
+export type GetState = () => State;
+export type Action = RSAAction<any, any, any> | AnyAction;
