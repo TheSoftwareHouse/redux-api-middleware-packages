@@ -64,6 +64,7 @@ describe('Auth middleware', () => {
   });
 
   it('should skip auth headers when there is no token in the store', () => {
+    store.dispatch(clearAuthToken());
     authMiddleware(store)(next)({
       [RSAA]: {
         foo: 'bar',
