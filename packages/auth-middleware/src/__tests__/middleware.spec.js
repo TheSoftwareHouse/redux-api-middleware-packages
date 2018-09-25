@@ -2,8 +2,8 @@ import { createStore } from 'redux';
 import { RSAA } from 'redux-api-middleware';
 import authReducer from '../reducer';
 import authMiddleware from '../middleware';
-import { SET_TOKEN } from '../const';
-import { setAuthToken } from '../action';
+import { SET_TOKEN, CLEAR_TOKEN } from '../const';
+import { clearAuthToken, setAuthToken } from '../action';
 
 describe('Auth middleware', () => {
   const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEyMzQifQ.w8piG6mIk3XwZJRjdsCUxfIcNw33OwQMrM06ZVOzESE';
@@ -32,6 +32,13 @@ describe('Auth middleware', () => {
       payload: { token },
     };
     expect(setAuthToken(token)).toEqual(expectedAction);
+  });
+
+  it('should create an action to clear the token', () => {
+    const expectedAction = {
+      type: CLEAR_TOKEN,
+    };
+    expect(clearAuthToken()).toEqual(expectedAction);
   });
 
   it('should add auth headers when there is a token in the store', () => {
