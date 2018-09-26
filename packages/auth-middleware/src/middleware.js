@@ -9,18 +9,12 @@ export default function authMiddleware(store: Store<GetState, Action, Dispatch<A
   return (next: Dispatch<Action>) => (action: Action) => {
     const apiCall = action[RSAA];
 
-    if (!apiCall) {
+    if (!apiCall || typeof apiCall.headers === 'function') {
       return next(action);
     }
 
-    const {auth} = store.getState();
-    const token = auth && auth.token ? auth.token : null;
-    let authHeaders = {};
-
-    if (token) {
-      authHeaders['Authorization'] = `Bearer ${token}`;
-    }
-
+    const { auth } = store.getState();
+    const token = auth?.token;
     return next({
       [RSAA]: {
         ...apiCall,

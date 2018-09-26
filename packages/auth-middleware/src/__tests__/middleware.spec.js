@@ -1,8 +1,8 @@
-import { createStore } from 'redux';
+import { createStore, combineReducers } from 'redux';
 import { RSAA } from 'redux-api-middleware';
 import authReducer from '../reducer';
 import authMiddleware from '../middleware';
-import { SET_TOKEN, CLEAR_TOKEN } from '../const';
+import { SET_TOKEN, CLEAR_TOKEN } from '../action-types';
 import { clearAuthToken, setAuthToken } from '../action';
 
 describe('Auth middleware', () => {
@@ -13,7 +13,7 @@ describe('Auth middleware', () => {
 
   beforeEach(() => {
     next = jest.fn();
-    store = createStore(authReducer, ['Use Redux']);
+    store = createStore(combineReducers({ auth: authReducer }));
   });
 
   it('should handle only RSAA', () => {
@@ -79,7 +79,7 @@ describe('Auth middleware', () => {
         foo: 'bar',
         body: {
           foo: 'bar',
-        }
+        },
       },
     });
   });

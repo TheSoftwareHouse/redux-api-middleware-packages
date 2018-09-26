@@ -1,26 +1,23 @@
-import { SET_TOKEN, CLEAR_TOKEN } from './const';
+// @flow
 
-const initialState = {
-  auth: {
-    token: null,
-  },
+import { SET_TOKEN, CLEAR_TOKEN } from './action-types';
+import type { SetTokenAction, State } from './types';
+
+const initialState: State = {
+  token: null,
 };
 
-export default function authReducer(state = initialState, action) {
+export default function authReducer(state: State = initialState, action: SetTokenAction) {
   switch (action.type) {
     case SET_TOKEN:
       return {
         ...state,
-        auth: {
-          token: action.payload.token,
-        },
+        token: action.payload.token,
       };
     case CLEAR_TOKEN:
       return {
         ...state,
-        auth: {
-          token: initialState.auth.token,
-        },
+        token: null,
       };
     default:
       return state;

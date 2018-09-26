@@ -2,15 +2,19 @@
 
 import type { RSAAction } from 'redux-api-middleware';
 
-type State = {
-  auth: {
-    token: string,
-  },
+export type State = {
+  token: ?string,
 };
 
-
-type AnyAction = {
+export type AnyAction = {
   type: string,
+};
+
+export type SetTokenAction = {
+  type: string,
+  payload: {
+    token: ?string,
+  },
 };
 
 export type GetState = () => State;
