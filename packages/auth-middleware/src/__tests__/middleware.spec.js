@@ -86,6 +86,7 @@ describe('Auth middleware', () => {
 
   it('throws an error if reducer is not set correctly', () => {
     const badStore = createStore(combineReducers({ badKey: null }));
-    expect(badStore).toThrowErrorMatchingSnapshot();
+    const middleware = () => authMiddleware(badStore)(next)({ type: 'FOO' });
+    expect(middleware).toThrowErrorMatchingSnapshot();
   });
 });
