@@ -6,6 +6,12 @@ import type { Dispatch, Store } from 'redux';
 import type { Action, GetState } from './types';
 
 export default function authMiddleware(store: Store<GetState, Action, Dispatch<Action>>) {
+  const { auth } = store.getState();
+
+  if (!auth) {
+    throw new Error('You must add authReducer to your store before using authMiddleware.');
+  }
+
   return (next: Dispatch<Action>) => (action: Action) => {
     const apiCall = action[RSAA];
 
@@ -13,7 +19,6 @@ export default function authMiddleware(store: Store<GetState, Action, Dispatch<A
       return next(action);
     }
 
-    const { auth } = store.getState();
     const token = auth?.token;
     return next({
       [RSAA]: {

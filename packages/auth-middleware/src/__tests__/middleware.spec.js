@@ -16,16 +16,6 @@ describe('Auth middleware', () => {
     store = createStore(combineReducers({ auth: authReducer }));
   });
 
-  it('should handle only RSAA', () => {
-    authMiddleware()(next)({
-      type: 'FOO',
-    });
-
-    expect(next).toHaveBeenCalledWith({
-      type: 'FOO',
-    });
-  });
-
   it('should create an action to set the token', () => {
     const expectedAction = {
       type: SET_TOKEN,
@@ -39,6 +29,16 @@ describe('Auth middleware', () => {
       type: CLEAR_TOKEN,
     };
     expect(clearAuthToken()).toEqual(expectedAction);
+  });
+
+  it('should handle only RSAA', () => {
+    authMiddleware(store)(next)({
+      type: 'FOO',
+    });
+
+    expect(next).toHaveBeenCalledWith({
+      type: 'FOO',
+    });
   });
 
   it('should add auth headers when there is a token in the store', () => {
