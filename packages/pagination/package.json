@@ -1,5 +1,5 @@
 {
-  "name": "@tshio/pagination-hoc",
+  "name": "@tshio/pagination",
   "version": "0.1.0",
   "description": "",
   "license": "MIT",
@@ -17,7 +17,10 @@
     "prepublishOnly": "node scripts/build.js"
   },
   "dependencies": {
-    "react": "^16.5.2"
+    "qs": "^6.5.2"
+  },
+  "peerDependencies": {
+    "react": ">=16.5.2"
   },
   "devDependencies": {
     "@babel/cli": "^7.1.0",

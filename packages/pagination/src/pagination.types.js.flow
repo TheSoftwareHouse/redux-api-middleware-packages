@@ -1,0 +1,19 @@
+// @flow
+
+export type ConfigOptions = {
+  currentPageKey: string,
+  pageParamName: string,
+  pageChangeCallbackKey: string,
+};
+
+export type PaginationProps = {
+  history: any,
+  location: {
+    pathname: string,
+    search: string,
+    hash: string,
+    state?: any,
+    key?: string,
+  },
+  onPageChange: Function,
+};
