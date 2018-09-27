@@ -42,6 +42,9 @@ export const ListContainer = compose(
     // In first parameter pass your custom pagination component
     {
         // Second parameter (optional) is an object and allow you to pass config options
+        pageChangeCallbackKey: "pageChangeCallback",
+        currentPageKey: "page",
+        pageParamName: "usersListPage"
         // See list of available options below..
     }
   )
