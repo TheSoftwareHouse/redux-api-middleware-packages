@@ -13,14 +13,14 @@ export const connectRouterWithPagination = (
     pageChangeCallbackKey = 'onChange',
     // above two values are use to set names of props which are passing directly to pagination render component
     pageParamName = 'page', // determines what is the name of page param which is displaying in URL
-  }: ConfigOptions,
+  }: ConfigOptions = {},
 ) => (WrappedComponent: ComponentType<any>) => {
   return class extends Component<PaginationProps> {
     // update history with new page param
     updateCurrentURL = (page: number) => {
       const queryParams = this.parseQueryParamsToObject();
       queryParams[pageParamName] = page;
-      this.props.history.push(this.props.location.pathname + '?' + stringify(queryParams));
+      this.props.history.push({ search: '?' + stringify(queryParams) });
     };
 
     parseQueryParamsToObject = () => parse(this.props.location.search.slice(1));
@@ -28,7 +28,9 @@ export const connectRouterWithPagination = (
     setDefaultPageParam = (params: { [string]: string | number }) => {
       params[pageParamName] = 1;
       const paramsString = stringify(params);
-      window.history.pushState({}, null, window.location.origin + this.props.location.pathname + '?' + paramsString);
+      if (window.history.state) {
+        window.history.pushState({}, null, window.location.origin + this.props.location.pathname + '?' + paramsString);
+      }
     };
 
     componentDidMount() {
@@ -39,7 +41,7 @@ export const connectRouterWithPagination = (
       }
       //dispatching redux action
       this.props.onPageChange({
-        page: queryParams[pageParamName],
+        page: +queryParams[pageParamName],
       });
     }
 
@@ -52,7 +54,7 @@ export const connectRouterWithPagination = (
       if (prevProps.location.search !== this.props.location.search) {
         //dispatching redux action
         this.props.onPageChange({
-          page: queryParams[pageParamName],
+          page: +queryParams[pageParamName],
         });
       }
     }
