@@ -40,10 +40,12 @@ describe('pagination HOC', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('fetches first page if page param is missing', () => {
+  it('add page param if it is missing', () => {
     const wrapper = mount(<ComponentWithPagination {...wrappedComponentProps} />);
 
-    expect(wrapper.props().onPageChange).toHaveBeenCalledWith({ page: 1 });
+    wrapper.setProps({ location: { search: '' } });
+
+    expect(wrapper.props().history.push).toHaveBeenCalledWith({ search: '?page=1' });
   });
 
   it('fetches page with param from URL', () => {
@@ -64,8 +66,8 @@ describe('pagination HOC', () => {
     wrapper.setProps({ location: { search: '?page=2' } });
     expect(wrapper.props().onPageChange).toHaveBeenCalledWith({ page: 2 });
 
-    wrapper.setProps({ location: { search: '' } });
-    expect(wrapper.props().onPageChange).toHaveBeenCalledWith({ page: 1 });
+    wrapper.setProps({ location: { search: '?page=3' } });
+    expect(wrapper.props().onPageChange).toHaveBeenCalledWith({ page: 3 });
   });
 
   it('changes history when handle click in pagination component', () => {

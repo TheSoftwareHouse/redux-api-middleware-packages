@@ -5,7 +5,30 @@ ReactWrapper {
   Symbol(enzyme.__unrendered__): <_class2
     history={
       Object {
-        "push": [MockFunction],
+        "push": [MockFunction] {
+          "calls": Array [
+            Array [
+              Object {
+                "search": "?page=1",
+              },
+            ],
+            Array [
+              Object {
+                "search": "?page=1",
+              },
+            ],
+          ],
+          "results": Array [
+            Object {
+              "isThrow": false,
+              "value": undefined,
+            },
+            Object {
+              "isThrow": false,
+              "value": undefined,
+            },
+          ],
+        },
       }
     }
     location={
@@ -13,32 +36,7 @@ ReactWrapper {
         "search": "",
       }
     }
-    onPageChange={
-      [MockFunction] {
-        "calls": Array [
-          Array [
-            Object {
-              "page": 1,
-            },
-          ],
-          Array [
-            Object {
-              "page": 1,
-            },
-          ],
-        ],
-        "results": Array [
-          Object {
-            "isThrow": false,
-            "value": undefined,
-          },
-          Object {
-            "isThrow": false,
-            "value": undefined,
-          },
-        ],
-      }
-    }
+    onPageChange={[MockFunction]}
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -76,35 +74,35 @@ ReactWrapper {
             "context": null,
             "props": Object {
               "history": Object {
-                "push": [MockFunction],
+                "push": [MockFunction] {
+                  "calls": Array [
+                    Array [
+                      Object {
+                        "search": "?page=1",
+                      },
+                    ],
+                    Array [
+                      Object {
+                        "search": "?page=1",
+                      },
+                    ],
+                  ],
+                  "results": Array [
+                    Object {
+                      "isThrow": false,
+                      "value": undefined,
+                    },
+                    Object {
+                      "isThrow": false,
+                      "value": undefined,
+                    },
+                  ],
+                },
               },
               "location": Object {
                 "search": "",
               },
-              "onPageChange": [MockFunction] {
-                "calls": Array [
-                  Array [
-                    Object {
-                      "page": 1,
-                    },
-                  ],
-                  Array [
-                    Object {
-                      "page": 1,
-                    },
-                  ],
-                ],
-                "results": Array [
-                  Object {
-                    "isThrow": false,
-                    "value": undefined,
-                  },
-                  Object {
-                    "isThrow": false,
-                    "value": undefined,
-                  },
-                ],
-              },
+              "onPageChange": [MockFunction],
             },
           },
           "memoizedState": Object {
@@ -112,35 +110,35 @@ ReactWrapper {
             "mount": true,
             "props": Object {
               "history": Object {
-                "push": [MockFunction],
+                "push": [MockFunction] {
+                  "calls": Array [
+                    Array [
+                      Object {
+                        "search": "?page=1",
+                      },
+                    ],
+                    Array [
+                      Object {
+                        "search": "?page=1",
+                      },
+                    ],
+                  ],
+                  "results": Array [
+                    Object {
+                      "isThrow": false,
+                      "value": undefined,
+                    },
+                    Object {
+                      "isThrow": false,
+                      "value": undefined,
+                    },
+                  ],
+                },
               },
               "location": Object {
                 "search": "",
               },
-              "onPageChange": [MockFunction] {
-                "calls": Array [
-                  Array [
-                    Object {
-                      "page": 1,
-                    },
-                  ],
-                  Array [
-                    Object {
-                      "page": 1,
-                    },
-                  ],
-                ],
-                "results": Array [
-                  Object {
-                    "isThrow": false,
-                    "value": undefined,
-                  },
-                  Object {
-                    "isThrow": false,
-                    "value": undefined,
-                  },
-                ],
-              },
+              "onPageChange": [MockFunction],
             },
           },
           "mode": 0,
@@ -150,35 +148,35 @@ ReactWrapper {
             "context": null,
             "props": Object {
               "history": Object {
-                "push": [MockFunction],
+                "push": [MockFunction] {
+                  "calls": Array [
+                    Array [
+                      Object {
+                        "search": "?page=1",
+                      },
+                    ],
+                    Array [
+                      Object {
+                        "search": "?page=1",
+                      },
+                    ],
+                  ],
+                  "results": Array [
+                    Object {
+                      "isThrow": false,
+                      "value": undefined,
+                    },
+                    Object {
+                      "isThrow": false,
+                      "value": undefined,
+                    },
+                  ],
+                },
               },
               "location": Object {
                 "search": "",
               },
-              "onPageChange": [MockFunction] {
-                "calls": Array [
-                  Array [
-                    Object {
-                      "page": 1,
-                    },
-                  ],
-                  Array [
-                    Object {
-                      "page": 1,
-                    },
-                  ],
-                ],
-                "results": Array [
-                  Object {
-                    "isThrow": false,
-                    "value": undefined,
-                  },
-                  Object {
-                    "isThrow": false,
-                    "value": undefined,
-                  },
-                ],
-              },
+              "onPageChange": [MockFunction],
             },
           },
           "ref": null,
@@ -261,35 +259,35 @@ ReactWrapper {
                       props={
                         Object {
                           "history": Object {
-                            "push": [MockFunction],
+                            "push": [MockFunction] {
+                              "calls": Array [
+                                Array [
+                                  Object {
+                                    "search": "?page=1",
+                                  },
+                                ],
+                                Array [
+                                  Object {
+                                    "search": "?page=1",
+                                  },
+                                ],
+                              ],
+                              "results": Array [
+                                Object {
+                                  "isThrow": false,
+                                  "value": undefined,
+                                },
+                                Object {
+                                  "isThrow": false,
+                                  "value": undefined,
+                                },
+                              ],
+                            },
                           },
                           "location": Object {
                             "search": "",
                           },
-                          "onPageChange": [MockFunction] {
-                            "calls": Array [
-                              Array [
-                                Object {
-                                  "page": 1,
-                                },
-                              ],
-                              Array [
-                                Object {
-                                  "page": 1,
-                                },
-                              ],
-                            ],
-                            "results": Array [
-                              Object {
-                                "isThrow": false,
-                                "value": undefined,
-                              },
-                              Object {
-                                "isThrow": false,
-                                "value": undefined,
-                              },
-                            ],
-                          },
+                          "onPageChange": [MockFunction],
                         }
                       }
                     />,
@@ -311,35 +309,35 @@ ReactWrapper {
                       props={
                         Object {
                           "history": Object {
-                            "push": [MockFunction],
+                            "push": [MockFunction] {
+                              "calls": Array [
+                                Array [
+                                  Object {
+                                    "search": "?page=1",
+                                  },
+                                ],
+                                Array [
+                                  Object {
+                                    "search": "?page=1",
+                                  },
+                                ],
+                              ],
+                              "results": Array [
+                                Object {
+                                  "isThrow": false,
+                                  "value": undefined,
+                                },
+                                Object {
+                                  "isThrow": false,
+                                  "value": undefined,
+                                },
+                              ],
+                            },
                           },
                           "location": Object {
                             "search": "",
                           },
-                          "onPageChange": [MockFunction] {
-                            "calls": Array [
-                              Array [
-                                Object {
-                                  "page": 1,
-                                },
-                              ],
-                              Array [
-                                Object {
-                                  "page": 1,
-                                },
-                              ],
-                            ],
-                            "results": Array [
-                              Object {
-                                "isThrow": false,
-                                "value": undefined,
-                              },
-                              Object {
-                                "isThrow": false,
-                                "value": undefined,
-                              },
-                            ],
-                          },
+                          "onPageChange": [MockFunction],
                         }
                       }
                     />,
@@ -365,35 +363,35 @@ ReactWrapper {
                 props={
                   Object {
                     "history": Object {
-                      "push": [MockFunction],
+                      "push": [MockFunction] {
+                        "calls": Array [
+                          Array [
+                            Object {
+                              "search": "?page=1",
+                            },
+                          ],
+                          Array [
+                            Object {
+                              "search": "?page=1",
+                            },
+                          ],
+                        ],
+                        "results": Array [
+                          Object {
+                            "isThrow": false,
+                            "value": undefined,
+                          },
+                          Object {
+                            "isThrow": false,
+                            "value": undefined,
+                          },
+                        ],
+                      },
                     },
                     "location": Object {
                       "search": "",
                     },
-                    "onPageChange": [MockFunction] {
-                      "calls": Array [
-                        Array [
-                          Object {
-                            "page": 1,
-                          },
-                        ],
-                        Array [
-                          Object {
-                            "page": 1,
-                          },
-                        ],
-                      ],
-                      "results": Array [
-                        Object {
-                          "isThrow": false,
-                          "value": undefined,
-                        },
-                        Object {
-                          "isThrow": false,
-                          "value": undefined,
-                        },
-                      ],
-                    },
+                    "onPageChange": [MockFunction],
                   }
                 }
               />,
@@ -442,35 +440,35 @@ ReactWrapper {
                   props={
                     Object {
                       "history": Object {
-                        "push": [MockFunction],
+                        "push": [MockFunction] {
+                          "calls": Array [
+                            Array [
+                              Object {
+                                "search": "?page=1",
+                              },
+                            ],
+                            Array [
+                              Object {
+                                "search": "?page=1",
+                              },
+                            ],
+                          ],
+                          "results": Array [
+                            Object {
+                              "isThrow": false,
+                              "value": undefined,
+                            },
+                            Object {
+                              "isThrow": false,
+                              "value": undefined,
+                            },
+                          ],
+                        },
                       },
                       "location": Object {
                         "search": "",
                       },
-                      "onPageChange": [MockFunction] {
-                        "calls": Array [
-                          Array [
-                            Object {
-                              "page": 1,
-                            },
-                          ],
-                          Array [
-                            Object {
-                              "page": 1,
-                            },
-                          ],
-                        ],
-                        "results": Array [
-                          Object {
-                            "isThrow": false,
-                            "value": undefined,
-                          },
-                          Object {
-                            "isThrow": false,
-                            "value": undefined,
-                          },
-                        ],
-                      },
+                      "onPageChange": [MockFunction],
                     }
                   }
                 />,
@@ -496,35 +494,35 @@ ReactWrapper {
               "context": null,
               "props": Object {
                 "history": Object {
-                  "push": [MockFunction],
+                  "push": [MockFunction] {
+                    "calls": Array [
+                      Array [
+                        Object {
+                          "search": "?page=1",
+                        },
+                      ],
+                      Array [
+                        Object {
+                          "search": "?page=1",
+                        },
+                      ],
+                    ],
+                    "results": Array [
+                      Object {
+                        "isThrow": false,
+                        "value": undefined,
+                      },
+                      Object {
+                        "isThrow": false,
+                        "value": undefined,
+                      },
+                    ],
+                  },
                 },
                 "location": Object {
                   "search": "",
                 },
-                "onPageChange": [MockFunction] {
-                  "calls": Array [
-                    Array [
-                      Object {
-                        "page": 1,
-                      },
-                    ],
-                    Array [
-                      Object {
-                        "page": 1,
-                      },
-                    ],
-                  ],
-                  "results": Array [
-                    Object {
-                      "isThrow": false,
-                      "value": undefined,
-                    },
-                    Object {
-                      "isThrow": false,
-                      "value": undefined,
-                    },
-                  ],
-                },
+                "onPageChange": [MockFunction],
               },
             },
             "refs": Object {},
@@ -533,35 +531,35 @@ ReactWrapper {
               "mount": true,
               "props": Object {
                 "history": Object {
-                  "push": [MockFunction],
+                  "push": [MockFunction] {
+                    "calls": Array [
+                      Array [
+                        Object {
+                          "search": "?page=1",
+                        },
+                      ],
+                      Array [
+                        Object {
+                          "search": "?page=1",
+                        },
+                      ],
+                    ],
+                    "results": Array [
+                      Object {
+                        "isThrow": false,
+                        "value": undefined,
+                      },
+                      Object {
+                        "isThrow": false,
+                        "value": undefined,
+                      },
+                    ],
+                  },
                 },
                 "location": Object {
                   "search": "",
                 },
-                "onPageChange": [MockFunction] {
-                  "calls": Array [
-                    Array [
-                      Object {
-                        "page": 1,
-                      },
-                    ],
-                    Array [
-                      Object {
-                        "page": 1,
-                      },
-                    ],
-                  ],
-                  "results": Array [
-                    Object {
-                      "isThrow": false,
-                      "value": undefined,
-                    },
-                    Object {
-                      "isThrow": false,
-                      "value": undefined,
-                    },
-                  ],
-                },
+                "onPageChange": [MockFunction],
               },
             },
             "updater": Object {
@@ -630,35 +628,35 @@ ReactWrapper {
           "lastEffect": null,
           "memoizedProps": Object {
             "history": Object {
-              "push": [MockFunction],
+              "push": [MockFunction] {
+                "calls": Array [
+                  Array [
+                    Object {
+                      "search": "?page=1",
+                    },
+                  ],
+                  Array [
+                    Object {
+                      "search": "?page=1",
+                    },
+                  ],
+                ],
+                "results": Array [
+                  Object {
+                    "isThrow": false,
+                    "value": undefined,
+                  },
+                  Object {
+                    "isThrow": false,
+                    "value": undefined,
+                  },
+                ],
+              },
             },
             "location": Object {
               "search": "",
             },
-            "onPageChange": [MockFunction] {
-              "calls": Array [
-                Array [
-                  Object {
-                    "page": 1,
-                  },
-                ],
-                Array [
-                  Object {
-                    "page": 1,
-                  },
-                ],
-              ],
-              "results": Array [
-                Object {
-                  "isThrow": false,
-                  "value": undefined,
-                },
-                Object {
-                  "isThrow": false,
-                  "value": undefined,
-                },
-              ],
-            },
+            "onPageChange": [MockFunction],
             "pagination": [Function],
           },
           "memoizedState": null,
@@ -666,35 +664,35 @@ ReactWrapper {
           "nextEffect": null,
           "pendingProps": Object {
             "history": Object {
-              "push": [MockFunction],
+              "push": [MockFunction] {
+                "calls": Array [
+                  Array [
+                    Object {
+                      "search": "?page=1",
+                    },
+                  ],
+                  Array [
+                    Object {
+                      "search": "?page=1",
+                    },
+                  ],
+                ],
+                "results": Array [
+                  Object {
+                    "isThrow": false,
+                    "value": undefined,
+                  },
+                  Object {
+                    "isThrow": false,
+                    "value": undefined,
+                  },
+                ],
+              },
             },
             "location": Object {
               "search": "",
             },
-            "onPageChange": [MockFunction] {
-              "calls": Array [
-                Array [
-                  Object {
-                    "page": 1,
-                  },
-                ],
-                Array [
-                  Object {
-                    "page": 1,
-                  },
-                ],
-              ],
-              "results": Array [
-                Object {
-                  "isThrow": false,
-                  "value": undefined,
-                },
-                Object {
-                  "isThrow": false,
-                  "value": undefined,
-                },
-              ],
-            },
+            "onPageChange": [MockFunction],
             "pagination": [Function],
           },
           "ref": null,
@@ -717,70 +715,70 @@ ReactWrapper {
         "lastEffect": null,
         "memoizedProps": Object {
           "history": Object {
-            "push": [MockFunction],
+            "push": [MockFunction] {
+              "calls": Array [
+                Array [
+                  Object {
+                    "search": "?page=1",
+                  },
+                ],
+                Array [
+                  Object {
+                    "search": "?page=1",
+                  },
+                ],
+              ],
+              "results": Array [
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+              ],
+            },
           },
           "location": Object {
             "search": "",
           },
-          "onPageChange": [MockFunction] {
-            "calls": Array [
-              Array [
-                Object {
-                  "page": 1,
-                },
-              ],
-              Array [
-                Object {
-                  "page": 1,
-                },
-              ],
-            ],
-            "results": Array [
-              Object {
-                "isThrow": false,
-                "value": undefined,
-              },
-              Object {
-                "isThrow": false,
-                "value": undefined,
-              },
-            ],
-          },
+          "onPageChange": [MockFunction],
         },
         "memoizedState": null,
         "mode": 0,
         "nextEffect": null,
         "pendingProps": Object {
           "history": Object {
-            "push": [MockFunction],
+            "push": [MockFunction] {
+              "calls": Array [
+                Array [
+                  Object {
+                    "search": "?page=1",
+                  },
+                ],
+                Array [
+                  Object {
+                    "search": "?page=1",
+                  },
+                ],
+              ],
+              "results": Array [
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+              ],
+            },
           },
           "location": Object {
             "search": "",
           },
-          "onPageChange": [MockFunction] {
-            "calls": Array [
-              Array [
-                Object {
-                  "page": 1,
-                },
-              ],
-              Array [
-                Object {
-                  "page": 1,
-                },
-              ],
-            ],
-            "results": Array [
-              Object {
-                "isThrow": false,
-                "value": undefined,
-              },
-              Object {
-                "isThrow": false,
-                "value": undefined,
-              },
-            ],
-          },
+          "onPageChange": [MockFunction],
         },
         "ref": null,
         "return": FiberNode {
@@ -805,35 +803,35 @@ ReactWrapper {
             "context": null,
             "props": Object {
               "history": Object {
-                "push": [MockFunction],
+                "push": [MockFunction] {
+                  "calls": Array [
+                    Array [
+                      Object {
+                        "search": "?page=1",
+                      },
+                    ],
+                    Array [
+                      Object {
+                        "search": "?page=1",
+                      },
+                    ],
+                  ],
+                  "results": Array [
+                    Object {
+                      "isThrow": false,
+                      "value": undefined,
+                    },
+                    Object {
+                      "isThrow": false,
+                      "value": undefined,
+                    },
+                  ],
+                },
               },
               "location": Object {
                 "search": "",
               },
-              "onPageChange": [MockFunction] {
-                "calls": Array [
-                  Array [
-                    Object {
-                      "page": 1,
-                    },
-                  ],
-                  Array [
-                    Object {
-                      "page": 1,
-                    },
-                  ],
-                ],
-                "results": Array [
-                  Object {
-                    "isThrow": false,
-                    "value": undefined,
-                  },
-                  Object {
-                    "isThrow": false,
-                    "value": undefined,
-                  },
-                ],
-              },
+              "onPageChange": [MockFunction],
             },
           },
           "memoizedState": Object {
@@ -841,35 +839,35 @@ ReactWrapper {
             "mount": true,
             "props": Object {
               "history": Object {
-                "push": [MockFunction],
+                "push": [MockFunction] {
+                  "calls": Array [
+                    Array [
+                      Object {
+                        "search": "?page=1",
+                      },
+                    ],
+                    Array [
+                      Object {
+                        "search": "?page=1",
+                      },
+                    ],
+                  ],
+                  "results": Array [
+                    Object {
+                      "isThrow": false,
+                      "value": undefined,
+                    },
+                    Object {
+                      "isThrow": false,
+                      "value": undefined,
+                    },
+                  ],
+                },
               },
               "location": Object {
                 "search": "",
               },
-              "onPageChange": [MockFunction] {
-                "calls": Array [
-                  Array [
-                    Object {
-                      "page": 1,
-                    },
-                  ],
-                  Array [
-                    Object {
-                      "page": 1,
-                    },
-                  ],
-                ],
-                "results": Array [
-                  Object {
-                    "isThrow": false,
-                    "value": undefined,
-                  },
-                  Object {
-                    "isThrow": false,
-                    "value": undefined,
-                  },
-                ],
-              },
+              "onPageChange": [MockFunction],
             },
           },
           "mode": 0,
@@ -879,35 +877,35 @@ ReactWrapper {
             "context": null,
             "props": Object {
               "history": Object {
-                "push": [MockFunction],
+                "push": [MockFunction] {
+                  "calls": Array [
+                    Array [
+                      Object {
+                        "search": "?page=1",
+                      },
+                    ],
+                    Array [
+                      Object {
+                        "search": "?page=1",
+                      },
+                    ],
+                  ],
+                  "results": Array [
+                    Object {
+                      "isThrow": false,
+                      "value": undefined,
+                    },
+                    Object {
+                      "isThrow": false,
+                      "value": undefined,
+                    },
+                  ],
+                },
               },
               "location": Object {
                 "search": "",
               },
-              "onPageChange": [MockFunction] {
-                "calls": Array [
-                  Array [
-                    Object {
-                      "page": 1,
-                    },
-                  ],
-                  Array [
-                    Object {
-                      "page": 1,
-                    },
-                  ],
-                ],
-                "results": Array [
-                  Object {
-                    "isThrow": false,
-                    "value": undefined,
-                  },
-                  Object {
-                    "isThrow": false,
-                    "value": undefined,
-                  },
-                ],
-              },
+              "onPageChange": [MockFunction],
             },
           },
           "ref": null,
@@ -990,35 +988,35 @@ ReactWrapper {
                       props={
                         Object {
                           "history": Object {
-                            "push": [MockFunction],
+                            "push": [MockFunction] {
+                              "calls": Array [
+                                Array [
+                                  Object {
+                                    "search": "?page=1",
+                                  },
+                                ],
+                                Array [
+                                  Object {
+                                    "search": "?page=1",
+                                  },
+                                ],
+                              ],
+                              "results": Array [
+                                Object {
+                                  "isThrow": false,
+                                  "value": undefined,
+                                },
+                                Object {
+                                  "isThrow": false,
+                                  "value": undefined,
+                                },
+                              ],
+                            },
                           },
                           "location": Object {
                             "search": "",
                           },
-                          "onPageChange": [MockFunction] {
-                            "calls": Array [
-                              Array [
-                                Object {
-                                  "page": 1,
-                                },
-                              ],
-                              Array [
-                                Object {
-                                  "page": 1,
-                                },
-                              ],
-                            ],
-                            "results": Array [
-                              Object {
-                                "isThrow": false,
-                                "value": undefined,
-                              },
-                              Object {
-                                "isThrow": false,
-                                "value": undefined,
-                              },
-                            ],
-                          },
+                          "onPageChange": [MockFunction],
                         }
                       }
                     />,
@@ -1040,35 +1038,35 @@ ReactWrapper {
                       props={
                         Object {
                           "history": Object {
-                            "push": [MockFunction],
+                            "push": [MockFunction] {
+                              "calls": Array [
+                                Array [
+                                  Object {
+                                    "search": "?page=1",
+                                  },
+                                ],
+                                Array [
+                                  Object {
+                                    "search": "?page=1",
+                                  },
+                                ],
+                              ],
+                              "results": Array [
+                                Object {
+                                  "isThrow": false,
+                                  "value": undefined,
+                                },
+                                Object {
+                                  "isThrow": false,
+                                  "value": undefined,
+                                },
+                              ],
+                            },
                           },
                           "location": Object {
                             "search": "",
                           },
-                          "onPageChange": [MockFunction] {
-                            "calls": Array [
-                              Array [
-                                Object {
-                                  "page": 1,
-                                },
-                              ],
-                              Array [
-                                Object {
-                                  "page": 1,
-                                },
-                              ],
-                            ],
-                            "results": Array [
-                              Object {
-                                "isThrow": false,
-                                "value": undefined,
-                              },
-                              Object {
-                                "isThrow": false,
-                                "value": undefined,
-                              },
-                            ],
-                          },
+                          "onPageChange": [MockFunction],
                         }
                       }
                     />,
@@ -1094,35 +1092,35 @@ ReactWrapper {
                 props={
                   Object {
                     "history": Object {
-                      "push": [MockFunction],
+                      "push": [MockFunction] {
+                        "calls": Array [
+                          Array [
+                            Object {
+                              "search": "?page=1",
+                            },
+                          ],
+                          Array [
+                            Object {
+                              "search": "?page=1",
+                            },
+                          ],
+                        ],
+                        "results": Array [
+                          Object {
+                            "isThrow": false,
+                            "value": undefined,
+                          },
+                          Object {
+                            "isThrow": false,
+                            "value": undefined,
+                          },
+                        ],
+                      },
                     },
                     "location": Object {
                       "search": "",
                     },
-                    "onPageChange": [MockFunction] {
-                      "calls": Array [
-                        Array [
-                          Object {
-                            "page": 1,
-                          },
-                        ],
-                        Array [
-                          Object {
-                            "page": 1,
-                          },
-                        ],
-                      ],
-                      "results": Array [
-                        Object {
-                          "isThrow": false,
-                          "value": undefined,
-                        },
-                        Object {
-                          "isThrow": false,
-                          "value": undefined,
-                        },
-                      ],
-                    },
+                    "onPageChange": [MockFunction],
                   }
                 }
               />,
@@ -1171,35 +1169,35 @@ ReactWrapper {
                   props={
                     Object {
                       "history": Object {
-                        "push": [MockFunction],
+                        "push": [MockFunction] {
+                          "calls": Array [
+                            Array [
+                              Object {
+                                "search": "?page=1",
+                              },
+                            ],
+                            Array [
+                              Object {
+                                "search": "?page=1",
+                              },
+                            ],
+                          ],
+                          "results": Array [
+                            Object {
+                              "isThrow": false,
+                              "value": undefined,
+                            },
+                            Object {
+                              "isThrow": false,
+                              "value": undefined,
+                            },
+                          ],
+                        },
                       },
                       "location": Object {
                         "search": "",
                       },
-                      "onPageChange": [MockFunction] {
-                        "calls": Array [
-                          Array [
-                            Object {
-                              "page": 1,
-                            },
-                          ],
-                          Array [
-                            Object {
-                              "page": 1,
-                            },
-                          ],
-                        ],
-                        "results": Array [
-                          Object {
-                            "isThrow": false,
-                            "value": undefined,
-                          },
-                          Object {
-                            "isThrow": false,
-                            "value": undefined,
-                          },
-                        ],
-                      },
+                      "onPageChange": [MockFunction],
                     }
                   }
                 />,
@@ -1225,35 +1223,35 @@ ReactWrapper {
               "context": null,
               "props": Object {
                 "history": Object {
-                  "push": [MockFunction],
+                  "push": [MockFunction] {
+                    "calls": Array [
+                      Array [
+                        Object {
+                          "search": "?page=1",
+                        },
+                      ],
+                      Array [
+                        Object {
+                          "search": "?page=1",
+                        },
+                      ],
+                    ],
+                    "results": Array [
+                      Object {
+                        "isThrow": false,
+                        "value": undefined,
+                      },
+                      Object {
+                        "isThrow": false,
+                        "value": undefined,
+                      },
+                    ],
+                  },
                 },
                 "location": Object {
                   "search": "",
                 },
-                "onPageChange": [MockFunction] {
-                  "calls": Array [
-                    Array [
-                      Object {
-                        "page": 1,
-                      },
-                    ],
-                    Array [
-                      Object {
-                        "page": 1,
-                      },
-                    ],
-                  ],
-                  "results": Array [
-                    Object {
-                      "isThrow": false,
-                      "value": undefined,
-                    },
-                    Object {
-                      "isThrow": false,
-                      "value": undefined,
-                    },
-                  ],
-                },
+                "onPageChange": [MockFunction],
               },
             },
             "refs": Object {},
@@ -1262,35 +1260,35 @@ ReactWrapper {
               "mount": true,
               "props": Object {
                 "history": Object {
-                  "push": [MockFunction],
+                  "push": [MockFunction] {
+                    "calls": Array [
+                      Array [
+                        Object {
+                          "search": "?page=1",
+                        },
+                      ],
+                      Array [
+                        Object {
+                          "search": "?page=1",
+                        },
+                      ],
+                    ],
+                    "results": Array [
+                      Object {
+                        "isThrow": false,
+                        "value": undefined,
+                      },
+                      Object {
+                        "isThrow": false,
+                        "value": undefined,
+                      },
+                    ],
+                  },
                 },
                 "location": Object {
                   "search": "",
                 },
-                "onPageChange": [MockFunction] {
-                  "calls": Array [
-                    Array [
-                      Object {
-                        "page": 1,
-                      },
-                    ],
-                    Array [
-                      Object {
-                        "page": 1,
-                      },
-                    ],
-                  ],
-                  "results": Array [
-                    Object {
-                      "isThrow": false,
-                      "value": undefined,
-                    },
-                    Object {
-                      "isThrow": false,
-                      "value": undefined,
-                    },
-                  ],
-                },
+                "onPageChange": [MockFunction],
               },
             },
             "updater": Object {
@@ -1318,35 +1316,35 @@ ReactWrapper {
       "parseQueryParamsToObject": [Function],
       "props": Object {
         "history": Object {
-          "push": [MockFunction],
+          "push": [MockFunction] {
+            "calls": Array [
+              Array [
+                Object {
+                  "search": "?page=1",
+                },
+              ],
+              Array [
+                Object {
+                  "search": "?page=1",
+                },
+              ],
+            ],
+            "results": Array [
+              Object {
+                "isThrow": false,
+                "value": undefined,
+              },
+              Object {
+                "isThrow": false,
+                "value": undefined,
+              },
+            ],
+          },
         },
         "location": Object {
           "search": "",
         },
-        "onPageChange": [MockFunction] {
-          "calls": Array [
-            Array [
-              Object {
-                "page": 1,
-              },
-            ],
-            Array [
-              Object {
-                "page": 1,
-              },
-            ],
-          ],
-          "results": Array [
-            Object {
-              "isThrow": false,
-              "value": undefined,
-            },
-            Object {
-              "isThrow": false,
-              "value": undefined,
-            },
-          ],
-        },
+        "onPageChange": [MockFunction],
       },
       "refs": Object {},
       "setDefaultPageParam": [Function],
@@ -1363,58 +1361,16 @@ ReactWrapper {
     "nodeType": "class",
     "props": Object {
       "history": Object {
-        "push": [MockFunction],
-      },
-      "location": Object {
-        "search": "",
-      },
-      "onPageChange": [MockFunction] {
-        "calls": Array [
-          Array [
-            Object {
-              "page": 1,
-            },
-          ],
-          Array [
-            Object {
-              "page": 1,
-            },
-          ],
-        ],
-        "results": Array [
-          Object {
-            "isThrow": false,
-            "value": undefined,
-          },
-          Object {
-            "isThrow": false,
-            "value": undefined,
-          },
-        ],
-      },
-    },
-    "ref": null,
-    "rendered": Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "function",
-      "props": Object {
-        "history": Object {
-          "push": [MockFunction],
-        },
-        "location": Object {
-          "search": "",
-        },
-        "onPageChange": [MockFunction] {
+        "push": [MockFunction] {
           "calls": Array [
             Array [
               Object {
-                "page": 1,
+                "search": "?page=1",
               },
             ],
             Array [
               Object {
-                "page": 1,
+                "search": "?page=1",
               },
             ],
           ],
@@ -1429,6 +1385,48 @@ ReactWrapper {
             },
           ],
         },
+      },
+      "location": Object {
+        "search": "",
+      },
+      "onPageChange": [MockFunction],
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "history": Object {
+          "push": [MockFunction] {
+            "calls": Array [
+              Array [
+                Object {
+                  "search": "?page=1",
+                },
+              ],
+              Array [
+                Object {
+                  "search": "?page=1",
+                },
+              ],
+            ],
+            "results": Array [
+              Object {
+                "isThrow": false,
+                "value": undefined,
+              },
+              Object {
+                "isThrow": false,
+                "value": undefined,
+              },
+            ],
+          },
+        },
+        "location": Object {
+          "search": "",
+        },
+        "onPageChange": [MockFunction],
         "pagination": [Function],
       },
       "ref": null,
@@ -1475,35 +1473,35 @@ ReactWrapper {
               "context": null,
               "props": Object {
                 "history": Object {
-                  "push": [MockFunction],
+                  "push": [MockFunction] {
+                    "calls": Array [
+                      Array [
+                        Object {
+                          "search": "?page=1",
+                        },
+                      ],
+                      Array [
+                        Object {
+                          "search": "?page=1",
+                        },
+                      ],
+                    ],
+                    "results": Array [
+                      Object {
+                        "isThrow": false,
+                        "value": undefined,
+                      },
+                      Object {
+                        "isThrow": false,
+                        "value": undefined,
+                      },
+                    ],
+                  },
                 },
                 "location": Object {
                   "search": "",
                 },
-                "onPageChange": [MockFunction] {
-                  "calls": Array [
-                    Array [
-                      Object {
-                        "page": 1,
-                      },
-                    ],
-                    Array [
-                      Object {
-                        "page": 1,
-                      },
-                    ],
-                  ],
-                  "results": Array [
-                    Object {
-                      "isThrow": false,
-                      "value": undefined,
-                    },
-                    Object {
-                      "isThrow": false,
-                      "value": undefined,
-                    },
-                  ],
-                },
+                "onPageChange": [MockFunction],
               },
             },
             "memoizedState": Object {
@@ -1511,35 +1509,35 @@ ReactWrapper {
               "mount": true,
               "props": Object {
                 "history": Object {
-                  "push": [MockFunction],
+                  "push": [MockFunction] {
+                    "calls": Array [
+                      Array [
+                        Object {
+                          "search": "?page=1",
+                        },
+                      ],
+                      Array [
+                        Object {
+                          "search": "?page=1",
+                        },
+                      ],
+                    ],
+                    "results": Array [
+                      Object {
+                        "isThrow": false,
+                        "value": undefined,
+                      },
+                      Object {
+                        "isThrow": false,
+                        "value": undefined,
+                      },
+                    ],
+                  },
                 },
                 "location": Object {
                   "search": "",
                 },
-                "onPageChange": [MockFunction] {
-                  "calls": Array [
-                    Array [
-                      Object {
-                        "page": 1,
-                      },
-                    ],
-                    Array [
-                      Object {
-                        "page": 1,
-                      },
-                    ],
-                  ],
-                  "results": Array [
-                    Object {
-                      "isThrow": false,
-                      "value": undefined,
-                    },
-                    Object {
-                      "isThrow": false,
-                      "value": undefined,
-                    },
-                  ],
-                },
+                "onPageChange": [MockFunction],
               },
             },
             "mode": 0,
@@ -1549,35 +1547,35 @@ ReactWrapper {
               "context": null,
               "props": Object {
                 "history": Object {
-                  "push": [MockFunction],
+                  "push": [MockFunction] {
+                    "calls": Array [
+                      Array [
+                        Object {
+                          "search": "?page=1",
+                        },
+                      ],
+                      Array [
+                        Object {
+                          "search": "?page=1",
+                        },
+                      ],
+                    ],
+                    "results": Array [
+                      Object {
+                        "isThrow": false,
+                        "value": undefined,
+                      },
+                      Object {
+                        "isThrow": false,
+                        "value": undefined,
+                      },
+                    ],
+                  },
                 },
                 "location": Object {
                   "search": "",
                 },
-                "onPageChange": [MockFunction] {
-                  "calls": Array [
-                    Array [
-                      Object {
-                        "page": 1,
-                      },
-                    ],
-                    Array [
-                      Object {
-                        "page": 1,
-                      },
-                    ],
-                  ],
-                  "results": Array [
-                    Object {
-                      "isThrow": false,
-                      "value": undefined,
-                    },
-                    Object {
-                      "isThrow": false,
-                      "value": undefined,
-                    },
-                  ],
-                },
+                "onPageChange": [MockFunction],
               },
             },
             "ref": null,
@@ -1660,35 +1658,35 @@ ReactWrapper {
                         props={
                           Object {
                             "history": Object {
-                              "push": [MockFunction],
+                              "push": [MockFunction] {
+                                "calls": Array [
+                                  Array [
+                                    Object {
+                                      "search": "?page=1",
+                                    },
+                                  ],
+                                  Array [
+                                    Object {
+                                      "search": "?page=1",
+                                    },
+                                  ],
+                                ],
+                                "results": Array [
+                                  Object {
+                                    "isThrow": false,
+                                    "value": undefined,
+                                  },
+                                  Object {
+                                    "isThrow": false,
+                                    "value": undefined,
+                                  },
+                                ],
+                              },
                             },
                             "location": Object {
                               "search": "",
                             },
-                            "onPageChange": [MockFunction] {
-                              "calls": Array [
-                                Array [
-                                  Object {
-                                    "page": 1,
-                                  },
-                                ],
-                                Array [
-                                  Object {
-                                    "page": 1,
-                                  },
-                                ],
-                              ],
-                              "results": Array [
-                                Object {
-                                  "isThrow": false,
-                                  "value": undefined,
-                                },
-                                Object {
-                                  "isThrow": false,
-                                  "value": undefined,
-                                },
-                              ],
-                            },
+                            "onPageChange": [MockFunction],
                           }
                         }
                       />,
@@ -1710,35 +1708,35 @@ ReactWrapper {
                         props={
                           Object {
                             "history": Object {
-                              "push": [MockFunction],
+                              "push": [MockFunction] {
+                                "calls": Array [
+                                  Array [
+                                    Object {
+                                      "search": "?page=1",
+                                    },
+                                  ],
+                                  Array [
+                                    Object {
+                                      "search": "?page=1",
+                                    },
+                                  ],
+                                ],
+                                "results": Array [
+                                  Object {
+                                    "isThrow": false,
+                                    "value": undefined,
+                                  },
+                                  Object {
+                                    "isThrow": false,
+                                    "value": undefined,
+                                  },
+                                ],
+                              },
                             },
                             "location": Object {
                               "search": "",
                             },
-                            "onPageChange": [MockFunction] {
-                              "calls": Array [
-                                Array [
-                                  Object {
-                                    "page": 1,
-                                  },
-                                ],
-                                Array [
-                                  Object {
-                                    "page": 1,
-                                  },
-                                ],
-                              ],
-                              "results": Array [
-                                Object {
-                                  "isThrow": false,
-                                  "value": undefined,
-                                },
-                                Object {
-                                  "isThrow": false,
-                                  "value": undefined,
-                                },
-                              ],
-                            },
+                            "onPageChange": [MockFunction],
                           }
                         }
                       />,
@@ -1764,35 +1762,35 @@ ReactWrapper {
                   props={
                     Object {
                       "history": Object {
-                        "push": [MockFunction],
+                        "push": [MockFunction] {
+                          "calls": Array [
+                            Array [
+                              Object {
+                                "search": "?page=1",
+                              },
+                            ],
+                            Array [
+                              Object {
+                                "search": "?page=1",
+                              },
+                            ],
+                          ],
+                          "results": Array [
+                            Object {
+                              "isThrow": false,
+                              "value": undefined,
+                            },
+                            Object {
+                              "isThrow": false,
+                              "value": undefined,
+                            },
+                          ],
+                        },
                       },
                       "location": Object {
                         "search": "",
                       },
-                      "onPageChange": [MockFunction] {
-                        "calls": Array [
-                          Array [
-                            Object {
-                              "page": 1,
-                            },
-                          ],
-                          Array [
-                            Object {
-                              "page": 1,
-                            },
-                          ],
-                        ],
-                        "results": Array [
-                          Object {
-                            "isThrow": false,
-                            "value": undefined,
-                          },
-                          Object {
-                            "isThrow": false,
-                            "value": undefined,
-                          },
-                        ],
-                      },
+                      "onPageChange": [MockFunction],
                     }
                   }
                 />,
@@ -1841,35 +1839,35 @@ ReactWrapper {
                     props={
                       Object {
                         "history": Object {
-                          "push": [MockFunction],
+                          "push": [MockFunction] {
+                            "calls": Array [
+                              Array [
+                                Object {
+                                  "search": "?page=1",
+                                },
+                              ],
+                              Array [
+                                Object {
+                                  "search": "?page=1",
+                                },
+                              ],
+                            ],
+                            "results": Array [
+                              Object {
+                                "isThrow": false,
+                                "value": undefined,
+                              },
+                              Object {
+                                "isThrow": false,
+                                "value": undefined,
+                              },
+                            ],
+                          },
                         },
                         "location": Object {
                           "search": "",
                         },
-                        "onPageChange": [MockFunction] {
-                          "calls": Array [
-                            Array [
-                              Object {
-                                "page": 1,
-                              },
-                            ],
-                            Array [
-                              Object {
-                                "page": 1,
-                              },
-                            ],
-                          ],
-                          "results": Array [
-                            Object {
-                              "isThrow": false,
-                              "value": undefined,
-                            },
-                            Object {
-                              "isThrow": false,
-                              "value": undefined,
-                            },
-                          ],
-                        },
+                        "onPageChange": [MockFunction],
                       }
                     }
                   />,
@@ -1895,35 +1893,35 @@ ReactWrapper {
                 "context": null,
                 "props": Object {
                   "history": Object {
-                    "push": [MockFunction],
+                    "push": [MockFunction] {
+                      "calls": Array [
+                        Array [
+                          Object {
+                            "search": "?page=1",
+                          },
+                        ],
+                        Array [
+                          Object {
+                            "search": "?page=1",
+                          },
+                        ],
+                      ],
+                      "results": Array [
+                        Object {
+                          "isThrow": false,
+                          "value": undefined,
+                        },
+                        Object {
+                          "isThrow": false,
+                          "value": undefined,
+                        },
+                      ],
+                    },
                   },
                   "location": Object {
                     "search": "",
                   },
-                  "onPageChange": [MockFunction] {
-                    "calls": Array [
-                      Array [
-                        Object {
-                          "page": 1,
-                        },
-                      ],
-                      Array [
-                        Object {
-                          "page": 1,
-                        },
-                      ],
-                    ],
-                    "results": Array [
-                      Object {
-                        "isThrow": false,
-                        "value": undefined,
-                      },
-                      Object {
-                        "isThrow": false,
-                        "value": undefined,
-                      },
-                    ],
-                  },
+                  "onPageChange": [MockFunction],
                 },
               },
               "refs": Object {},
@@ -1932,35 +1930,35 @@ ReactWrapper {
                 "mount": true,
                 "props": Object {
                   "history": Object {
-                    "push": [MockFunction],
+                    "push": [MockFunction] {
+                      "calls": Array [
+                        Array [
+                          Object {
+                            "search": "?page=1",
+                          },
+                        ],
+                        Array [
+                          Object {
+                            "search": "?page=1",
+                          },
+                        ],
+                      ],
+                      "results": Array [
+                        Object {
+                          "isThrow": false,
+                          "value": undefined,
+                        },
+                        Object {
+                          "isThrow": false,
+                          "value": undefined,
+                        },
+                      ],
+                    },
                   },
                   "location": Object {
                     "search": "",
                   },
-                  "onPageChange": [MockFunction] {
-                    "calls": Array [
-                      Array [
-                        Object {
-                          "page": 1,
-                        },
-                      ],
-                      Array [
-                        Object {
-                          "page": 1,
-                        },
-                      ],
-                    ],
-                    "results": Array [
-                      Object {
-                        "isThrow": false,
-                        "value": undefined,
-                      },
-                      Object {
-                        "isThrow": false,
-                        "value": undefined,
-                      },
-                    ],
-                  },
+                  "onPageChange": [MockFunction],
                 },
               },
               "updater": Object {
@@ -2029,35 +2027,35 @@ ReactWrapper {
             "lastEffect": null,
             "memoizedProps": Object {
               "history": Object {
-                "push": [MockFunction],
+                "push": [MockFunction] {
+                  "calls": Array [
+                    Array [
+                      Object {
+                        "search": "?page=1",
+                      },
+                    ],
+                    Array [
+                      Object {
+                        "search": "?page=1",
+                      },
+                    ],
+                  ],
+                  "results": Array [
+                    Object {
+                      "isThrow": false,
+                      "value": undefined,
+                    },
+                    Object {
+                      "isThrow": false,
+                      "value": undefined,
+                    },
+                  ],
+                },
               },
               "location": Object {
                 "search": "",
               },
-              "onPageChange": [MockFunction] {
-                "calls": Array [
-                  Array [
-                    Object {
-                      "page": 1,
-                    },
-                  ],
-                  Array [
-                    Object {
-                      "page": 1,
-                    },
-                  ],
-                ],
-                "results": Array [
-                  Object {
-                    "isThrow": false,
-                    "value": undefined,
-                  },
-                  Object {
-                    "isThrow": false,
-                    "value": undefined,
-                  },
-                ],
-              },
+              "onPageChange": [MockFunction],
               "pagination": [Function],
             },
             "memoizedState": null,
@@ -2065,35 +2063,35 @@ ReactWrapper {
             "nextEffect": null,
             "pendingProps": Object {
               "history": Object {
-                "push": [MockFunction],
+                "push": [MockFunction] {
+                  "calls": Array [
+                    Array [
+                      Object {
+                        "search": "?page=1",
+                      },
+                    ],
+                    Array [
+                      Object {
+                        "search": "?page=1",
+                      },
+                    ],
+                  ],
+                  "results": Array [
+                    Object {
+                      "isThrow": false,
+                      "value": undefined,
+                    },
+                    Object {
+                      "isThrow": false,
+                      "value": undefined,
+                    },
+                  ],
+                },
               },
               "location": Object {
                 "search": "",
               },
-              "onPageChange": [MockFunction] {
-                "calls": Array [
-                  Array [
-                    Object {
-                      "page": 1,
-                    },
-                  ],
-                  Array [
-                    Object {
-                      "page": 1,
-                    },
-                  ],
-                ],
-                "results": Array [
-                  Object {
-                    "isThrow": false,
-                    "value": undefined,
-                  },
-                  Object {
-                    "isThrow": false,
-                    "value": undefined,
-                  },
-                ],
-              },
+              "onPageChange": [MockFunction],
               "pagination": [Function],
             },
             "ref": null,
@@ -2116,70 +2114,70 @@ ReactWrapper {
           "lastEffect": null,
           "memoizedProps": Object {
             "history": Object {
-              "push": [MockFunction],
+              "push": [MockFunction] {
+                "calls": Array [
+                  Array [
+                    Object {
+                      "search": "?page=1",
+                    },
+                  ],
+                  Array [
+                    Object {
+                      "search": "?page=1",
+                    },
+                  ],
+                ],
+                "results": Array [
+                  Object {
+                    "isThrow": false,
+                    "value": undefined,
+                  },
+                  Object {
+                    "isThrow": false,
+                    "value": undefined,
+                  },
+                ],
+              },
             },
             "location": Object {
               "search": "",
             },
-            "onPageChange": [MockFunction] {
-              "calls": Array [
-                Array [
-                  Object {
-                    "page": 1,
-                  },
-                ],
-                Array [
-                  Object {
-                    "page": 1,
-                  },
-                ],
-              ],
-              "results": Array [
-                Object {
-                  "isThrow": false,
-                  "value": undefined,
-                },
-                Object {
-                  "isThrow": false,
-                  "value": undefined,
-                },
-              ],
-            },
+            "onPageChange": [MockFunction],
           },
           "memoizedState": null,
           "mode": 0,
           "nextEffect": null,
           "pendingProps": Object {
             "history": Object {
-              "push": [MockFunction],
+              "push": [MockFunction] {
+                "calls": Array [
+                  Array [
+                    Object {
+                      "search": "?page=1",
+                    },
+                  ],
+                  Array [
+                    Object {
+                      "search": "?page=1",
+                    },
+                  ],
+                ],
+                "results": Array [
+                  Object {
+                    "isThrow": false,
+                    "value": undefined,
+                  },
+                  Object {
+                    "isThrow": false,
+                    "value": undefined,
+                  },
+                ],
+              },
             },
             "location": Object {
               "search": "",
             },
-            "onPageChange": [MockFunction] {
-              "calls": Array [
-                Array [
-                  Object {
-                    "page": 1,
-                  },
-                ],
-                Array [
-                  Object {
-                    "page": 1,
-                  },
-                ],
-              ],
-              "results": Array [
-                Object {
-                  "isThrow": false,
-                  "value": undefined,
-                },
-                Object {
-                  "isThrow": false,
-                  "value": undefined,
-                },
-              ],
-            },
+            "onPageChange": [MockFunction],
           },
           "ref": null,
           "return": FiberNode {
@@ -2204,35 +2202,35 @@ ReactWrapper {
               "context": null,
               "props": Object {
                 "history": Object {
-                  "push": [MockFunction],
+                  "push": [MockFunction] {
+                    "calls": Array [
+                      Array [
+                        Object {
+                          "search": "?page=1",
+                        },
+                      ],
+                      Array [
+                        Object {
+                          "search": "?page=1",
+                        },
+                      ],
+                    ],
+                    "results": Array [
+                      Object {
+                        "isThrow": false,
+                        "value": undefined,
+                      },
+                      Object {
+                        "isThrow": false,
+                        "value": undefined,
+                      },
+                    ],
+                  },
                 },
                 "location": Object {
                   "search": "",
                 },
-                "onPageChange": [MockFunction] {
-                  "calls": Array [
-                    Array [
-                      Object {
-                        "page": 1,
-                      },
-                    ],
-                    Array [
-                      Object {
-                        "page": 1,
-                      },
-                    ],
-                  ],
-                  "results": Array [
-                    Object {
-                      "isThrow": false,
-                      "value": undefined,
-                    },
-                    Object {
-                      "isThrow": false,
-                      "value": undefined,
-                    },
-                  ],
-                },
+                "onPageChange": [MockFunction],
               },
             },
             "memoizedState": Object {
@@ -2240,35 +2238,35 @@ ReactWrapper {
               "mount": true,
               "props": Object {
                 "history": Object {
-                  "push": [MockFunction],
+                  "push": [MockFunction] {
+                    "calls": Array [
+                      Array [
+                        Object {
+                          "search": "?page=1",
+                        },
+                      ],
+                      Array [
+                        Object {
+                          "search": "?page=1",
+                        },
+                      ],
+                    ],
+                    "results": Array [
+                      Object {
+                        "isThrow": false,
+                        "value": undefined,
+                      },
+                      Object {
+                        "isThrow": false,
+                        "value": undefined,
+                      },
+                    ],
+                  },
                 },
                 "location": Object {
                   "search": "",
                 },
-                "onPageChange": [MockFunction] {
-                  "calls": Array [
-                    Array [
-                      Object {
-                        "page": 1,
-                      },
-                    ],
-                    Array [
-                      Object {
-                        "page": 1,
-                      },
-                    ],
-                  ],
-                  "results": Array [
-                    Object {
-                      "isThrow": false,
-                      "value": undefined,
-                    },
-                    Object {
-                      "isThrow": false,
-                      "value": undefined,
-                    },
-                  ],
-                },
+                "onPageChange": [MockFunction],
               },
             },
             "mode": 0,
@@ -2278,35 +2276,35 @@ ReactWrapper {
               "context": null,
               "props": Object {
                 "history": Object {
-                  "push": [MockFunction],
+                  "push": [MockFunction] {
+                    "calls": Array [
+                      Array [
+                        Object {
+                          "search": "?page=1",
+                        },
+                      ],
+                      Array [
+                        Object {
+                          "search": "?page=1",
+                        },
+                      ],
+                    ],
+                    "results": Array [
+                      Object {
+                        "isThrow": false,
+                        "value": undefined,
+                      },
+                      Object {
+                        "isThrow": false,
+                        "value": undefined,
+                      },
+                    ],
+                  },
                 },
                 "location": Object {
                   "search": "",
                 },
-                "onPageChange": [MockFunction] {
-                  "calls": Array [
-                    Array [
-                      Object {
-                        "page": 1,
-                      },
-                    ],
-                    Array [
-                      Object {
-                        "page": 1,
-                      },
-                    ],
-                  ],
-                  "results": Array [
-                    Object {
-                      "isThrow": false,
-                      "value": undefined,
-                    },
-                    Object {
-                      "isThrow": false,
-                      "value": undefined,
-                    },
-                  ],
-                },
+                "onPageChange": [MockFunction],
               },
             },
             "ref": null,
@@ -2389,35 +2387,35 @@ ReactWrapper {
                         props={
                           Object {
                             "history": Object {
-                              "push": [MockFunction],
+                              "push": [MockFunction] {
+                                "calls": Array [
+                                  Array [
+                                    Object {
+                                      "search": "?page=1",
+                                    },
+                                  ],
+                                  Array [
+                                    Object {
+                                      "search": "?page=1",
+                                    },
+                                  ],
+                                ],
+                                "results": Array [
+                                  Object {
+                                    "isThrow": false,
+                                    "value": undefined,
+                                  },
+                                  Object {
+                                    "isThrow": false,
+                                    "value": undefined,
+                                  },
+                                ],
+                              },
                             },
                             "location": Object {
                               "search": "",
                             },
-                            "onPageChange": [MockFunction] {
-                              "calls": Array [
-                                Array [
-                                  Object {
-                                    "page": 1,
-                                  },
-                                ],
-                                Array [
-                                  Object {
-                                    "page": 1,
-                                  },
-                                ],
-                              ],
-                              "results": Array [
-                                Object {
-                                  "isThrow": false,
-                                  "value": undefined,
-                                },
-                                Object {
-                                  "isThrow": false,
-                                  "value": undefined,
-                                },
-                              ],
-                            },
+                            "onPageChange": [MockFunction],
                           }
                         }
                       />,
@@ -2439,35 +2437,35 @@ ReactWrapper {
                         props={
                           Object {
                             "history": Object {
-                              "push": [MockFunction],
+                              "push": [MockFunction] {
+                                "calls": Array [
+                                  Array [
+                                    Object {
+                                      "search": "?page=1",
+                                    },
+                                  ],
+                                  Array [
+                                    Object {
+                                      "search": "?page=1",
+                                    },
+                                  ],
+                                ],
+                                "results": Array [
+                                  Object {
+                                    "isThrow": false,
+                                    "value": undefined,
+                                  },
+                                  Object {
+                                    "isThrow": false,
+                                    "value": undefined,
+                                  },
+                                ],
+                              },
                             },
                             "location": Object {
                               "search": "",
                             },
-                            "onPageChange": [MockFunction] {
-                              "calls": Array [
-                                Array [
-                                  Object {
-                                    "page": 1,
-                                  },
-                                ],
-                                Array [
-                                  Object {
-                                    "page": 1,
-                                  },
-                                ],
-                              ],
-                              "results": Array [
-                                Object {
-                                  "isThrow": false,
-                                  "value": undefined,
-                                },
-                                Object {
-                                  "isThrow": false,
-                                  "value": undefined,
-                                },
-                              ],
-                            },
+                            "onPageChange": [MockFunction],
                           }
                         }
                       />,
@@ -2493,35 +2491,35 @@ ReactWrapper {
                   props={
                     Object {
                       "history": Object {
-                        "push": [MockFunction],
+                        "push": [MockFunction] {
+                          "calls": Array [
+                            Array [
+                              Object {
+                                "search": "?page=1",
+                              },
+                            ],
+                            Array [
+                              Object {
+                                "search": "?page=1",
+                              },
+                            ],
+                          ],
+                          "results": Array [
+                            Object {
+                              "isThrow": false,
+                              "value": undefined,
+                            },
+                            Object {
+                              "isThrow": false,
+                              "value": undefined,
+                            },
+                          ],
+                        },
                       },
                       "location": Object {
                         "search": "",
                       },
-                      "onPageChange": [MockFunction] {
-                        "calls": Array [
-                          Array [
-                            Object {
-                              "page": 1,
-                            },
-                          ],
-                          Array [
-                            Object {
-                              "page": 1,
-                            },
-                          ],
-                        ],
-                        "results": Array [
-                          Object {
-                            "isThrow": false,
-                            "value": undefined,
-                          },
-                          Object {
-                            "isThrow": false,
-                            "value": undefined,
-                          },
-                        ],
-                      },
+                      "onPageChange": [MockFunction],
                     }
                   }
                 />,
@@ -2570,35 +2568,35 @@ ReactWrapper {
                     props={
                       Object {
                         "history": Object {
-                          "push": [MockFunction],
+                          "push": [MockFunction] {
+                            "calls": Array [
+                              Array [
+                                Object {
+                                  "search": "?page=1",
+                                },
+                              ],
+                              Array [
+                                Object {
+                                  "search": "?page=1",
+                                },
+                              ],
+                            ],
+                            "results": Array [
+                              Object {
+                                "isThrow": false,
+                                "value": undefined,
+                              },
+                              Object {
+                                "isThrow": false,
+                                "value": undefined,
+                              },
+                            ],
+                          },
                         },
                         "location": Object {
                           "search": "",
                         },
-                        "onPageChange": [MockFunction] {
-                          "calls": Array [
-                            Array [
-                              Object {
-                                "page": 1,
-                              },
-                            ],
-                            Array [
-                              Object {
-                                "page": 1,
-                              },
-                            ],
-                          ],
-                          "results": Array [
-                            Object {
-                              "isThrow": false,
-                              "value": undefined,
-                            },
-                            Object {
-                              "isThrow": false,
-                              "value": undefined,
-                            },
-                          ],
-                        },
+                        "onPageChange": [MockFunction],
                       }
                     }
                   />,
@@ -2624,35 +2622,35 @@ ReactWrapper {
                 "context": null,
                 "props": Object {
                   "history": Object {
-                    "push": [MockFunction],
+                    "push": [MockFunction] {
+                      "calls": Array [
+                        Array [
+                          Object {
+                            "search": "?page=1",
+                          },
+                        ],
+                        Array [
+                          Object {
+                            "search": "?page=1",
+                          },
+                        ],
+                      ],
+                      "results": Array [
+                        Object {
+                          "isThrow": false,
+                          "value": undefined,
+                        },
+                        Object {
+                          "isThrow": false,
+                          "value": undefined,
+                        },
+                      ],
+                    },
                   },
                   "location": Object {
                     "search": "",
                   },
-                  "onPageChange": [MockFunction] {
-                    "calls": Array [
-                      Array [
-                        Object {
-                          "page": 1,
-                        },
-                      ],
-                      Array [
-                        Object {
-                          "page": 1,
-                        },
-                      ],
-                    ],
-                    "results": Array [
-                      Object {
-                        "isThrow": false,
-                        "value": undefined,
-                      },
-                      Object {
-                        "isThrow": false,
-                        "value": undefined,
-                      },
-                    ],
-                  },
+                  "onPageChange": [MockFunction],
                 },
               },
               "refs": Object {},
@@ -2661,35 +2659,35 @@ ReactWrapper {
                 "mount": true,
                 "props": Object {
                   "history": Object {
-                    "push": [MockFunction],
+                    "push": [MockFunction] {
+                      "calls": Array [
+                        Array [
+                          Object {
+                            "search": "?page=1",
+                          },
+                        ],
+                        Array [
+                          Object {
+                            "search": "?page=1",
+                          },
+                        ],
+                      ],
+                      "results": Array [
+                        Object {
+                          "isThrow": false,
+                          "value": undefined,
+                        },
+                        Object {
+                          "isThrow": false,
+                          "value": undefined,
+                        },
+                      ],
+                    },
                   },
                   "location": Object {
                     "search": "",
                   },
-                  "onPageChange": [MockFunction] {
-                    "calls": Array [
-                      Array [
-                        Object {
-                          "page": 1,
-                        },
-                      ],
-                      Array [
-                        Object {
-                          "page": 1,
-                        },
-                      ],
-                    ],
-                    "results": Array [
-                      Object {
-                        "isThrow": false,
-                        "value": undefined,
-                      },
-                      Object {
-                        "isThrow": false,
-                        "value": undefined,
-                      },
-                    ],
-                  },
+                  "onPageChange": [MockFunction],
                 },
               },
               "updater": Object {
@@ -2717,35 +2715,35 @@ ReactWrapper {
         "parseQueryParamsToObject": [Function],
         "props": Object {
           "history": Object {
-            "push": [MockFunction],
+            "push": [MockFunction] {
+              "calls": Array [
+                Array [
+                  Object {
+                    "search": "?page=1",
+                  },
+                ],
+                Array [
+                  Object {
+                    "search": "?page=1",
+                  },
+                ],
+              ],
+              "results": Array [
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+              ],
+            },
           },
           "location": Object {
             "search": "",
           },
-          "onPageChange": [MockFunction] {
-            "calls": Array [
-              Array [
-                Object {
-                  "page": 1,
-                },
-              ],
-              Array [
-                Object {
-                  "page": 1,
-                },
-              ],
-            ],
-            "results": Array [
-              Object {
-                "isThrow": false,
-                "value": undefined,
-              },
-              Object {
-                "isThrow": false,
-                "value": undefined,
-              },
-            ],
-          },
+          "onPageChange": [MockFunction],
         },
         "refs": Object {},
         "setDefaultPageParam": [Function],
@@ -2762,58 +2760,16 @@ ReactWrapper {
       "nodeType": "class",
       "props": Object {
         "history": Object {
-          "push": [MockFunction],
-        },
-        "location": Object {
-          "search": "",
-        },
-        "onPageChange": [MockFunction] {
-          "calls": Array [
-            Array [
-              Object {
-                "page": 1,
-              },
-            ],
-            Array [
-              Object {
-                "page": 1,
-              },
-            ],
-          ],
-          "results": Array [
-            Object {
-              "isThrow": false,
-              "value": undefined,
-            },
-            Object {
-              "isThrow": false,
-              "value": undefined,
-            },
-          ],
-        },
-      },
-      "ref": null,
-      "rendered": Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "function",
-        "props": Object {
-          "history": Object {
-            "push": [MockFunction],
-          },
-          "location": Object {
-            "search": "",
-          },
-          "onPageChange": [MockFunction] {
+          "push": [MockFunction] {
             "calls": Array [
               Array [
                 Object {
-                  "page": 1,
+                  "search": "?page=1",
                 },
               ],
               Array [
                 Object {
-                  "page": 1,
+                  "search": "?page=1",
                 },
               ],
             ],
@@ -2828,6 +2784,48 @@ ReactWrapper {
               },
             ],
           },
+        },
+        "location": Object {
+          "search": "",
+        },
+        "onPageChange": [MockFunction],
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "history": Object {
+            "push": [MockFunction] {
+              "calls": Array [
+                Array [
+                  Object {
+                    "search": "?page=1",
+                  },
+                ],
+                Array [
+                  Object {
+                    "search": "?page=1",
+                  },
+                ],
+              ],
+              "results": Array [
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+              ],
+            },
+          },
+          "location": Object {
+            "search": "",
+          },
+          "onPageChange": [MockFunction],
           "pagination": [Function],
         },
         "ref": null,
@@ -2874,7 +2872,21 @@ ReactWrapper {
   Symbol(enzyme.__unrendered__): <_class2
     history={
       Object {
-        "push": [MockFunction],
+        "push": [MockFunction] {
+          "calls": Array [
+            Array [
+              Object {
+                "search": "?page=1",
+              },
+            ],
+          ],
+          "results": Array [
+            Object {
+              "isThrow": false,
+              "value": undefined,
+            },
+          ],
+        },
       }
     }
     location={
@@ -2882,23 +2894,7 @@ ReactWrapper {
         "search": "",
       }
     }
-    onPageChange={
-      [MockFunction] {
-        "calls": Array [
-          Array [
-            Object {
-              "page": 1,
-            },
-          ],
-        ],
-        "results": Array [
-          Object {
-            "isThrow": false,
-            "value": undefined,
-          },
-        ],
-      }
-    }
+    onPageChange={[MockFunction]}
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -2936,26 +2932,26 @@ ReactWrapper {
             "context": null,
             "props": Object {
               "history": Object {
-                "push": [MockFunction],
+                "push": [MockFunction] {
+                  "calls": Array [
+                    Array [
+                      Object {
+                        "search": "?page=1",
+                      },
+                    ],
+                  ],
+                  "results": Array [
+                    Object {
+                      "isThrow": false,
+                      "value": undefined,
+                    },
+                  ],
+                },
               },
               "location": Object {
                 "search": "",
               },
-              "onPageChange": [MockFunction] {
-                "calls": Array [
-                  Array [
-                    Object {
-                      "page": 1,
-                    },
-                  ],
-                ],
-                "results": Array [
-                  Object {
-                    "isThrow": false,
-                    "value": undefined,
-                  },
-                ],
-              },
+              "onPageChange": [MockFunction],
             },
           },
           "memoizedState": Object {
@@ -2963,26 +2959,26 @@ ReactWrapper {
             "mount": true,
             "props": Object {
               "history": Object {
-                "push": [MockFunction],
+                "push": [MockFunction] {
+                  "calls": Array [
+                    Array [
+                      Object {
+                        "search": "?page=1",
+                      },
+                    ],
+                  ],
+                  "results": Array [
+                    Object {
+                      "isThrow": false,
+                      "value": undefined,
+                    },
+                  ],
+                },
               },
               "location": Object {
                 "search": "",
               },
-              "onPageChange": [MockFunction] {
-                "calls": Array [
-                  Array [
-                    Object {
-                      "page": 1,
-                    },
-                  ],
-                ],
-                "results": Array [
-                  Object {
-                    "isThrow": false,
-                    "value": undefined,
-                  },
-                ],
-              },
+              "onPageChange": [MockFunction],
             },
           },
           "mode": 0,
@@ -2992,26 +2988,26 @@ ReactWrapper {
             "context": null,
             "props": Object {
               "history": Object {
-                "push": [MockFunction],
+                "push": [MockFunction] {
+                  "calls": Array [
+                    Array [
+                      Object {
+                        "search": "?page=1",
+                      },
+                    ],
+                  ],
+                  "results": Array [
+                    Object {
+                      "isThrow": false,
+                      "value": undefined,
+                    },
+                  ],
+                },
               },
               "location": Object {
                 "search": "",
               },
-              "onPageChange": [MockFunction] {
-                "calls": Array [
-                  Array [
-                    Object {
-                      "page": 1,
-                    },
-                  ],
-                ],
-                "results": Array [
-                  Object {
-                    "isThrow": false,
-                    "value": undefined,
-                  },
-                ],
-              },
+              "onPageChange": [MockFunction],
             },
           },
           "ref": null,
@@ -3094,26 +3090,26 @@ ReactWrapper {
                       props={
                         Object {
                           "history": Object {
-                            "push": [MockFunction],
+                            "push": [MockFunction] {
+                              "calls": Array [
+                                Array [
+                                  Object {
+                                    "search": "?page=1",
+                                  },
+                                ],
+                              ],
+                              "results": Array [
+                                Object {
+                                  "isThrow": false,
+                                  "value": undefined,
+                                },
+                              ],
+                            },
                           },
                           "location": Object {
                             "search": "",
                           },
-                          "onPageChange": [MockFunction] {
-                            "calls": Array [
-                              Array [
-                                Object {
-                                  "page": 1,
-                                },
-                              ],
-                            ],
-                            "results": Array [
-                              Object {
-                                "isThrow": false,
-                                "value": undefined,
-                              },
-                            ],
-                          },
+                          "onPageChange": [MockFunction],
                         }
                       }
                     />,
@@ -3135,26 +3131,26 @@ ReactWrapper {
                       props={
                         Object {
                           "history": Object {
-                            "push": [MockFunction],
+                            "push": [MockFunction] {
+                              "calls": Array [
+                                Array [
+                                  Object {
+                                    "search": "?page=1",
+                                  },
+                                ],
+                              ],
+                              "results": Array [
+                                Object {
+                                  "isThrow": false,
+                                  "value": undefined,
+                                },
+                              ],
+                            },
                           },
                           "location": Object {
                             "search": "",
                           },
-                          "onPageChange": [MockFunction] {
-                            "calls": Array [
-                              Array [
-                                Object {
-                                  "page": 1,
-                                },
-                              ],
-                            ],
-                            "results": Array [
-                              Object {
-                                "isThrow": false,
-                                "value": undefined,
-                              },
-                            ],
-                          },
+                          "onPageChange": [MockFunction],
                         }
                       }
                     />,
@@ -3180,26 +3176,26 @@ ReactWrapper {
                 props={
                   Object {
                     "history": Object {
-                      "push": [MockFunction],
+                      "push": [MockFunction] {
+                        "calls": Array [
+                          Array [
+                            Object {
+                              "search": "?page=1",
+                            },
+                          ],
+                        ],
+                        "results": Array [
+                          Object {
+                            "isThrow": false,
+                            "value": undefined,
+                          },
+                        ],
+                      },
                     },
                     "location": Object {
                       "search": "",
                     },
-                    "onPageChange": [MockFunction] {
-                      "calls": Array [
-                        Array [
-                          Object {
-                            "page": 1,
-                          },
-                        ],
-                      ],
-                      "results": Array [
-                        Object {
-                          "isThrow": false,
-                          "value": undefined,
-                        },
-                      ],
-                    },
+                    "onPageChange": [MockFunction],
                   }
                 }
               />,
@@ -3248,26 +3244,26 @@ ReactWrapper {
                   props={
                     Object {
                       "history": Object {
-                        "push": [MockFunction],
+                        "push": [MockFunction] {
+                          "calls": Array [
+                            Array [
+                              Object {
+                                "search": "?page=1",
+                              },
+                            ],
+                          ],
+                          "results": Array [
+                            Object {
+                              "isThrow": false,
+                              "value": undefined,
+                            },
+                          ],
+                        },
                       },
                       "location": Object {
                         "search": "",
                       },
-                      "onPageChange": [MockFunction] {
-                        "calls": Array [
-                          Array [
-                            Object {
-                              "page": 1,
-                            },
-                          ],
-                        ],
-                        "results": Array [
-                          Object {
-                            "isThrow": false,
-                            "value": undefined,
-                          },
-                        ],
-                      },
+                      "onPageChange": [MockFunction],
                     }
                   }
                 />,
@@ -3293,26 +3289,26 @@ ReactWrapper {
               "context": null,
               "props": Object {
                 "history": Object {
-                  "push": [MockFunction],
+                  "push": [MockFunction] {
+                    "calls": Array [
+                      Array [
+                        Object {
+                          "search": "?page=1",
+                        },
+                      ],
+                    ],
+                    "results": Array [
+                      Object {
+                        "isThrow": false,
+                        "value": undefined,
+                      },
+                    ],
+                  },
                 },
                 "location": Object {
                   "search": "",
                 },
-                "onPageChange": [MockFunction] {
-                  "calls": Array [
-                    Array [
-                      Object {
-                        "page": 1,
-                      },
-                    ],
-                  ],
-                  "results": Array [
-                    Object {
-                      "isThrow": false,
-                      "value": undefined,
-                    },
-                  ],
-                },
+                "onPageChange": [MockFunction],
               },
             },
             "refs": Object {},
@@ -3321,26 +3317,26 @@ ReactWrapper {
               "mount": true,
               "props": Object {
                 "history": Object {
-                  "push": [MockFunction],
+                  "push": [MockFunction] {
+                    "calls": Array [
+                      Array [
+                        Object {
+                          "search": "?page=1",
+                        },
+                      ],
+                    ],
+                    "results": Array [
+                      Object {
+                        "isThrow": false,
+                        "value": undefined,
+                      },
+                    ],
+                  },
                 },
                 "location": Object {
                   "search": "",
                 },
-                "onPageChange": [MockFunction] {
-                  "calls": Array [
-                    Array [
-                      Object {
-                        "page": 1,
-                      },
-                    ],
-                  ],
-                  "results": Array [
-                    Object {
-                      "isThrow": false,
-                      "value": undefined,
-                    },
-                  ],
-                },
+                "onPageChange": [MockFunction],
               },
             },
             "updater": Object {
@@ -3409,26 +3405,26 @@ ReactWrapper {
           "lastEffect": null,
           "memoizedProps": Object {
             "history": Object {
-              "push": [MockFunction],
+              "push": [MockFunction] {
+                "calls": Array [
+                  Array [
+                    Object {
+                      "search": "?page=1",
+                    },
+                  ],
+                ],
+                "results": Array [
+                  Object {
+                    "isThrow": false,
+                    "value": undefined,
+                  },
+                ],
+              },
             },
             "location": Object {
               "search": "",
             },
-            "onPageChange": [MockFunction] {
-              "calls": Array [
-                Array [
-                  Object {
-                    "page": 1,
-                  },
-                ],
-              ],
-              "results": Array [
-                Object {
-                  "isThrow": false,
-                  "value": undefined,
-                },
-              ],
-            },
+            "onPageChange": [MockFunction],
             "pagination": [Function],
           },
           "memoizedState": null,
@@ -3436,26 +3432,26 @@ ReactWrapper {
           "nextEffect": null,
           "pendingProps": Object {
             "history": Object {
-              "push": [MockFunction],
+              "push": [MockFunction] {
+                "calls": Array [
+                  Array [
+                    Object {
+                      "search": "?page=1",
+                    },
+                  ],
+                ],
+                "results": Array [
+                  Object {
+                    "isThrow": false,
+                    "value": undefined,
+                  },
+                ],
+              },
             },
             "location": Object {
               "search": "",
             },
-            "onPageChange": [MockFunction] {
-              "calls": Array [
-                Array [
-                  Object {
-                    "page": 1,
-                  },
-                ],
-              ],
-              "results": Array [
-                Object {
-                  "isThrow": false,
-                  "value": undefined,
-                },
-              ],
-            },
+            "onPageChange": [MockFunction],
             "pagination": [Function],
           },
           "ref": null,
@@ -3478,52 +3474,52 @@ ReactWrapper {
         "lastEffect": null,
         "memoizedProps": Object {
           "history": Object {
-            "push": [MockFunction],
+            "push": [MockFunction] {
+              "calls": Array [
+                Array [
+                  Object {
+                    "search": "?page=1",
+                  },
+                ],
+              ],
+              "results": Array [
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+              ],
+            },
           },
           "location": Object {
             "search": "",
           },
-          "onPageChange": [MockFunction] {
-            "calls": Array [
-              Array [
-                Object {
-                  "page": 1,
-                },
-              ],
-            ],
-            "results": Array [
-              Object {
-                "isThrow": false,
-                "value": undefined,
-              },
-            ],
-          },
+          "onPageChange": [MockFunction],
         },
         "memoizedState": null,
         "mode": 0,
         "nextEffect": null,
         "pendingProps": Object {
           "history": Object {
-            "push": [MockFunction],
+            "push": [MockFunction] {
+              "calls": Array [
+                Array [
+                  Object {
+                    "search": "?page=1",
+                  },
+                ],
+              ],
+              "results": Array [
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+              ],
+            },
           },
           "location": Object {
             "search": "",
           },
-          "onPageChange": [MockFunction] {
-            "calls": Array [
-              Array [
-                Object {
-                  "page": 1,
-                },
-              ],
-            ],
-            "results": Array [
-              Object {
-                "isThrow": false,
-                "value": undefined,
-              },
-            ],
-          },
+          "onPageChange": [MockFunction],
         },
         "ref": null,
         "return": FiberNode {
@@ -3548,26 +3544,26 @@ ReactWrapper {
             "context": null,
             "props": Object {
               "history": Object {
-                "push": [MockFunction],
+                "push": [MockFunction] {
+                  "calls": Array [
+                    Array [
+                      Object {
+                        "search": "?page=1",
+                      },
+                    ],
+                  ],
+                  "results": Array [
+                    Object {
+                      "isThrow": false,
+                      "value": undefined,
+                    },
+                  ],
+                },
               },
               "location": Object {
                 "search": "",
               },
-              "onPageChange": [MockFunction] {
-                "calls": Array [
-                  Array [
-                    Object {
-                      "page": 1,
-                    },
-                  ],
-                ],
-                "results": Array [
-                  Object {
-                    "isThrow": false,
-                    "value": undefined,
-                  },
-                ],
-              },
+              "onPageChange": [MockFunction],
             },
           },
           "memoizedState": Object {
@@ -3575,26 +3571,26 @@ ReactWrapper {
             "mount": true,
             "props": Object {
               "history": Object {
-                "push": [MockFunction],
+                "push": [MockFunction] {
+                  "calls": Array [
+                    Array [
+                      Object {
+                        "search": "?page=1",
+                      },
+                    ],
+                  ],
+                  "results": Array [
+                    Object {
+                      "isThrow": false,
+                      "value": undefined,
+                    },
+                  ],
+                },
               },
               "location": Object {
                 "search": "",
               },
-              "onPageChange": [MockFunction] {
-                "calls": Array [
-                  Array [
-                    Object {
-                      "page": 1,
-                    },
-                  ],
-                ],
-                "results": Array [
-                  Object {
-                    "isThrow": false,
-                    "value": undefined,
-                  },
-                ],
-              },
+              "onPageChange": [MockFunction],
             },
           },
           "mode": 0,
@@ -3604,26 +3600,26 @@ ReactWrapper {
             "context": null,
             "props": Object {
               "history": Object {
-                "push": [MockFunction],
+                "push": [MockFunction] {
+                  "calls": Array [
+                    Array [
+                      Object {
+                        "search": "?page=1",
+                      },
+                    ],
+                  ],
+                  "results": Array [
+                    Object {
+                      "isThrow": false,
+                      "value": undefined,
+                    },
+                  ],
+                },
               },
               "location": Object {
                 "search": "",
               },
-              "onPageChange": [MockFunction] {
-                "calls": Array [
-                  Array [
-                    Object {
-                      "page": 1,
-                    },
-                  ],
-                ],
-                "results": Array [
-                  Object {
-                    "isThrow": false,
-                    "value": undefined,
-                  },
-                ],
-              },
+              "onPageChange": [MockFunction],
             },
           },
           "ref": null,
@@ -3706,26 +3702,26 @@ ReactWrapper {
                       props={
                         Object {
                           "history": Object {
-                            "push": [MockFunction],
+                            "push": [MockFunction] {
+                              "calls": Array [
+                                Array [
+                                  Object {
+                                    "search": "?page=1",
+                                  },
+                                ],
+                              ],
+                              "results": Array [
+                                Object {
+                                  "isThrow": false,
+                                  "value": undefined,
+                                },
+                              ],
+                            },
                           },
                           "location": Object {
                             "search": "",
                           },
-                          "onPageChange": [MockFunction] {
-                            "calls": Array [
-                              Array [
-                                Object {
-                                  "page": 1,
-                                },
-                              ],
-                            ],
-                            "results": Array [
-                              Object {
-                                "isThrow": false,
-                                "value": undefined,
-                              },
-                            ],
-                          },
+                          "onPageChange": [MockFunction],
                         }
                       }
                     />,
@@ -3747,26 +3743,26 @@ ReactWrapper {
                       props={
                         Object {
                           "history": Object {
-                            "push": [MockFunction],
+                            "push": [MockFunction] {
+                              "calls": Array [
+                                Array [
+                                  Object {
+                                    "search": "?page=1",
+                                  },
+                                ],
+                              ],
+                              "results": Array [
+                                Object {
+                                  "isThrow": false,
+                                  "value": undefined,
+                                },
+                              ],
+                            },
                           },
                           "location": Object {
                             "search": "",
                           },
-                          "onPageChange": [MockFunction] {
-                            "calls": Array [
-                              Array [
-                                Object {
-                                  "page": 1,
-                                },
-                              ],
-                            ],
-                            "results": Array [
-                              Object {
-                                "isThrow": false,
-                                "value": undefined,
-                              },
-                            ],
-                          },
+                          "onPageChange": [MockFunction],
                         }
                       }
                     />,
@@ -3792,26 +3788,26 @@ ReactWrapper {
                 props={
                   Object {
                     "history": Object {
-                      "push": [MockFunction],
+                      "push": [MockFunction] {
+                        "calls": Array [
+                          Array [
+                            Object {
+                              "search": "?page=1",
+                            },
+                          ],
+                        ],
+                        "results": Array [
+                          Object {
+                            "isThrow": false,
+                            "value": undefined,
+                          },
+                        ],
+                      },
                     },
                     "location": Object {
                       "search": "",
                     },
-                    "onPageChange": [MockFunction] {
-                      "calls": Array [
-                        Array [
-                          Object {
-                            "page": 1,
-                          },
-                        ],
-                      ],
-                      "results": Array [
-                        Object {
-                          "isThrow": false,
-                          "value": undefined,
-                        },
-                      ],
-                    },
+                    "onPageChange": [MockFunction],
                   }
                 }
               />,
@@ -3860,26 +3856,26 @@ ReactWrapper {
                   props={
                     Object {
                       "history": Object {
-                        "push": [MockFunction],
+                        "push": [MockFunction] {
+                          "calls": Array [
+                            Array [
+                              Object {
+                                "search": "?page=1",
+                              },
+                            ],
+                          ],
+                          "results": Array [
+                            Object {
+                              "isThrow": false,
+                              "value": undefined,
+                            },
+                          ],
+                        },
                       },
                       "location": Object {
                         "search": "",
                       },
-                      "onPageChange": [MockFunction] {
-                        "calls": Array [
-                          Array [
-                            Object {
-                              "page": 1,
-                            },
-                          ],
-                        ],
-                        "results": Array [
-                          Object {
-                            "isThrow": false,
-                            "value": undefined,
-                          },
-                        ],
-                      },
+                      "onPageChange": [MockFunction],
                     }
                   }
                 />,
@@ -3905,26 +3901,26 @@ ReactWrapper {
               "context": null,
               "props": Object {
                 "history": Object {
-                  "push": [MockFunction],
+                  "push": [MockFunction] {
+                    "calls": Array [
+                      Array [
+                        Object {
+                          "search": "?page=1",
+                        },
+                      ],
+                    ],
+                    "results": Array [
+                      Object {
+                        "isThrow": false,
+                        "value": undefined,
+                      },
+                    ],
+                  },
                 },
                 "location": Object {
                   "search": "",
                 },
-                "onPageChange": [MockFunction] {
-                  "calls": Array [
-                    Array [
-                      Object {
-                        "page": 1,
-                      },
-                    ],
-                  ],
-                  "results": Array [
-                    Object {
-                      "isThrow": false,
-                      "value": undefined,
-                    },
-                  ],
-                },
+                "onPageChange": [MockFunction],
               },
             },
             "refs": Object {},
@@ -3933,26 +3929,26 @@ ReactWrapper {
               "mount": true,
               "props": Object {
                 "history": Object {
-                  "push": [MockFunction],
+                  "push": [MockFunction] {
+                    "calls": Array [
+                      Array [
+                        Object {
+                          "search": "?page=1",
+                        },
+                      ],
+                    ],
+                    "results": Array [
+                      Object {
+                        "isThrow": false,
+                        "value": undefined,
+                      },
+                    ],
+                  },
                 },
                 "location": Object {
                   "search": "",
                 },
-                "onPageChange": [MockFunction] {
-                  "calls": Array [
-                    Array [
-                      Object {
-                        "page": 1,
-                      },
-                    ],
-                  ],
-                  "results": Array [
-                    Object {
-                      "isThrow": false,
-                      "value": undefined,
-                    },
-                  ],
-                },
+                "onPageChange": [MockFunction],
               },
             },
             "updater": Object {
@@ -3980,26 +3976,26 @@ ReactWrapper {
       "parseQueryParamsToObject": [Function],
       "props": Object {
         "history": Object {
-          "push": [MockFunction],
+          "push": [MockFunction] {
+            "calls": Array [
+              Array [
+                Object {
+                  "search": "?page=1",
+                },
+              ],
+            ],
+            "results": Array [
+              Object {
+                "isThrow": false,
+                "value": undefined,
+              },
+            ],
+          },
         },
         "location": Object {
           "search": "",
         },
-        "onPageChange": [MockFunction] {
-          "calls": Array [
-            Array [
-              Object {
-                "page": 1,
-              },
-            ],
-          ],
-          "results": Array [
-            Object {
-              "isThrow": false,
-              "value": undefined,
-            },
-          ],
-        },
+        "onPageChange": [MockFunction],
       },
       "refs": Object {},
       "setDefaultPageParam": [Function],
@@ -4016,44 +4012,11 @@ ReactWrapper {
     "nodeType": "class",
     "props": Object {
       "history": Object {
-        "push": [MockFunction],
-      },
-      "location": Object {
-        "search": "",
-      },
-      "onPageChange": [MockFunction] {
-        "calls": Array [
-          Array [
-            Object {
-              "page": 1,
-            },
-          ],
-        ],
-        "results": Array [
-          Object {
-            "isThrow": false,
-            "value": undefined,
-          },
-        ],
-      },
-    },
-    "ref": null,
-    "rendered": Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "function",
-      "props": Object {
-        "history": Object {
-          "push": [MockFunction],
-        },
-        "location": Object {
-          "search": "",
-        },
-        "onPageChange": [MockFunction] {
+        "push": [MockFunction] {
           "calls": Array [
             Array [
               Object {
-                "page": 1,
+                "search": "?page=1",
               },
             ],
           ],
@@ -4064,6 +4027,39 @@ ReactWrapper {
             },
           ],
         },
+      },
+      "location": Object {
+        "search": "",
+      },
+      "onPageChange": [MockFunction],
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "history": Object {
+          "push": [MockFunction] {
+            "calls": Array [
+              Array [
+                Object {
+                  "search": "?page=1",
+                },
+              ],
+            ],
+            "results": Array [
+              Object {
+                "isThrow": false,
+                "value": undefined,
+              },
+            ],
+          },
+        },
+        "location": Object {
+          "search": "",
+        },
+        "onPageChange": [MockFunction],
         "pagination": [Function],
       },
       "ref": null,
@@ -4110,26 +4106,26 @@ ReactWrapper {
               "context": null,
               "props": Object {
                 "history": Object {
-                  "push": [MockFunction],
+                  "push": [MockFunction] {
+                    "calls": Array [
+                      Array [
+                        Object {
+                          "search": "?page=1",
+                        },
+                      ],
+                    ],
+                    "results": Array [
+                      Object {
+                        "isThrow": false,
+                        "value": undefined,
+                      },
+                    ],
+                  },
                 },
                 "location": Object {
                   "search": "",
                 },
-                "onPageChange": [MockFunction] {
-                  "calls": Array [
-                    Array [
-                      Object {
-                        "page": 1,
-                      },
-                    ],
-                  ],
-                  "results": Array [
-                    Object {
-                      "isThrow": false,
-                      "value": undefined,
-                    },
-                  ],
-                },
+                "onPageChange": [MockFunction],
               },
             },
             "memoizedState": Object {
@@ -4137,26 +4133,26 @@ ReactWrapper {
               "mount": true,
               "props": Object {
                 "history": Object {
-                  "push": [MockFunction],
+                  "push": [MockFunction] {
+                    "calls": Array [
+                      Array [
+                        Object {
+                          "search": "?page=1",
+                        },
+                      ],
+                    ],
+                    "results": Array [
+                      Object {
+                        "isThrow": false,
+                        "value": undefined,
+                      },
+                    ],
+                  },
                 },
                 "location": Object {
                   "search": "",
                 },
-                "onPageChange": [MockFunction] {
-                  "calls": Array [
-                    Array [
-                      Object {
-                        "page": 1,
-                      },
-                    ],
-                  ],
-                  "results": Array [
-                    Object {
-                      "isThrow": false,
-                      "value": undefined,
-                    },
-                  ],
-                },
+                "onPageChange": [MockFunction],
               },
             },
             "mode": 0,
@@ -4166,26 +4162,26 @@ ReactWrapper {
               "context": null,
               "props": Object {
                 "history": Object {
-                  "push": [MockFunction],
+                  "push": [MockFunction] {
+                    "calls": Array [
+                      Array [
+                        Object {
+                          "search": "?page=1",
+                        },
+                      ],
+                    ],
+                    "results": Array [
+                      Object {
+                        "isThrow": false,
+                        "value": undefined,
+                      },
+                    ],
+                  },
                 },
                 "location": Object {
                   "search": "",
                 },
-                "onPageChange": [MockFunction] {
-                  "calls": Array [
-                    Array [
-                      Object {
-                        "page": 1,
-                      },
-                    ],
-                  ],
-                  "results": Array [
-                    Object {
-                      "isThrow": false,
-                      "value": undefined,
-                    },
-                  ],
-                },
+                "onPageChange": [MockFunction],
               },
             },
             "ref": null,
@@ -4268,26 +4264,26 @@ ReactWrapper {
                         props={
                           Object {
                             "history": Object {
-                              "push": [MockFunction],
+                              "push": [MockFunction] {
+                                "calls": Array [
+                                  Array [
+                                    Object {
+                                      "search": "?page=1",
+                                    },
+                                  ],
+                                ],
+                                "results": Array [
+                                  Object {
+                                    "isThrow": false,
+                                    "value": undefined,
+                                  },
+                                ],
+                              },
                             },
                             "location": Object {
                               "search": "",
                             },
-                            "onPageChange": [MockFunction] {
-                              "calls": Array [
-                                Array [
-                                  Object {
-                                    "page": 1,
-                                  },
-                                ],
-                              ],
-                              "results": Array [
-                                Object {
-                                  "isThrow": false,
-                                  "value": undefined,
-                                },
-                              ],
-                            },
+                            "onPageChange": [MockFunction],
                           }
                         }
                       />,
@@ -4309,26 +4305,26 @@ ReactWrapper {
                         props={
                           Object {
                             "history": Object {
-                              "push": [MockFunction],
+                              "push": [MockFunction] {
+                                "calls": Array [
+                                  Array [
+                                    Object {
+                                      "search": "?page=1",
+                                    },
+                                  ],
+                                ],
+                                "results": Array [
+                                  Object {
+                                    "isThrow": false,
+                                    "value": undefined,
+                                  },
+                                ],
+                              },
                             },
                             "location": Object {
                               "search": "",
                             },
-                            "onPageChange": [MockFunction] {
-                              "calls": Array [
-                                Array [
-                                  Object {
-                                    "page": 1,
-                                  },
-                                ],
-                              ],
-                              "results": Array [
-                                Object {
-                                  "isThrow": false,
-                                  "value": undefined,
-                                },
-                              ],
-                            },
+                            "onPageChange": [MockFunction],
                           }
                         }
                       />,
@@ -4354,26 +4350,26 @@ ReactWrapper {
                   props={
                     Object {
                       "history": Object {
-                        "push": [MockFunction],
+                        "push": [MockFunction] {
+                          "calls": Array [
+                            Array [
+                              Object {
+                                "search": "?page=1",
+                              },
+                            ],
+                          ],
+                          "results": Array [
+                            Object {
+                              "isThrow": false,
+                              "value": undefined,
+                            },
+                          ],
+                        },
                       },
                       "location": Object {
                         "search": "",
                       },
-                      "onPageChange": [MockFunction] {
-                        "calls": Array [
-                          Array [
-                            Object {
-                              "page": 1,
-                            },
-                          ],
-                        ],
-                        "results": Array [
-                          Object {
-                            "isThrow": false,
-                            "value": undefined,
-                          },
-                        ],
-                      },
+                      "onPageChange": [MockFunction],
                     }
                   }
                 />,
@@ -4422,26 +4418,26 @@ ReactWrapper {
                     props={
                       Object {
                         "history": Object {
-                          "push": [MockFunction],
+                          "push": [MockFunction] {
+                            "calls": Array [
+                              Array [
+                                Object {
+                                  "search": "?page=1",
+                                },
+                              ],
+                            ],
+                            "results": Array [
+                              Object {
+                                "isThrow": false,
+                                "value": undefined,
+                              },
+                            ],
+                          },
                         },
                         "location": Object {
                           "search": "",
                         },
-                        "onPageChange": [MockFunction] {
-                          "calls": Array [
-                            Array [
-                              Object {
-                                "page": 1,
-                              },
-                            ],
-                          ],
-                          "results": Array [
-                            Object {
-                              "isThrow": false,
-                              "value": undefined,
-                            },
-                          ],
-                        },
+                        "onPageChange": [MockFunction],
                       }
                     }
                   />,
@@ -4467,26 +4463,26 @@ ReactWrapper {
                 "context": null,
                 "props": Object {
                   "history": Object {
-                    "push": [MockFunction],
+                    "push": [MockFunction] {
+                      "calls": Array [
+                        Array [
+                          Object {
+                            "search": "?page=1",
+                          },
+                        ],
+                      ],
+                      "results": Array [
+                        Object {
+                          "isThrow": false,
+                          "value": undefined,
+                        },
+                      ],
+                    },
                   },
                   "location": Object {
                     "search": "",
                   },
-                  "onPageChange": [MockFunction] {
-                    "calls": Array [
-                      Array [
-                        Object {
-                          "page": 1,
-                        },
-                      ],
-                    ],
-                    "results": Array [
-                      Object {
-                        "isThrow": false,
-                        "value": undefined,
-                      },
-                    ],
-                  },
+                  "onPageChange": [MockFunction],
                 },
               },
               "refs": Object {},
@@ -4495,26 +4491,26 @@ ReactWrapper {
                 "mount": true,
                 "props": Object {
                   "history": Object {
-                    "push": [MockFunction],
+                    "push": [MockFunction] {
+                      "calls": Array [
+                        Array [
+                          Object {
+                            "search": "?page=1",
+                          },
+                        ],
+                      ],
+                      "results": Array [
+                        Object {
+                          "isThrow": false,
+                          "value": undefined,
+                        },
+                      ],
+                    },
                   },
                   "location": Object {
                     "search": "",
                   },
-                  "onPageChange": [MockFunction] {
-                    "calls": Array [
-                      Array [
-                        Object {
-                          "page": 1,
-                        },
-                      ],
-                    ],
-                    "results": Array [
-                      Object {
-                        "isThrow": false,
-                        "value": undefined,
-                      },
-                    ],
-                  },
+                  "onPageChange": [MockFunction],
                 },
               },
               "updater": Object {
@@ -4583,26 +4579,26 @@ ReactWrapper {
             "lastEffect": null,
             "memoizedProps": Object {
               "history": Object {
-                "push": [MockFunction],
+                "push": [MockFunction] {
+                  "calls": Array [
+                    Array [
+                      Object {
+                        "search": "?page=1",
+                      },
+                    ],
+                  ],
+                  "results": Array [
+                    Object {
+                      "isThrow": false,
+                      "value": undefined,
+                    },
+                  ],
+                },
               },
               "location": Object {
                 "search": "",
               },
-              "onPageChange": [MockFunction] {
-                "calls": Array [
-                  Array [
-                    Object {
-                      "page": 1,
-                    },
-                  ],
-                ],
-                "results": Array [
-                  Object {
-                    "isThrow": false,
-                    "value": undefined,
-                  },
-                ],
-              },
+              "onPageChange": [MockFunction],
               "pagination": [Function],
             },
             "memoizedState": null,
@@ -4610,26 +4606,26 @@ ReactWrapper {
             "nextEffect": null,
             "pendingProps": Object {
               "history": Object {
-                "push": [MockFunction],
+                "push": [MockFunction] {
+                  "calls": Array [
+                    Array [
+                      Object {
+                        "search": "?page=1",
+                      },
+                    ],
+                  ],
+                  "results": Array [
+                    Object {
+                      "isThrow": false,
+                      "value": undefined,
+                    },
+                  ],
+                },
               },
               "location": Object {
                 "search": "",
               },
-              "onPageChange": [MockFunction] {
-                "calls": Array [
-                  Array [
-                    Object {
-                      "page": 1,
-                    },
-                  ],
-                ],
-                "results": Array [
-                  Object {
-                    "isThrow": false,
-                    "value": undefined,
-                  },
-                ],
-              },
+              "onPageChange": [MockFunction],
               "pagination": [Function],
             },
             "ref": null,
@@ -4652,52 +4648,52 @@ ReactWrapper {
           "lastEffect": null,
           "memoizedProps": Object {
             "history": Object {
-              "push": [MockFunction],
+              "push": [MockFunction] {
+                "calls": Array [
+                  Array [
+                    Object {
+                      "search": "?page=1",
+                    },
+                  ],
+                ],
+                "results": Array [
+                  Object {
+                    "isThrow": false,
+                    "value": undefined,
+                  },
+                ],
+              },
             },
             "location": Object {
               "search": "",
             },
-            "onPageChange": [MockFunction] {
-              "calls": Array [
-                Array [
-                  Object {
-                    "page": 1,
-                  },
-                ],
-              ],
-              "results": Array [
-                Object {
-                  "isThrow": false,
-                  "value": undefined,
-                },
-              ],
-            },
+            "onPageChange": [MockFunction],
           },
           "memoizedState": null,
           "mode": 0,
           "nextEffect": null,
           "pendingProps": Object {
             "history": Object {
-              "push": [MockFunction],
+              "push": [MockFunction] {
+                "calls": Array [
+                  Array [
+                    Object {
+                      "search": "?page=1",
+                    },
+                  ],
+                ],
+                "results": Array [
+                  Object {
+                    "isThrow": false,
+                    "value": undefined,
+                  },
+                ],
+              },
             },
             "location": Object {
               "search": "",
             },
-            "onPageChange": [MockFunction] {
-              "calls": Array [
-                Array [
-                  Object {
-                    "page": 1,
-                  },
-                ],
-              ],
-              "results": Array [
-                Object {
-                  "isThrow": false,
-                  "value": undefined,
-                },
-              ],
-            },
+            "onPageChange": [MockFunction],
           },
           "ref": null,
           "return": FiberNode {
@@ -4722,26 +4718,26 @@ ReactWrapper {
               "context": null,
               "props": Object {
                 "history": Object {
-                  "push": [MockFunction],
+                  "push": [MockFunction] {
+                    "calls": Array [
+                      Array [
+                        Object {
+                          "search": "?page=1",
+                        },
+                      ],
+                    ],
+                    "results": Array [
+                      Object {
+                        "isThrow": false,
+                        "value": undefined,
+                      },
+                    ],
+                  },
                 },
                 "location": Object {
                   "search": "",
                 },
-                "onPageChange": [MockFunction] {
-                  "calls": Array [
-                    Array [
-                      Object {
-                        "page": 1,
-                      },
-                    ],
-                  ],
-                  "results": Array [
-                    Object {
-                      "isThrow": false,
-                      "value": undefined,
-                    },
-                  ],
-                },
+                "onPageChange": [MockFunction],
               },
             },
             "memoizedState": Object {
@@ -4749,26 +4745,26 @@ ReactWrapper {
               "mount": true,
               "props": Object {
                 "history": Object {
-                  "push": [MockFunction],
+                  "push": [MockFunction] {
+                    "calls": Array [
+                      Array [
+                        Object {
+                          "search": "?page=1",
+                        },
+                      ],
+                    ],
+                    "results": Array [
+                      Object {
+                        "isThrow": false,
+                        "value": undefined,
+                      },
+                    ],
+                  },
                 },
                 "location": Object {
                   "search": "",
                 },
-                "onPageChange": [MockFunction] {
-                  "calls": Array [
-                    Array [
-                      Object {
-                        "page": 1,
-                      },
-                    ],
-                  ],
-                  "results": Array [
-                    Object {
-                      "isThrow": false,
-                      "value": undefined,
-                    },
-                  ],
-                },
+                "onPageChange": [MockFunction],
               },
             },
             "mode": 0,
@@ -4778,26 +4774,26 @@ ReactWrapper {
               "context": null,
               "props": Object {
                 "history": Object {
-                  "push": [MockFunction],
+                  "push": [MockFunction] {
+                    "calls": Array [
+                      Array [
+                        Object {
+                          "search": "?page=1",
+                        },
+                      ],
+                    ],
+                    "results": Array [
+                      Object {
+                        "isThrow": false,
+                        "value": undefined,
+                      },
+                    ],
+                  },
                 },
                 "location": Object {
                   "search": "",
                 },
-                "onPageChange": [MockFunction] {
-                  "calls": Array [
-                    Array [
-                      Object {
-                        "page": 1,
-                      },
-                    ],
-                  ],
-                  "results": Array [
-                    Object {
-                      "isThrow": false,
-                      "value": undefined,
-                    },
-                  ],
-                },
+                "onPageChange": [MockFunction],
               },
             },
             "ref": null,
@@ -4880,26 +4876,26 @@ ReactWrapper {
                         props={
                           Object {
                             "history": Object {
-                              "push": [MockFunction],
+                              "push": [MockFunction] {
+                                "calls": Array [
+                                  Array [
+                                    Object {
+                                      "search": "?page=1",
+                                    },
+                                  ],
+                                ],
+                                "results": Array [
+                                  Object {
+                                    "isThrow": false,
+                                    "value": undefined,
+                                  },
+                                ],
+                              },
                             },
                             "location": Object {
                               "search": "",
                             },
-                            "onPageChange": [MockFunction] {
-                              "calls": Array [
-                                Array [
-                                  Object {
-                                    "page": 1,
-                                  },
-                                ],
-                              ],
-                              "results": Array [
-                                Object {
-                                  "isThrow": false,
-                                  "value": undefined,
-                                },
-                              ],
-                            },
+                            "onPageChange": [MockFunction],
                           }
                         }
                       />,
@@ -4921,26 +4917,26 @@ ReactWrapper {
                         props={
                           Object {
                             "history": Object {
-                              "push": [MockFunction],
+                              "push": [MockFunction] {
+                                "calls": Array [
+                                  Array [
+                                    Object {
+                                      "search": "?page=1",
+                                    },
+                                  ],
+                                ],
+                                "results": Array [
+                                  Object {
+                                    "isThrow": false,
+                                    "value": undefined,
+                                  },
+                                ],
+                              },
                             },
                             "location": Object {
                               "search": "",
                             },
-                            "onPageChange": [MockFunction] {
-                              "calls": Array [
-                                Array [
-                                  Object {
-                                    "page": 1,
-                                  },
-                                ],
-                              ],
-                              "results": Array [
-                                Object {
-                                  "isThrow": false,
-                                  "value": undefined,
-                                },
-                              ],
-                            },
+                            "onPageChange": [MockFunction],
                           }
                         }
                       />,
@@ -4966,26 +4962,26 @@ ReactWrapper {
                   props={
                     Object {
                       "history": Object {
-                        "push": [MockFunction],
+                        "push": [MockFunction] {
+                          "calls": Array [
+                            Array [
+                              Object {
+                                "search": "?page=1",
+                              },
+                            ],
+                          ],
+                          "results": Array [
+                            Object {
+                              "isThrow": false,
+                              "value": undefined,
+                            },
+                          ],
+                        },
                       },
                       "location": Object {
                         "search": "",
                       },
-                      "onPageChange": [MockFunction] {
-                        "calls": Array [
-                          Array [
-                            Object {
-                              "page": 1,
-                            },
-                          ],
-                        ],
-                        "results": Array [
-                          Object {
-                            "isThrow": false,
-                            "value": undefined,
-                          },
-                        ],
-                      },
+                      "onPageChange": [MockFunction],
                     }
                   }
                 />,
@@ -5034,26 +5030,26 @@ ReactWrapper {
                     props={
                       Object {
                         "history": Object {
-                          "push": [MockFunction],
+                          "push": [MockFunction] {
+                            "calls": Array [
+                              Array [
+                                Object {
+                                  "search": "?page=1",
+                                },
+                              ],
+                            ],
+                            "results": Array [
+                              Object {
+                                "isThrow": false,
+                                "value": undefined,
+                              },
+                            ],
+                          },
                         },
                         "location": Object {
                           "search": "",
                         },
-                        "onPageChange": [MockFunction] {
-                          "calls": Array [
-                            Array [
-                              Object {
-                                "page": 1,
-                              },
-                            ],
-                          ],
-                          "results": Array [
-                            Object {
-                              "isThrow": false,
-                              "value": undefined,
-                            },
-                          ],
-                        },
+                        "onPageChange": [MockFunction],
                       }
                     }
                   />,
@@ -5079,26 +5075,26 @@ ReactWrapper {
                 "context": null,
                 "props": Object {
                   "history": Object {
-                    "push": [MockFunction],
+                    "push": [MockFunction] {
+                      "calls": Array [
+                        Array [
+                          Object {
+                            "search": "?page=1",
+                          },
+                        ],
+                      ],
+                      "results": Array [
+                        Object {
+                          "isThrow": false,
+                          "value": undefined,
+                        },
+                      ],
+                    },
                   },
                   "location": Object {
                     "search": "",
                   },
-                  "onPageChange": [MockFunction] {
-                    "calls": Array [
-                      Array [
-                        Object {
-                          "page": 1,
-                        },
-                      ],
-                    ],
-                    "results": Array [
-                      Object {
-                        "isThrow": false,
-                        "value": undefined,
-                      },
-                    ],
-                  },
+                  "onPageChange": [MockFunction],
                 },
               },
               "refs": Object {},
@@ -5107,26 +5103,26 @@ ReactWrapper {
                 "mount": true,
                 "props": Object {
                   "history": Object {
-                    "push": [MockFunction],
+                    "push": [MockFunction] {
+                      "calls": Array [
+                        Array [
+                          Object {
+                            "search": "?page=1",
+                          },
+                        ],
+                      ],
+                      "results": Array [
+                        Object {
+                          "isThrow": false,
+                          "value": undefined,
+                        },
+                      ],
+                    },
                   },
                   "location": Object {
                     "search": "",
                   },
-                  "onPageChange": [MockFunction] {
-                    "calls": Array [
-                      Array [
-                        Object {
-                          "page": 1,
-                        },
-                      ],
-                    ],
-                    "results": Array [
-                      Object {
-                        "isThrow": false,
-                        "value": undefined,
-                      },
-                    ],
-                  },
+                  "onPageChange": [MockFunction],
                 },
               },
               "updater": Object {
@@ -5154,26 +5150,26 @@ ReactWrapper {
         "parseQueryParamsToObject": [Function],
         "props": Object {
           "history": Object {
-            "push": [MockFunction],
+            "push": [MockFunction] {
+              "calls": Array [
+                Array [
+                  Object {
+                    "search": "?page=1",
+                  },
+                ],
+              ],
+              "results": Array [
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+              ],
+            },
           },
           "location": Object {
             "search": "",
           },
-          "onPageChange": [MockFunction] {
-            "calls": Array [
-              Array [
-                Object {
-                  "page": 1,
-                },
-              ],
-            ],
-            "results": Array [
-              Object {
-                "isThrow": false,
-                "value": undefined,
-              },
-            ],
-          },
+          "onPageChange": [MockFunction],
         },
         "refs": Object {},
         "setDefaultPageParam": [Function],
@@ -5190,44 +5186,11 @@ ReactWrapper {
       "nodeType": "class",
       "props": Object {
         "history": Object {
-          "push": [MockFunction],
-        },
-        "location": Object {
-          "search": "",
-        },
-        "onPageChange": [MockFunction] {
-          "calls": Array [
-            Array [
-              Object {
-                "page": 1,
-              },
-            ],
-          ],
-          "results": Array [
-            Object {
-              "isThrow": false,
-              "value": undefined,
-            },
-          ],
-        },
-      },
-      "ref": null,
-      "rendered": Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "function",
-        "props": Object {
-          "history": Object {
-            "push": [MockFunction],
-          },
-          "location": Object {
-            "search": "",
-          },
-          "onPageChange": [MockFunction] {
+          "push": [MockFunction] {
             "calls": Array [
               Array [
                 Object {
-                  "page": 1,
+                  "search": "?page=1",
                 },
               ],
             ],
@@ -5238,6 +5201,39 @@ ReactWrapper {
               },
             ],
           },
+        },
+        "location": Object {
+          "search": "",
+        },
+        "onPageChange": [MockFunction],
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "history": Object {
+            "push": [MockFunction] {
+              "calls": Array [
+                Array [
+                  Object {
+                    "search": "?page=1",
+                  },
+                ],
+              ],
+              "results": Array [
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+              ],
+            },
+          },
+          "location": Object {
+            "search": "",
+          },
+          "onPageChange": [MockFunction],
           "pagination": [Function],
         },
         "ref": null,

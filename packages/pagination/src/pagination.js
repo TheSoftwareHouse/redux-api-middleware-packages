@@ -27,17 +27,14 @@ export const connectRouterWithPagination = (
 
     setDefaultPageParam = (params: { [string]: string | number }) => {
       params[pageParamName] = 1;
-      const paramsString = stringify(params);
-      if (window.history.state) {
-        window.history.pushState({}, null, window.location.origin + this.props.location.pathname + '?' + paramsString);
-      }
+      this.props.history.push({ search: '?' + stringify(params) });
     };
 
     componentDidMount() {
       const queryParams = this.parseQueryParamsToObject();
       // if page param is missing in URL set its value to 1
       if (!queryParams[pageParamName]) {
-        this.setDefaultPageParam(queryParams);
+        return this.setDefaultPageParam(queryParams);
       }
       //dispatching redux action
       this.props.onPageChange({
@@ -47,15 +44,15 @@ export const connectRouterWithPagination = (
 
     componentDidUpdate(prevProps: PaginationProps) {
       const queryParams = this.parseQueryParamsToObject();
-      // if page param is missing in URL set its value to 1
-      if (!queryParams[pageParamName]) {
-        this.setDefaultPageParam(queryParams);
-      }
-      if (prevProps.location.search !== this.props.location.search) {
+      if (prevProps.location.search !== this.props.location.search && queryParams[pageParamName]) {
         //dispatching redux action
         this.props.onPageChange({
           page: +queryParams[pageParamName],
         });
+      }
+      // if page param is missing in URL set its value to 1
+      if (!queryParams[pageParamName]) {
+        this.setDefaultPageParam(queryParams);
       }
     }
 
