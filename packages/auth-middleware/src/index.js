@@ -1,2 +1,2 @@
-export authMiddleware from './middleware';
-export authReducer from './reducer';
+export { authMiddleware } from './middleware';
+export { authReducer } from './store';

@@ -5,7 +5,7 @@ import { RSAA } from 'redux-api-middleware';
 import type { Dispatch, Store } from 'redux';
 import type { Action, GetState } from './types';
 
-export default function authMiddleware(store: Store<GetState, Action, Dispatch<Action>>) {
+export function authMiddleware(store: Store<GetState, Action, Dispatch<Action>>) {
   const { auth } = store.getState();
 
   if (!auth) {

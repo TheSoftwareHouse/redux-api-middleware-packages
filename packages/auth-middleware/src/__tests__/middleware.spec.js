@@ -1,9 +1,7 @@
 import { createStore, combineReducers } from 'redux';
 import { RSAA } from 'redux-api-middleware';
-import authReducer from '../reducer';
-import authMiddleware from '../middleware';
-import { SET_TOKEN, CLEAR_TOKEN } from '../action-types';
-import { clearAuthToken, setAuthToken } from '../action';
+import { authMiddleware } from '../middleware';
+import { SET_TOKEN, CLEAR_TOKEN, authReducer, clearAuthToken, setAuthToken } from '../store';
 
 describe('Auth middleware', () => {
   const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEyMzQifQ.w8piG6mIk3XwZJRjdsCUxfIcNw33OwQMrM06ZVOzESE';
