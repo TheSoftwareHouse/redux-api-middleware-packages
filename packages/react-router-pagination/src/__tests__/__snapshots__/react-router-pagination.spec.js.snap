@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`pagination HOC render pagination component correctly 1`] = `
+exports[`react-router-pagination render pagination component correctly 1`] = `
 ReactWrapper {
   Symbol(enzyme.__unrendered__): <_class2
     history={
@@ -2867,7 +2867,7 @@ ReactWrapper {
 }
 `;
 
-exports[`pagination HOC render wrapped component component correctly 1`] = `
+exports[`react-router-pagination render wrapped component component correctly 1`] = `
 ReactWrapper {
   Symbol(enzyme.__unrendered__): <_class2
     history={

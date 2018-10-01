@@ -1,5 +1,5 @@
 {
-  "name": "@tshio/pagination",
+  "name": "@tshio/react-router-pagination",
   "version": "0.1.0",
   "description": "",
   "license": "MIT",
@@ -20,7 +20,8 @@
     "qs": "^6.5.2"
   },
   "peerDependencies": {
-    "react": ">=16.5.2"
+    "react": ">=16.5.2",
+    "react-router-dom": ">=4.3.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.1.0",

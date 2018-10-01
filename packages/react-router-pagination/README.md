@@ -4,11 +4,11 @@
 
 Using [yarn](https://yarnpkg.com/lang/en/):
 
-    $ yarn add @tshio/pagination
+    $ yarn add @tshio/react-router-pagination
 
 Using [npm](https://www.npmjs.com/):
 
-    $ npm install --save @tshio/pagination
+    $ npm install --save @tshio/react-router-pagination
 
 ## Usage
 

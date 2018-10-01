@@ -1,1 +1,0 @@
-export { connectRouterWithPagination } from './pagination';
