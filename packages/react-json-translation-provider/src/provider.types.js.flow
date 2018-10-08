@@ -1,0 +1,17 @@
+// @flow
+
+import type { Node } from 'react';
+import type { Locale } from './context.types';
+
+export type Locales = {
+  [string]: Object,
+};
+
+export type TranslationsProviderProps = {
+  children: Node,
+  locale: string,
+};
+
+export type TranslationsProviderState = {
+  locale: Locale,
+};
