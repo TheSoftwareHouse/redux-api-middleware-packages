@@ -4,11 +4,11 @@
 
 Using [yarn](https://yarnpkg.com/lang/en/):
 
-    $ yarn add @tsh/content-middleware
+    $ yarn add @tshio/content-middleware
 
 Using [npm](https://www.npmjs.com/):
 
-    $ npm install --save @tsh/content-middleware
+    $ npm install --save @tshio/content-middleware
 
 Then, to enable contentMiddleware, use [`applyMiddleware`](https://redux.js.org/api-reference/applymiddleware):
 
@@ -16,7 +16,7 @@ Then, to enable contentMiddleware, use [`applyMiddleware`](https://redux.js.org/
 import { applyMiddleware, createStore } from 'redux';
 
 import { apiMiddleware } from 'redux-api-middleware';
-import contentMiddleware from '@tsh/content-middleware';
+import contentMiddleware from '@tshio/content-middleware';
 
 import { appReducer } from 'app/app.reducer';
 

@@ -12,3 +12,8 @@ That means that [several packages](/packages) are published to npm from the same
 | [`content-middleware`](/packages/content-middleware)   | ![version](https://img.shields.io/npm/v/@tshio/content-middleware.svg)  | Adding JSON body support middleware     |
 | [`endpoint-middleware`](/packages/endpoint-middleware) | ![version](https://img.shields.io/npm/v/@tshio/endpoint-middleware.svg) | Endpoint prefixing middleware           |
 | [`params-middleware`](/packages/params-middleware)     | ![version](https://img.shields.io/npm/v/@tshio/params-middleware.svg)   | Adding query params to request endpoint |
+
+## Development
+
+We welcome all contributions. Please read our [CONTRIBUTING.md](https://github.com/TheSoftwareHouse/react-packages/blob/master/CONTRIBUTING.md) first.
+You can submit any ideas as [GitHub issues](https://github.com/TheSoftwareHouse/react-packages/issues).

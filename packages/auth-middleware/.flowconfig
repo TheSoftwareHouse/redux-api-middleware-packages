@@ -1,0 +1,9 @@
+[ignore]
+
+[include]
+
+[libs]
+flow-typed
+
+[options]
+esproposal.optional_chaining=enable
