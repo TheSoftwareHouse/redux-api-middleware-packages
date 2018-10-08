@@ -4,11 +4,11 @@
 
 Using [yarn](https://yarnpkg.com/lang/en/):
 
-    $ yarn add @tshio/translations-provider
+    $ yarn add @tshio/react-json-translation-provider
 
 Using [npm](https://www.npmjs.com/):
 
-    $ npm install --save @tshio/translations-provider
+    $ npm install --save @tshio/react-json-translation-provider
 
 ## Usage example
 
@@ -20,7 +20,7 @@ import { addLocaleData } from 'react-intl';
 import enLocaleData from 'react-intl/locale-data/en';
 import plLocaleData from 'react-intl/locale-data/pl';
 
-import createTranslationsProvider from '@tshio/translations-provider';
+import createTranslationsProvider from '@tshio/react-json-translation-provider';
 
 import { AppComponent } from 'app/app.component';
 
@@ -49,7 +49,7 @@ decorated component.
 
 ```js
 import React, { Component } from 'react';
-import { withLocale } from '@tshio/translations-provider';
+import { withLocale } from '@tshio/react-json-translation-provider';
 
 // Simple component that display the current locale
 class DisplayLocale extends Component {
@@ -71,7 +71,7 @@ the component `withTranslationsContext` HOC can be used.
 
 ```js
 import React, { Component } from 'react';
-import { withTranslationsContext } from '@tshio/translations-provider';
+import { withTranslationsContext } from '@tshio/react-json-translation-provider';
 
 class ChangeLocale extends Component {
   render() {
