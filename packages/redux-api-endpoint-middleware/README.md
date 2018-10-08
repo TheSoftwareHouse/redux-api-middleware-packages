@@ -4,11 +4,11 @@
 
 Using [yarn](https://yarnpkg.com/lang/en/):
 
-    $ yarn add @tshio/endpoint-middleware
+    $ yarn add @tshio/redux-api-endpoint-middleware
 
 Using [npm](https://www.npmjs.com/):
 
-    $ npm install --save @tshio/endpoint-middleware
+    $ npm install --save @tshio/redux-api-endpoint-middleware
 
 Then, to enable endpointMiddleware, use [`applyMiddleware`](https://redux.js.org/api-reference/applymiddleware):
 
@@ -16,7 +16,7 @@ Then, to enable endpointMiddleware, use [`applyMiddleware`](https://redux.js.org
 import { applyMiddleware, createStore } from 'redux';
 
 import { apiMiddleware } from 'redux-api-middleware';
-import createEndpointMiddleware from '@tshio/endpoint-middleware';
+import createEndpointMiddleware from '@tshio/redux-api-endpoint-middleware';
 
 import { appReducer } from 'app/app.reducer';
 
