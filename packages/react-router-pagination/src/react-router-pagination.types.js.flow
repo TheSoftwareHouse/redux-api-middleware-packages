@@ -1,0 +1,14 @@
+// @flow
+import type { Location, RouterHistory } from 'react-router-dom';
+
+export type ConfigOptions = {
+  currentPageKey: string,
+  pageParamName: string,
+  pageChangeCallbackKey: string,
+};
+
+export type PaginationProps = {
+  history: RouterHistory,
+  location: Location,
+  onPageChange: Function,
+};
