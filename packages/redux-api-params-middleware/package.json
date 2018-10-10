@@ -1,6 +1,6 @@
 {
-  "name": "@tshio/params-middleware",
-  "version": "1.0.0",
+  "name": "@tshio/redux-api-params-middleware",
+  "version": "0.0.0",
   "description": "",
   "license": "MIT",
   "repository": "TheSoftwareHouse/react-packages",

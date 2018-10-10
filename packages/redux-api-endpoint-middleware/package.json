@@ -1,10 +1,10 @@
 {
-  "name": "@tshio/auth-middleware",
-  "version": "1.0.0",
+  "name": "@tshio/redux-api-endpoint-middleware",
+  "version": "0.0.0",
   "description": "",
   "license": "MIT",
   "repository": "TheSoftwareHouse/react-packages",
-  "author": "Bartosz Magier <bartosz.magier@tsh.io>",
+  "author": "Łukasz Golder <lukasz.golder@tsh.io>",
   "main": "index.js",
   "module": "es/index.js",
   "publishConfig": {
@@ -23,7 +23,6 @@
   "devDependencies": {
     "@babel/cli": "^7.1.0",
     "@babel/core": "^7.1.0",
-    "@babel/plugin-proposal-optional-chaining": "^7.0.0",
     "@babel/preset-env": "^7.1.0",
     "@babel/preset-flow": "^7.0.0",
     "babel-core": "^7.0.0-0",
