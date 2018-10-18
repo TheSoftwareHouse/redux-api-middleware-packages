@@ -3,17 +3,29 @@
 import type { RSAAction } from 'redux-api-middleware';
 
 export type State = {
-  token: ?string,
+  authToken: ?string,
+  refreshToken: ?string,
+};
+
+export type AuthMiddlewareConfig = {
+  header: string,
 };
 
 export type AnyAction = {
   type: string,
 };
 
+export type RefreshMiddlewareConfig = {
+  header: string,
+  endpoint: string,
+  failedAction: AnyAction,
+};
+
 export type SetTokenAction = {
   type: string,
   payload: {
-    token: ?string,
+    authToken: ?string,
+    refreshToken: ?string,
   },
 };
 

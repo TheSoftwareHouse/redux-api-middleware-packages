@@ -27,9 +27,9 @@ describe('Translations provider factory', () => {
         .create(
           <TranslationsProvider>
             <FormattedMessage id="FOO.BAR" />
-          </TranslationsProvider>,
+          </TranslationsProvider>
         )
-        .toJSON(),
+        .toJSON()
     ).toMatchSnapshot();
   });
 });

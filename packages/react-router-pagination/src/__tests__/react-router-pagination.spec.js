@@ -75,7 +75,7 @@ describe('react-router-pagination', () => {
     const paginationWrapper = mount(
       wrapper.find(WrappedComponent).prop('pagination')({
         onChange: page => wrapper.instance().updateCurrentURL(page),
-      }),
+      })
     );
 
     paginationWrapper.instance().handleClick(1);

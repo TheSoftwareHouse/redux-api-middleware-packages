@@ -11,7 +11,7 @@ declare module 'react-router-dom' {
       getUserConfirmation?: GetUserConfirmation,
       keyLength?: number,
       children?: Node,
-    |}>,
+    |}>
   >;
 
   declare export var HashRouter: Class<
@@ -20,7 +20,7 @@ declare module 'react-router-dom' {
       getUserConfirmation?: GetUserConfirmation,
       hashType?: 'slash' | 'noslash' | 'hashbang',
       children?: Node,
-    |}>,
+    |}>
   >;
 
   declare export var Link: Class<
@@ -29,7 +29,7 @@ declare module 'react-router-dom' {
       to: string | LocationShape,
       replace?: boolean,
       children?: Node,
-    }>,
+    }>
   >;
 
   declare export var NavLink: Class<
@@ -43,7 +43,7 @@ declare module 'react-router-dom' {
       children?: Node,
       exact?: boolean,
       strict?: boolean,
-    }>,
+    }>
   >;
 
   // NOTE: Below are duplicated from react-router. If updating these, please
@@ -115,7 +115,7 @@ declare module 'react-router-dom' {
       location?: string | Location,
       context: StaticRouterContext,
       children?: Node,
-    |}>,
+    |}>
   >;
 
   declare export var MemoryRouter: Class<
@@ -125,21 +125,21 @@ declare module 'react-router-dom' {
       getUserConfirmation?: GetUserConfirmation,
       keyLength?: number,
       children?: Node,
-    |}>,
+    |}>
   >;
 
   declare export var Router: Class<
     Component<{|
       history: RouterHistory,
       children?: Node,
-    |}>,
+    |}>
   >;
 
   declare export var Prompt: Class<
     Component<{|
       message: string | ((location: Location) => string | boolean),
       when?: boolean,
-    |}>,
+    |}>
   >;
 
   declare export var Redirect: Class<
@@ -149,7 +149,7 @@ declare module 'react-router-dom' {
       from?: string,
       exact?: boolean,
       strict?: boolean,
-    |}>,
+    |}>
   >;
 
   declare export var Route: Class<
@@ -162,18 +162,18 @@ declare module 'react-router-dom' {
       strict?: boolean,
       location?: LocationShape,
       sensitive?: boolean,
-    |}>,
+    |}>
   >;
 
   declare export var Switch: Class<
     Component<{|
       children?: Node,
       location?: Location,
-    |}>,
+    |}>
   >;
 
   declare export function withRouter<WrappedComponent: ComponentType<*>>(
-    Component: WrappedComponent,
+    Component: WrappedComponent
   ): ComponentType<$Diff<ElementConfig<$Supertype<WrappedComponent>>, ContextRouterVoid>>;
 
   declare type MatchPathOptions = {
@@ -186,7 +186,7 @@ declare module 'react-router-dom' {
   declare export function matchPath(
     pathname: string,
     options?: MatchPathOptions | string,
-    parent?: Match,
+    parent?: Match
   ): null | Match;
 
   declare export function generatePath(pattern?: string, params?: Object): string;

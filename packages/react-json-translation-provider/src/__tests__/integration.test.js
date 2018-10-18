@@ -37,7 +37,7 @@ describe('Translations provider factory', () => {
 
           <EnhancedChangeLocaleComponent />
         </>
-      </TranslationsProvider>,
+      </TranslationsProvider>
     );
 
     expect(wrapper.find('p').text()).toBe('en');
@@ -64,7 +64,7 @@ describe('Translations provider factory', () => {
     const wrapper = mount(
       <TranslationsProvider locale="pl">
         <EnhancedCurrentLocaleComponent />
-      </TranslationsProvider>,
+      </TranslationsProvider>
     );
 
     expect(wrapper.find('p').text()).toBe('pl');

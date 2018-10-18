@@ -1,6 +1,8 @@
 // flow-typed signature: df80bdd535bfed9cf3223e077f3b4543
 // flow-typed version: c4c8963c9c/redux_v4.x.x/flow_>=v0.55.x
 
+import type { RSAAction } from 'redux-api-middleware';
+
 declare module 'redux' {
   import type { RSAAction } from 'redux-api-middleware';
 
@@ -12,7 +14,7 @@ declare module 'redux' {
 
   */
 
-  declare export type DispatchAPI<A> = (action: A) => A;
+  declare export type DispatchAPI<A> = (action: A) => A => Promise<any>;
   declare export type Dispatch<A: { type: $Subtype<string> } | RSAAction<any, any, any>> = DispatchAPI<A>;
 
   declare export type MiddlewareAPI<S, A, D = Dispatch<A>> = {
@@ -43,12 +45,12 @@ declare module 'redux' {
 
   declare export function createStore<S, A, D>(
     reducer: Reducer<S, A>,
-    enhancer?: StoreEnhancer<S, A, D>,
+    enhancer?: StoreEnhancer<S, A, D>
   ): Store<S, A, D>;
   declare export function createStore<S, A, D>(
     reducer: Reducer<S, A>,
     preloadedState?: S,
-    enhancer?: StoreEnhancer<S, A, D>,
+    enhancer?: StoreEnhancer<S, A, D>
   ): Store<S, A, D>;
 
   declare export function applyMiddleware<S, A, D>(...middlewares: Array<Middleware<S, A, D>>): StoreEnhancer<S, A, D>;
@@ -58,15 +60,15 @@ declare module 'redux' {
 
   declare export function bindActionCreators<A, C: ActionCreator<A, any>, D: DispatchAPI<A>>(
     actionCreator: C,
-    dispatch: D,
+    dispatch: D
   ): C;
   declare export function bindActionCreators<A, K, C: ActionCreators<K, A>, D: DispatchAPI<A>>(
     actionCreators: C,
-    dispatch: D,
+    dispatch: D
   ): C;
 
   declare export function combineReducers<O: Object, A>(
-    reducers: O,
+    reducers: O
   ): CombinedReducer<$ObjMap<O, <S>(r: Reducer<S, any>) => S>, A>;
 
   declare export var compose: $Compose;

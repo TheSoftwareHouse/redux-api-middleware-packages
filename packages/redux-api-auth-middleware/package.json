@@ -16,6 +16,9 @@
     "flow": "flow",
     "prepublishOnly": "node scripts/build.js"
   },
+  "dependencies": {
+    "lodash.isplainobject": "^4.0.6"
+  },
   "peerDependencies": {
     "redux": ">=4.0.0",
     "redux-api-middleware": ">=2.0.0"
@@ -29,10 +32,13 @@
     "babel-core": "^7.0.0-0",
     "babel-jest": "^23.6.0",
     "codecov": "^3.1.0",
+    "fetch-mock": "^7.0.7",
     "flow-bin": "^0.81.0",
     "jest": "^23.6.0",
+    "node-fetch": "^2.2.0",
     "redux": "^4.0.0",
-    "redux-api-middleware": "^2.3.0"
+    "redux-api-middleware": "^2.3.0",
+    "redux-mock-store": "^1.5.3"
   },
   "files": [
     "es",
@@ -45,7 +51,7 @@
       "!src/**/index.js"
     ],
     "testMatch": [
-      "<rootDir>/src/__tests__/**/*.js?(x)",
+      "<rootDir>/src/__tests__/**/*.spec.js?(x)",
       "<rootDir>/src/?(*.)+(spec|test).js?(x)"
     ]
   }
