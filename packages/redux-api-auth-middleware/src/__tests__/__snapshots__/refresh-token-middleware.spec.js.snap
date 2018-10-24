@@ -1,5 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`Refresh token middleware throws an error if reducer is not set correctly 1`] = `"You must add authReducer to your store before using refreshMiddleware."`;
-
-exports[`Refresh token middleware throws an error if refresh token url is not specified 1`] = `"You must set the endpoint for refreshing token."`;
