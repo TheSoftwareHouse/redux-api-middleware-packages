@@ -1,10 +1,13 @@
 language: node_js
+
 node_js:
   - "lts/*"
+
 script:
   - yarn install
   - yarn bootstrap
   - yarn flow
   - yarn test
   - yarn codecov
+
 cache: yarn
