@@ -8,7 +8,7 @@ import type { ComponentType } from 'react';
 
 export const connectRouterWithPagination = (
   RenderComponent: ComponentType<any>,
-  { currentPageKey = 'currentPage', pageChangeCallbackKey = 'onChange', pageParamName = 'page' }: ConfigOptions = {},
+  { currentPageKey = 'currentPage', pageChangeCallbackKey = 'onChange', pageParamName = 'page' }: ConfigOptions = {}
 ) => (WrappedComponent: ComponentType<any>) => {
   return class extends Component<PaginationProps> {
     updateCurrentURL = (page: number) => {

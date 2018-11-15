@@ -35,7 +35,7 @@ export default function translationsProviderFactory(locales: Locales = {}) {
             value: locale,
           },
         }),
-        callback,
+        callback
       );
 
     render() {
