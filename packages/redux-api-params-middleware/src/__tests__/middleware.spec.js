@@ -79,6 +79,64 @@ describe('Params middleware', () => {
     });
   });
 
+  test('parametrises endpoint correctly using stringify options - array format changed', () => {
+    const next = jest.fn();
+
+    paramsMiddleware()(next)({
+      [RSAA]: {
+        foo: 'bar',
+        endpoint: '/foo?foo=bar',
+        types: ['REQUEST', 'SUCCESS', 'FAILURE'],
+        params: {
+          bar: ['baz', 'qaz'],
+          baz: null,
+          qux: undefined,
+          quux: 0,
+          quuz: false,
+        },
+        paramsOptions: {
+          arrayFormat: 'brackets',
+        },
+      },
+    });
+
+    expect(next).toHaveBeenCalledWith({
+      [RSAA]: expect.objectContaining({
+        foo: 'bar',
+        endpoint: '/foo?foo=bar&bar%5B%5D=baz&bar%5B%5D=qaz&baz=&quux=0&quuz=false',
+      }),
+    });
+  });
+
+  test('parametrises endpoint correctly using stringify options - indices disabled', () => {
+    const next = jest.fn();
+
+    paramsMiddleware()(next)({
+      [RSAA]: {
+        foo: 'bar',
+        endpoint: '/foo?foo=bar',
+        types: ['REQUEST', 'SUCCESS', 'FAILURE'],
+        params: {
+          bar: ['baz', 'qaz'],
+          baz: null,
+          qux: undefined,
+          quux: 0,
+          quuz: false,
+        },
+        paramsOptions: {
+          indices: false,
+        },
+      },
+    });
+
+    expect(next).toHaveBeenCalledWith({
+      [RSAA]: expect.objectContaining({
+        foo: 'bar',
+        endpoint: '/foo?foo=bar&bar=baz&bar=qaz&baz=&quux=0&quuz=false',
+      }),
+    });
+  });
+
   test('overrides parameters from endpoint', () => {
     const next = jest.fn();
 
