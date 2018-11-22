@@ -1,0 +1,54 @@
+{
+  "name": "@tshio/react-router-permissions",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "module": "es/index.js",
+  "repository": "TheSoftwareHouse/react-packages",
+  "author": "Rafał Kucharski <rafal.kucharski@thesoftwarehouse.pl>",
+  "publishConfig": {
+    "access": "public"
+  },
+  "contributors": [
+    "Mateusz Klinowski <mateusz.klinowski@thesoftwarehouse.pl>",
+    "Łukasz Pietrek <lukasz.pietrek@thesoftwarehouse.pl>"
+  ],
+  "peerDependencies": {
+    "react": "^16.6.0",
+    "react-dom": "^16.6.0",
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1"
+  },
+  "scripts": {
+    "build": "node scripts/build.js",
+    "test": "node scripts/test.js",
+    "flow": "flow",
+    "prepublishOnly": "node scripts/build.js"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.1.0",
+    "@babel/core": "^7.1.0",
+    "@babel/plugin-proposal-class-properties": "^7.1.0",
+    "@babel/plugin-proposal-export-default-from": "^7.0.0",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-flow": "^7.0.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-core": "^7.0.0-0",
+    "babel-jest": "^23.6.0",
+    "codecov": "^3.1.0",
+    "flow-bin": "^0.81.0",
+    "jest": "^23.6.0",
+    "enzyme": "^3.7.0",
+    "enzyme-adapter-react-16": "^1.7.0"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.js?(x)",
+      "!src/**/index.js"
+    ],
+    "testMatch": [
+      "<rootDir>/src/__tests__/**/*.js?(x)",
+      "<rootDir>/src/**/(*.)+(spec|test).js?(x)"
+    ]
+  }
+}
