@@ -45,3 +45,42 @@ export const fetchUsers = () => ({
   },
 });
 ```
+
+## Params format
+
+We can change our params format by using `paramsOptions`.
+
+Default params format is _**indices**_.
+
+We are using stringify from [qs](https://github.com/ljharb/qs) so we can pass any options from documentation as paramOptions.
+
+```js
+params: {
+    a: ['b', 'c'],
+}
+paramsOptions: {
+    arrayFormat: 'indices'
+}
+
+//  output'a[0]=b&a[1]=c'
+```
+
+```
+params: {
+    a: ['b', 'c'],
+}
+paramsOptions: {
+    arrayFormat: 'brackets' // output 'a[]=b&a[]=c'
+}
+```
+
+```
+params: {
+    a: ['b', 'c'],
+}
+paramsOptions: {
+    arrayFormat: 'repeat' // output'a=b&a=c'
+}
+```
+
+More information about options in stringify function [ in qs documentation.](https://github.com/ljharb/qs#stringifying)
