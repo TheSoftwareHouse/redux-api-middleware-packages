@@ -1,0 +1,8 @@
+// @flow
+
+import type { StringifyOptions } from 'qs';
+
+
+export type Options = {
+  defaultOptions: StringifyOptions
+};

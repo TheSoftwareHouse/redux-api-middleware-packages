@@ -16,9 +16,11 @@ Then, to enable paramsMiddleware, use [`applyMiddleware`](https://redux.js.org/a
 import { applyMiddleware, createStore } from 'redux';
 
 import { apiMiddleware } from 'redux-api-middleware';
-import paramsMiddleware from '@tshio/redux-api-params-middleware';
+import createParamsMiddleware from '@tshio/redux-api-params-middleware';
 
 import { appReducer } from 'app/app.reducer';
+
+const paramsMiddleware = createParamsMiddleware();
 
 const middlewares = [paramsMiddleware, apiMiddleware];
 
@@ -48,11 +50,32 @@ export const fetchUsers = () => ({
 
 ## Params format
 
-We can change our params format by using `paramsOptions`.
-
 Default params format is _**indices**_.
 
-We are using stringify from [qs](https://github.com/ljharb/qs) so we can pass any options from documentation as paramOptions.
+We are using stringify from [qs](https://github.com/ljharb/qs) so we can pass any options from documentation
+as `defaultOptions` or `paramOptions`.
+
+### Globally
+
+You can change params format by using `defaultOptions` option during creation of the middleware:
+
+```js
+const paramsMiddleware = createParamsMiddleware({
+  defaultOptions: {
+    arrayFormat: 'repeat',
+  },
+});
+
+// output 'a=b&a=c'
+```
+
+Such middleware configuration will use 'repeat' format unless some `paramOptions` are defined for particular action.
+
+### In particular request
+
+In case you want to override params format for particular request only
+(for instance when you use multiple APIs with inconsistent format)
+you can change params format by using `paramsOptions` in particular action.
 
 ```js
 params: {
@@ -62,7 +85,7 @@ paramsOptions: {
     arrayFormat: 'indices'
 }
 
-//  output'a[0]=b&a[1]=c'
+//  output 'a[0]=b&a[1]=c'
 ```
 
 ```
@@ -79,7 +102,7 @@ params: {
     a: ['b', 'c'],
 }
 paramsOptions: {
-    arrayFormat: 'repeat' // output'a=b&a=c'
+    arrayFormat: 'repeat' // output 'a=b&a=c'
 }
 ```
 
