@@ -142,7 +142,7 @@ describe('Endpoint middleware factory', () => {
     expect(next).toHaveBeenCalledWith({
       [RSAA]: {
         foo: 'bar',
-        endpoint: 'http://foo.barhttp://foo.bar',
+        endpoint: 'http://foo.bar/http://foo.bar',
       },
     });
 
@@ -159,5 +159,76 @@ describe('Endpoint middleware factory', () => {
         endpoint: '/foo/bar',
       },
     });
+  });
+
+  test('removes double slashes or adds one if needed', () => {
+    process.env.REACT_APP_API_URL = 'http://foo.bar';
+
+    const endpointMiddleware = createEndpointMiddleware();
+
+    const next = jest.fn();
+
+    endpointMiddleware()(next)({
+      [RSAA]: {
+        endpoint: 'bar',
+      },
+    });
+
+    expect(next).toHaveBeenCalledWith({
+      [RSAA]: {
+        endpoint: 'http://foo.bar/bar',
+      },
+    });
+
+    endpointMiddleware()(next)({
+      [RSAA]: {
+        endpoint: '/bar',
+      },
+    });
+
+    expect(next).toHaveBeenCalledWith({
+      [RSAA]: {
+        endpoint: 'http://foo.bar/bar',
+      },
+    });
+  });
+
+  test('allows to pass additional API urls via options', () => {
+    const endpointMiddleware = createEndpointMiddleware({
+      apiUrl: 'http://bar.baz',
+      additionalApiUrls: {
+        microServiceOne: 'http://microservice1.example.com',
+      },
+    });
+
+    const next = jest.fn();
+
+    endpointMiddleware()(next)({
+      [RSAA]: {
+        endpoint: '/foo/bar',
+        api: 'microServiceOne',
+      },
+    });
+
+    expect(next).toHaveBeenCalledWith({
+      [RSAA]: {
+        endpoint: 'http://microservice1.example.com/foo/bar',
+      },
+    });
+  });
+
+  test('throws an error if selected additional API url is not defined in config', () => {
+    expect(() => {
+      const endpointMiddleware = createEndpointMiddleware({ apiUrl: 'http://bar.baz' });
+
+      const next = jest.fn();
+
+      endpointMiddleware()(next)({
+        [RSAA]: {
+          endpoint: '/foo/bar',
+          api: 'microServiceOne',
+        },
+      });
+    }).toThrowErrorMatchingSnapshot();
   });
 });

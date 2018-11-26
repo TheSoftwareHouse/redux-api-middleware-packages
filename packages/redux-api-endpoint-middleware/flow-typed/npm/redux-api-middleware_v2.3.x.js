@@ -16,6 +16,7 @@ declare module 'redux-api-middleware' {
       bailout?: boolean | ((state: any) => boolean),
       fetch?: (url: string | Request, init?: RequestOptions) => Promise<Response>,
       types: [R, S, F],
+      api?: string,
     },
   };
 

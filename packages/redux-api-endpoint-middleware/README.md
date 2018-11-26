@@ -47,3 +47,27 @@ const endpointMiddleware = createEndpointMiddleware({
   excluded: ['http://', 'https://', '/i18n/'],
 });
 ```
+
+When you have to connect to more than one API in your application, you can define a list of URLs in configuration:
+
+```js
+const endpointMiddleware = createEndpointMiddleware({
+  apiUrl: process.env.MY_API,
+  additionalApiUrls: {
+    microServiceOne: 'http://microservice-1.example.com',
+    microServiceTwo: 'http://microservice-2.example.com',
+  },
+});
+```
+
+and then you can select defined API directly in action (by **api** property):
+
+```js
+export const fetchUsers = () => ({
+  [RSAA]: {
+    method: 'GET',
+    types: [FETCH_USERS_REQUEST, FETCH_USERS_SUCCESS, FETCH_USERS_FAILURE],
+    api: 'microServiceOne',
+  },
+});
+```
