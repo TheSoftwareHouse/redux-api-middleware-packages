@@ -1,6 +1,6 @@
 // @flow
 
-export function permissionsStrategy(permissions: { [string]: * }, requirement: string): * {
+export function permissionsStrategy(permissions: { [string]: boolean }, requirement: string): boolean {
   return permissions[requirement] || false;
 }
 

@@ -4,8 +4,8 @@ import Adapter from 'enzyme-adapter-react-16';
 
 import { MemoryRouter, Switch } from 'react-router-dom';
 
-import AuthorizedRoute from './authorized-route.component';
-import PermissionsProvider from '../PermissionsProvider/permissions-provider.component';
+import AuthorizedRoute from './authorized-route';
+import PermissionsProvider from '../permissions-provider/permissions-provider';
 
 Enzyme.configure({ adapter: new Adapter() });
 

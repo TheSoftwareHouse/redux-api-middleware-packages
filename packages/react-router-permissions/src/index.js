@@ -2,7 +2,7 @@ export {
   permissionsStrategy,
   roleBasedStrategy,
   atLeastOneStrategy,
-} from './AuthorizationStrategy/authorization-strategy';
-export { AuthorizedRoute } from './AuthorizedRoute/authorized-route.component';
-export { AuthorizedSection } from './AuthorizedSection/authorized-section.component';
-export { PermissionsProvider } from './PermissionsProvider/permissions-provider.component';
+} from './authorization-strategy/authorization-strategy';
+export { AuthorizedRoute } from './authorized-route/authorized-route';
+export { AuthorizedSection } from './authorized-section/authorized-section';
+export { PermissionsProvider } from './permissions-provider/permissions-provider';

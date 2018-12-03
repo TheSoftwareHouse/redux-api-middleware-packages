@@ -2,8 +2,8 @@ import React from 'react';
 import Enzyme, { mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 
-import { AuthorizedSection } from './authorized-section.component';
-import PermissionsProvider from '../PermissionsProvider/permissions-provider.component';
+import { AuthorizedSection } from './authorized-section';
+import PermissionsProvider from '../permissions-provider/permissions-provider';
 
 Enzyme.configure({ adapter: new Adapter() });
 

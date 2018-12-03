@@ -2,9 +2,9 @@
 
 import React from 'react';
 import { Route } from 'react-router';
-import { AuthorizedSection } from '../AuthorizedSection/authorized-section.component';
+import { AuthorizedSection } from '../authorized-section/authorized-section';
 import type { Route as RouteType, ContextRouter } from 'react-router';
-import type { AuthorizedSectionProps } from '../AuthorizedSection/authorized-section.component';
+import type { AuthorizedSectionProps } from '../authorized-section/authorized-section';
 
 export type AuthorizedRouteProps = {
   path: string,

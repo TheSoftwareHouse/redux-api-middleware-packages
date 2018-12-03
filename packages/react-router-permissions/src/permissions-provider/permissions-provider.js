@@ -1,7 +1,7 @@
 // @flow
 
 import React from 'react';
-import { PermissionsContext } from '../PermissionsContext/permissions.context';
+import { PermissionsContext } from '../permissions-context/permissions.context';
 
 export type PermissionsProviderProps = {
   permissions: *,
