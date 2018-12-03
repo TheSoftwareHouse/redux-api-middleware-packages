@@ -103,7 +103,11 @@ describe('Endpoint middleware factory', () => {
     process.env.REACT_APP_API_URL = 'http://foo.bar';
 
     const endpointMiddleware = createEndpointMiddleware({
-      apiUrl: 'http://bar.baz',
+      apis: {
+        default: {
+          apiUrl: 'http://bar.baz',
+        },
+      },
     });
 
     const next = jest.fn();
@@ -193,11 +197,21 @@ describe('Endpoint middleware factory', () => {
     });
   });
 
-  test('allows to pass additional API urls via options', () => {
+  test('allows to pass additional API urls and options', () => {
     const endpointMiddleware = createEndpointMiddleware({
-      apiUrl: 'http://bar.baz',
-      additionalApiUrls: {
-        microServiceOne: 'http://microservice1.example.com',
+      apis: {
+        default: {
+          apiUrl: 'http://bar.baz',
+        },
+        microServiceOne: {
+          apiUrl: 'http://microservice1.example.com',
+          headers: {
+            'X-Api-Version': '2',
+          },
+          paramsOptions: {
+            arrayFormat: 'brackets',
+          },
+        },
       },
     });
 
@@ -207,19 +221,34 @@ describe('Endpoint middleware factory', () => {
       [RSAA]: {
         endpoint: '/foo/bar',
         api: 'microServiceOne',
+        paramsOptions: {
+          arrayFormat: 'indices',
+        },
       },
     });
 
     expect(next).toHaveBeenCalledWith({
       [RSAA]: {
         endpoint: 'http://microservice1.example.com/foo/bar',
+        headers: {
+          'X-Api-Version': '2',
+        },
+        paramsOptions: {
+          arrayFormat: 'indices',
+        },
       },
     });
   });
 
   test('throws an error if selected additional API url is not defined in config', () => {
     expect(() => {
-      const endpointMiddleware = createEndpointMiddleware({ apiUrl: 'http://bar.baz' });
+      const endpointMiddleware = createEndpointMiddleware({
+        apis: {
+          default: {
+            apiUrl: 'http://bar.baz',
+          },
+        },
+      });
 
       const next = jest.fn();
 

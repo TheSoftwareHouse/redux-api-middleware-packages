@@ -22,12 +22,15 @@ function prefixEndpoint(
 }
 
 export default function endpointMiddlewareFactory(options: Options = {}) {
-  if (!(options.apiUrl || process.env.REACT_APP_API_URL)) {
+  if (!((options.apis && options.apis.default && options.apis.default.apiUrl) || process.env.REACT_APP_API_URL)) {
     throw new Error('You must specify API url either via options or REACT_APP_API_URL environment variable');
   }
 
   const config: Config = {
-    apiUrl: options.apiUrl || ((process.env.REACT_APP_API_URL: any): string),
+    apiUrl:
+      options.apis && options.apis.default && options.apis.default.apiUrl
+        ? options.apis.default.apiUrl
+        : ((process.env.REACT_APP_API_URL: any): string),
     excluded: options.excluded || ['http://', 'https://'],
   };
 
@@ -41,18 +44,17 @@ export default function endpointMiddlewareFactory(options: Options = {}) {
 
       const { api, ...rest } = apiCall;
 
-      if (api && (!options.additionalApiUrls || !options.additionalApiUrls[api])) {
-        throw new Error(`You must specify ${api} url in additionalApiUrls config option`);
+      if (api && (!options.apis || !options.apis[api])) {
+        throw new Error(`You must specify ${api} url in apis config option`);
       }
+
+      const { apiUrl, ...apiOptions } = api && options.apis ? options.apis[api] : {};
 
       return next({
         [RSAA]: {
+          ...apiOptions,
           ...rest,
-          endpoint: prefixEndpoint(
-            apiCall.endpoint,
-            config,
-            api && options.additionalApiUrls ? options.additionalApiUrls[api] : undefined,
-          ),
+          endpoint: prefixEndpoint(apiCall.endpoint, config, apiUrl),
         },
       });
     };

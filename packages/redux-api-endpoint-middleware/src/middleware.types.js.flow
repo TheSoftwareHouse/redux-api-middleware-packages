@@ -5,10 +5,15 @@ export type Config = {|
   excluded: string[],
 |};
 
+type ApiOptions = {
+  apiUrl: string,
+  [key:string]: any,
+};
+
 export type Options = {
-  apiUrl?: string,
-  additionalApiUrls?: {
-    [key: string]: string,
+  apis?: {
+    default: ApiOptions,
+    [key: string]: ApiOptions,
   },
   excluded?: string[],
 };

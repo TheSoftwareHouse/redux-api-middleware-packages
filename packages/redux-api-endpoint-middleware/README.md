@@ -30,12 +30,16 @@ const store = createStore(appReducer, applyMiddleware(...middlewares));
 ## Configuration
 
 By default all endpoints will be prefixed with the API url take from environment variable `REACT_APP_API_URL`.
-In order to change it the configuration object with property `apiUrl` has to be passed to the endpointMiddleware
+In order to change it, the configuration object with property `apis.default.apiUrl` has to be passed to the endpointMiddleware
 factory:
 
 ```js
 const endpointMiddleware = createEndpointMiddleware({
-  apiUrl: process.env.MY_API,
+  apis: {
+    default: {
+      apiUrl: process.env.MY_API,
+    },
+  },
 });
 ```
 
@@ -48,14 +52,29 @@ const endpointMiddleware = createEndpointMiddleware({
 });
 ```
 
-When you have to connect to more than one API in your application, you can define a list of URLs in configuration:
+When you have to connect to more than one API in your application, you can define a list of APIs (with URL and custom params) in configuration:
 
 ```js
 const endpointMiddleware = createEndpointMiddleware({
-  apiUrl: process.env.MY_API,
-  additionalApiUrls: {
-    microServiceOne: 'http://microservice-1.example.com',
-    microServiceTwo: 'http://microservice-2.example.com',
+  apis: {
+    default: {
+      apiUrl: process.env.MY_API,
+      headers: {
+        'X-Api-Version': '1',
+      },
+    },
+    microServiceOne: {
+      apiUrl: 'http://microservice-1.example.com',
+      customParam: {
+        foo: 'bar',
+      },
+    },
+    microServiceTwo: {
+      apiUrl: 'http://microservice-2.example.com',
+      customParam: {
+        foo: 'bar',
+      },
+    },
   },
 });
 ```
@@ -68,6 +87,21 @@ export const fetchUsers = () => ({
     method: 'GET',
     types: [FETCH_USERS_REQUEST, FETCH_USERS_SUCCESS, FETCH_USERS_FAILURE],
     api: 'microServiceOne',
+  },
+});
+```
+
+It will be equal to:
+
+```js
+export const fetchUsers = () => ({
+  [RSAA]: {
+    method: 'GET',
+    types: [FETCH_USERS_REQUEST, FETCH_USERS_SUCCESS, FETCH_USERS_FAILURE],
+    endpoint: 'http://microservice-1.example.com/',
+    customParam: {
+      foo: 'bar',
+    },
   },
 });
 ```
