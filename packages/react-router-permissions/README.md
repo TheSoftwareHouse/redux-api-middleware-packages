@@ -103,7 +103,7 @@ There are some strategies provided with the package out of the box. Those are:
 - Role based strategy
 
   ```js
-  const strategy = ['MODERATOR', 'PREMIUM_USER'];
+  const permissions = ['MODERATOR', 'PREMIUM_USER'];
 
   ...
   // authorization will pass
@@ -125,7 +125,7 @@ There are some strategies provided with the package out of the box. Those are:
 * Permissions based strategy
 
   ```js
-  const strategy = {
+  const permissions = {
     canReadPosts: true,
     canManagePosts: true,
     canManageUsers: false,
@@ -151,7 +151,7 @@ There are some strategies provided with the package out of the box. Those are:
 * At least one strategy
 
   ```js
-  const strategy = {
+  const permissions = {
     canReadPosts: true,
     canManagePosts: false,
     canManageUsers: false,

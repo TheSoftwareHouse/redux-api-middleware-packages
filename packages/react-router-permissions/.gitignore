@@ -1,7 +1,2 @@
 es
 /*.js
-authorization-strategy
-authorized-route
-authorized-section
-permissions-context
-permissions-provider

@@ -50,17 +50,4 @@ describe('Authorized Section', () => {
 
     expect(authorization).toBeCalledWith(false);
   });
-
-  it('passes cuctom props along isAuthorized', () => {
-    const trapForFoo = jest.fn();
-    mount(
-      <PermissionsProvider permissions={{ isLogged: true }} authorizationStrategy={strategy}>
-        <AuthorizedSection requires="isLogged" foo="bar">
-          {({ foo }) => trapForFoo(foo)}
-        </AuthorizedSection>
-      </PermissionsProvider>,
-    );
-
-    expect(trapForFoo).toBeCalledWith('bar');
-  });
 });

@@ -2,7 +2,7 @@ import React from 'react';
 import Enzyme, { mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 
-import { MemoryRouter, Switch } from 'react-router-dom';
+import { MemoryRouter, Switch } from 'react-router';
 
 import AuthorizedRoute from './authorized-route';
 import PermissionsProvider from '../permissions-provider/permissions-provider';

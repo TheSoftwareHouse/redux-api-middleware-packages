@@ -5,16 +5,15 @@ import { PermissionsContext } from '../permissions-context/permissions.context';
 
 export type AuthorizedSectionProps = {
   requires: *,
-  authorizationStrategy?: (*, *) => *,
+  authorizationStrategy?: (permissions: *, requirement: *) => *,
   children: ({
-    isAuthorized: boolean,
+    isAuthorized: *,
   }) => React.Node,
-  [string]: *,
 };
 
 export class AuthorizedSection extends React.Component<AuthorizedSectionProps> {
   render() {
-    const { requires, authorizationStrategy: overrideStrategy, children, ...rest } = this.props;
+    const { requires, authorizationStrategy: overrideStrategy, children } = this.props;
 
     return (
       <PermissionsContext.Consumer>
@@ -23,7 +22,6 @@ export class AuthorizedSection extends React.Component<AuthorizedSectionProps> {
             ? overrideStrategy(permissions, requires)
             : authorizationStrategy(permissions, requires);
           return children({
-            ...rest,
             isAuthorized,
           });
         }}

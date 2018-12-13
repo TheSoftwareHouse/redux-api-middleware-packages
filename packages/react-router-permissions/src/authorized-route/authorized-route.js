@@ -20,10 +20,9 @@ export class AuthorizedRoute extends React.Component<AuthorizedRouteProps> {
         children={(routerProps: ContextRouter) =>
           routerProps.match ? (
             <AuthorizedSection
-              {...routerProps}
               requires={requires}
               authorizationStrategy={authorizationStrategy}
-              children={children}
+              children={({ isAuthorized }: { isAuthorized: * }) => children({ ...routerProps, isAuthorized })}
             />
           ) : null
         }
