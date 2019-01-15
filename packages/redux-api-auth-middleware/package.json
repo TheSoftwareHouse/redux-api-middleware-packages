@@ -43,7 +43,7 @@
   "files": [
     "es",
     "index.js",
-    "middleware.js"
+    "auth.middleware.js"
   ],
   "jest": {
     "collectCoverageFrom": [
