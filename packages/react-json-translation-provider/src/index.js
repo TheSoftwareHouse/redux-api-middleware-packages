@@ -1,2 +1,2 @@
-export { withLocale, withTranslationsContext } from './context';
+export { withLocale, withTranslationsContext, TranslationsContext } from './context';
 export { default } from './provider';

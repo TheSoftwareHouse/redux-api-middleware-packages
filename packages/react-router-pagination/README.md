@@ -21,7 +21,7 @@ import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { compose } from 'redux';
 
-import { connectRouterWithPagination } from '@tsh/pagination';
+import { connectRouterWithPagination } from '@tshio/react-router-pagination';
 
 import { fetchUsers } from '../redux/users/users.actions';
 import { ListComponent } from '../list.component';
@@ -50,6 +50,7 @@ export const ListContainer = compose(
   )
 )(ListComponent);
 ```
+
 **Keep in mind, that `onPageChange` function is required and always has to be implemented!**
 
 And then, you can render pagination component in list component:
@@ -62,13 +63,13 @@ import React, { Component } from 'react';
 export class ListComponent extends Component {
   render() {
     return (
-        <div>
+      <div>
         // ...
-            {this.props.pagination({
-                // here, you can define custom properties for pagination component
-            })}
-        </div>
-    )
+        {this.props.pagination({
+          // here, you can define custom properties for pagination component
+        })}
+      </div>
+    );
   }
 }
 ```
@@ -77,8 +78,8 @@ This package is working with `page` parameter which is included in URL. If `page
 
 ## Config options
 
-|Option name|Default value|Type|Role|
-|--- |--- |--- |--- |
-|currentPageKey|`currentPage`|`string`|Name of prop which is passed to pagination component to point on current page.|
-|pageChangeCallbackKey|`onChange`|`string`|Name of callback function which is called when you click on navigation button in pagination component.|
-|pageParamName|`page`|`string`|Determines what is the name of page param which is displaying in URL; e.g. `/users?page=1`.|
+| Option name           | Default value | Type     | Role                                                                                                   |
+| --------------------- | ------------- | -------- | ------------------------------------------------------------------------------------------------------ |
+| currentPageKey        | `currentPage` | `string` | Name of prop which is passed to pagination component to point on current page.                         |
+| pageChangeCallbackKey | `onChange`    | `string` | Name of callback function which is called when you click on navigation button in pagination component. |
+| pageParamName         | `page`        | `string` | Determines what is the name of page param which is displaying in URL; e.g. `/users?page=1`.            |

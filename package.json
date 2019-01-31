@@ -1,12 +1,24 @@
 {
   "name": "react-packages",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "workspaces": [
     "packages/*"
   ],
-  "authors": [
-    "Łukasz Golder <lukasz.golder@tsh.io>"
+  "author": {
+    "name": "The Software House",
+    "url": "http://tsh.io"
+  },
+  "contributors": [
+    "Łukasz Golder <lukasz.golder@tsh.io>",
+    "Marcin Piela <marcin.piela@tsh.io>",
+    "Rafał Kucharski <rafal.kucharski@tsh.io>",
+    "Bartosz Magier <bartosz.magier@tsh.io>",
+    "Wiktor Toporek <wiktor.toporek@tsh.io>",
+    "Jakub Rybniński <jakub.rybinski@tsh.io>",
+    "Kamil Foltyniak <kamil.foltyniak@tsh.io>",
+    "Łukasz Pietrek <lukasz.pietrek@tsh.io>",
+    "Mateusz Klinowski <mateusz.klinowski@tsh.io>"
   ],
   "repository": {
     "type": "git",

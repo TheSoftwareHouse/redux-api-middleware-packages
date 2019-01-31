@@ -7,6 +7,7 @@
   "author": "Łukasz Golder <lukasz.golder@tsh.io>",
   "main": "index.js",
   "module": "es/index.js",
+  "typings": "typings/index.d.ts",
   "publishConfig": {
     "access": "public"
   },
@@ -44,7 +45,9 @@
   "files": [
     "es",
     "index.js",
-    "provider.js"
+    "context.js",
+    "provider.js",
+    "typings/index.d.ts"
   ],
   "jest": {
     "collectCoverageFrom": [

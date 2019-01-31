@@ -7,6 +7,7 @@
   "author": "Łukasz Golder <lukasz.golder@tsh.io>",
   "main": "index.js",
   "module": "es/index.js",
+  "typings": "index.d.ts",
   "publishConfig": {
     "access": "public"
   },
