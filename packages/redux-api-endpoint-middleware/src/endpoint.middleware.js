@@ -9,10 +9,6 @@ export default function createEndpointMiddleware(endpoint: string | ((state: any
   return (next: Dispatch<Action>) => (action: Action) => {
     const apiCall = action[RSAA];
 
-    if (!apiCall) {
-      return next(action);
-    }
-
     return next({
       [RSAA]: {
         ...apiOptions,
