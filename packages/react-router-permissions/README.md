@@ -98,7 +98,82 @@ const authorizationStrategy = (permissions, requirement) => {
 >
 ```
 
-There will be some strategies provided with the package out of the box. Role based and Permissions based strategies will be included.
+There are some strategies provided with the package out of the box. Those are:
+
+- Role based strategy
+
+  ```js
+  const permissions = ['MODERATOR', 'PREMIUM_USER'];
+
+  ...
+  // authorization will pass
+  <AuthorizedRoute
+    path='/authorized-section'
+    requires='MODERATOR'
+  >
+  ...
+
+  ...
+  // authorization will fail
+  <AuthorizedRoute
+    path='/authorized-section'
+    requires='ADMIN'
+  >
+  ...
+  ```
+
+* Permissions based strategy
+
+  ```js
+  const permissions = {
+    canReadPosts: true,
+    canManagePosts: true,
+    canManageUsers: false,
+  };
+
+  ...
+  // authorization will pass
+  <AuthorizedRoute
+    path='/authorized-section'
+    requires='canManagePosts'
+  >
+  ...
+
+  ...
+  // authorization will fail
+  <AuthorizedRoute
+    path='/authorized-section'
+    requires='canManageUsers'
+  >
+  ...
+  ```
+
+* At least one strategy
+
+  ```js
+  const permissions = {
+    canReadPosts: true,
+    canManagePosts: false,
+    canManageUsers: false,
+    canViewUsers: false,
+  };
+
+  ...
+  // authorization will pass
+  <AuthorizedRoute
+    path='/authorized-section'
+    requires={['canReadPosts', 'canManagePosts']}
+  >
+  ...
+
+  ...
+  // authorization will fail
+  <AuthorizedRoute
+    path='/authorized-section'
+    requires={['canManageUsers', 'canViewUsers']}
+  >
+  ...
+  ```
 
 We also provide authorized section to cover cases where we need authorization but want to be route agnostic
 
@@ -122,7 +197,7 @@ This works exactly like AuthorizedRoute but will attempt access regardless of ac
 Since permissions are being fetched from context, it is possible to override them for certain section of our application
 using nested `PermissionsProvider`. Result of `authorizationStrategy` does not need to be boolean too.
 While most of the time it being a boolean might be convenient. It is possible for `authorizationStrategy`
-to return complex object that we can utilize in our component
+to return complex object that we can utilize in our component.
 
 ```js
 const store = createStore(
