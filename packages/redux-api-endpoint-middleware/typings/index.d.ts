@@ -1,8 +1,10 @@
 import { Middleware } from 'redux';
 
 type Options = {
-    apiUrl?: string;
-    excluded?: string[];
+  apis?: {
+    [key: string]: Object;
+  };
+  excluded?: string[];
 };
 
 export default function endpointMiddlewareFactory(options: Options): Middleware;

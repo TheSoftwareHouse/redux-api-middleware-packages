@@ -37,7 +37,9 @@
   "files": [
     "es",
     "index.js",
-    "middleware.js",
+    "api-selector.middleware.js",
+    "endpoint.middleware.js",
+    "middleware-factory.js",
     "typings/index.d.ts"
   ],
   "jest": {

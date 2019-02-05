@@ -1,6 +1,6 @@
 import { RSAA } from 'redux-api-middleware';
 
-import createEndpointMiddleware from '../middleware';
+import createEndpointMiddleware from '../middleware-factory';
 
 describe('Endpoint middleware factory', () => {
   beforeEach(() => {
@@ -103,7 +103,12 @@ describe('Endpoint middleware factory', () => {
     process.env.REACT_APP_API_URL = 'http://foo.bar';
 
     const endpointMiddleware = createEndpointMiddleware({
-      apiUrl: 'http://bar.baz',
+      apis: {
+        default: {
+          apiUrl: 'http://bar.baz',
+          additionalProps: true,
+        },
+      },
     });
 
     const next = jest.fn();
@@ -119,6 +124,7 @@ describe('Endpoint middleware factory', () => {
       [RSAA]: {
         foo: 'bar',
         endpoint: 'http://bar.baz/foo/bar',
+        additionalProps: true,
       },
     });
   });
@@ -142,7 +148,7 @@ describe('Endpoint middleware factory', () => {
     expect(next).toHaveBeenCalledWith({
       [RSAA]: {
         foo: 'bar',
-        endpoint: 'http://foo.barhttp://foo.bar',
+        endpoint: 'http://foo.bar/http://foo.bar',
       },
     });
 
@@ -159,5 +165,101 @@ describe('Endpoint middleware factory', () => {
         endpoint: '/foo/bar',
       },
     });
+  });
+
+  test('removes double slashes or adds one if needed', () => {
+    process.env.REACT_APP_API_URL = 'http://foo.bar';
+
+    const endpointMiddleware = createEndpointMiddleware();
+
+    const next = jest.fn();
+
+    endpointMiddleware()(next)({
+      [RSAA]: {
+        endpoint: 'bar',
+      },
+    });
+
+    expect(next).toHaveBeenCalledWith({
+      [RSAA]: {
+        endpoint: 'http://foo.bar/bar',
+      },
+    });
+
+    endpointMiddleware()(next)({
+      [RSAA]: {
+        endpoint: '/bar',
+      },
+    });
+
+    expect(next).toHaveBeenCalledWith({
+      [RSAA]: {
+        endpoint: 'http://foo.bar/bar',
+      },
+    });
+  });
+
+  test('allows to pass additional API urls and options', () => {
+    const endpointMiddleware = createEndpointMiddleware({
+      apis: {
+        default: {
+          apiUrl: 'http://bar.baz',
+        },
+        microServiceOne: {
+          apiUrl: 'http://microservice1.example.com',
+          headers: {
+            'X-Api-Version': '2',
+          },
+          paramsOptions: {
+            arrayFormat: 'brackets',
+          },
+        },
+      },
+    });
+
+    const next = jest.fn();
+
+    endpointMiddleware()(next)({
+      [RSAA]: {
+        endpoint: '/foo/bar',
+        api: 'microServiceOne',
+        paramsOptions: {
+          arrayFormat: 'indices',
+        },
+      },
+    });
+
+    expect(next).toHaveBeenCalledWith({
+      [RSAA]: {
+        endpoint: 'http://microservice1.example.com/foo/bar',
+        headers: {
+          'X-Api-Version': '2',
+        },
+        paramsOptions: {
+          arrayFormat: 'indices',
+        },
+      },
+    });
+  });
+
+  test('throws an error if selected additional API url is not defined in config', () => {
+    expect(() => {
+      const endpointMiddleware = createEndpointMiddleware({
+        apis: {
+          default: {
+            apiUrl: 'http://bar.baz',
+          },
+        },
+      });
+
+      const next = jest.fn();
+
+      endpointMiddleware()(next)({
+        [RSAA]: {
+          endpoint: '/foo/bar',
+          api: 'microServiceOne',
+        },
+      });
+    }).toThrowErrorMatchingSnapshot();
   });
 });
