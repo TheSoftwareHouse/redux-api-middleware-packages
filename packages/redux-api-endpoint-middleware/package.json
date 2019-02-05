@@ -36,7 +36,9 @@
   "files": [
     "es",
     "index.js",
-    "middleware.js"
+    "api-selector.middleware.js",
+    "endpoint.middleware.js",
+    "middleware-factory.js"
   ],
   "jest": {
     "collectCoverageFrom": [

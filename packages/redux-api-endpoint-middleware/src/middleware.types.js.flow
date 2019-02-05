@@ -5,14 +5,20 @@ export type Config = {|
   excluded: string[],
 |};
 
-type ApiOptions = {
-  apiUrl: string,
+export type ApiOptions = {
   [key:string]: any,
 };
 
+export type ApiSelectorMiddlewareConfig = {
+  apis: {
+    default: ApiOptions,
+    [string]: ApiOptions,
+  },
+  excluded: string[],
+}
+
 export type Options = {
   apis?: {
-    default: ApiOptions,
     [key: string]: ApiOptions,
   },
   excluded?: string[],

@@ -1,6 +1,6 @@
 import { RSAA } from 'redux-api-middleware';
 
-import createEndpointMiddleware from '../middleware';
+import createEndpointMiddleware from '../middleware-factory';
 
 describe('Endpoint middleware factory', () => {
   beforeEach(() => {
@@ -106,6 +106,7 @@ describe('Endpoint middleware factory', () => {
       apis: {
         default: {
           apiUrl: 'http://bar.baz',
+          additionalProps: true,
         },
       },
     });
@@ -123,6 +124,7 @@ describe('Endpoint middleware factory', () => {
       [RSAA]: {
         foo: 'bar',
         endpoint: 'http://bar.baz/foo/bar',
+        additionalProps: true,
       },
     });
   });
