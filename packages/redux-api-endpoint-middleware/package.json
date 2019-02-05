@@ -7,6 +7,7 @@
   "author": "Łukasz Golder <lukasz.golder@tsh.io>",
   "main": "index.js",
   "module": "es/index.js",
+  "typings": "typings/index.d.ts",
   "publishConfig": {
     "access": "public"
   },
@@ -38,7 +39,8 @@
     "index.js",
     "api-selector.middleware.js",
     "endpoint.middleware.js",
-    "middleware-factory.js"
+    "middleware-factory.js",
+    "typings/index.d.ts"
   ],
   "jest": {
     "collectCoverageFrom": [

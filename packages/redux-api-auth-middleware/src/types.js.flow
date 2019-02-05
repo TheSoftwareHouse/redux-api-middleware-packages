@@ -12,10 +12,6 @@ export type State = {
   expirationDate: ?number,
 };
 
-export type AuthMiddlewareConfig = {
-  header: string,
-};
-
 export type AnyAction = {
   type: string,
 };

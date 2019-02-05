@@ -33,7 +33,7 @@ const authMiddleware = createAuthMiddleware({
   refreshConfig: {
     endpoint: '/refresh-token',
     failedAction: { type: 'LOGOUT' },
-  }
+  },
 });
 const middlewares = [authMiddleware, apiMiddleware];
 const store = createStore(appReducer, applyMiddleware(...middlewares));
@@ -43,7 +43,7 @@ and add authReducer to your app:
 
 ```js
 import { combineReducers } from 'redux'
-import { authReducer } from '@tshio/redux-api-auth-middleware';
+import { createAuthReducer } from '@tshio/redux-api-auth-middleware';
 
 // See config details below.
 const authReducer = createAuthReducer({
@@ -57,6 +57,7 @@ export default combineReducers({
 ```
 
 ## Usage
+
 To use this middleware you have to save your `authToken` and `refreshToken` using `setTokenAction`.
 
 ```js
@@ -86,6 +87,7 @@ import { RSAA } from 'redux-api-middleware';
 ```
 
 If for some reason you want to skip the middleware you have to add `skipAuth` key to your action.
+
 ```js
 import { RSAA } from 'redux-api-middleware';
 
@@ -117,60 +119,70 @@ export default connect(
 )(Component);
 ```
 
-
 ## Configuration
 
 ### Auth middleware
-|Key|Option name|Default value|Type|Role|
-|--- |--- |--- |--- |--- |
-|authConfig|-|-|-|Configuration for adding authorization headers|
-||header|Authorization|`string`|Name of the header passed to every request that needs authorization|
-||type|Bearer|`string`|Type of the token|
-|refreshConfig|-|-|-|Configuration for token refresh|
-||endpoint|undefined|`string`|API endpoint for token renewal|
-||failedAction|undefined|`ReduxAction`|Action that will be dispatched after failed token request|
+
+| Key           | Option name  | Default value | Type          | Role                                                                |
+| ------------- | ------------ | ------------- | ------------- | ------------------------------------------------------------------- |
+| authConfig    | -            | -             | -             | Configuration for adding authorization headers                      |
+|               | header       | Authorization | `string`      | Name of the header passed to every request that needs authorization |
+|               | type         | Bearer        | `string`      | Type of the token                                                   |
+| refreshConfig | -            | -             | -             | Configuration for token refresh                                     |
+|               | endpoint     | undefined     | `string`      | API endpoint for token renewal                                      |
+|               | failedAction | undefined     | `ReduxAction` | Action that will be dispatched after failed token request           |
 
 ### Auth reducer
-|Option name|Default value|Type|Role|
-|--- |--- |--- |--- |
-|getExpirationTimestamp|calculateJWTTokenExpirationDate|`function<number>`|Function returning expiration timestamp for requested token. Defaults to a function that sums `iat` and `exp` keys from JWT payload|
+
+| Option name            | Default value                   | Type               | Role                                                                                                                                |
+| ---------------------- | ------------------------------- | ------------------ | ----------------------------------------------------------------------------------------------------------------------------------- |
+| getExpirationTimestamp | calculateJWTTokenExpirationDate | `function<number>` | Function returning expiration timestamp for requested token. Defaults to a function that sums `iat` and `exp` keys from JWT payload |
 
 There are two built in functions for calculating token expiration timestamp, one for **JWT** and the other one for **OAuth2**. See examples below.
 
 #### JWT Example
+
 Function takes payload below, parses the `authToken` and looks for `iat` and `exp` keys to sum them. If they are not there it returns 0.
 
 API Payload
+
 ```json
 {
   "authToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjQxMzM5ODA3OTksImV4cCI6MzYwMH0.XzogySsPK2_KU4uceVR1rwwKa31_5Ur9zhqCaBYVzUw",
   "refreshToken": "..."
 }
 ```
+
 Reducer Configuration
+
 ```js
-import { calculateJWTTokenExpirationDate } from '@tshio/redux-api-auth-middleware'
+import { calculateJWTTokenExpirationDate } from '@tshio/redux-api-auth-middleware';
 
 const authReducer = createAuthReducer({
   getExpirationTimestamp: calculateJWTTokenExpirationDate,
 });
 ```
+
 #### OAuth2 Example
+
 Function takes payload below and adds `expires_in` value to current timestamp.
 
 API Payload
+
 ```json
 {
-  "access_token":"MTQ0NjJkZmQ5OTM2NDE1ZTZjNGZmZjI3",
-  "token_type":"bearer",
-  "expires_in":3600,
-  "refresh_token":"IwOGYzYTlmM2YxOTQ5MGE3YmNmMDFkNTVk",
-  "scope":"create"
+  "access_token": "MTQ0NjJkZmQ5OTM2NDE1ZTZjNGZmZjI3",
+  "token_type": "bearer",
+  "expires_in": 3600,
+  "refresh_token": "IwOGYzYTlmM2YxOTQ5MGE3YmNmMDFkNTVk",
+  "scope": "create"
 }
 ```
+
 Reducer Configuration
+
 ```js
-import { calculateOauthTokenExpirationDate } from '@tshio/redux-api-auth-middleware'
+import { calculateOauthTokenExpirationDate } from '@tshio/redux-api-auth-middleware';
 
 const authReducer = createAuthReducer({
   getExpirationTimestamp: calculateOauthTokenExpirationDate,
