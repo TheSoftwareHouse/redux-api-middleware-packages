@@ -2,8 +2,8 @@
   "name": "@tshio/react-router-permissions",
   "version": "1.0.1",
   "description": "",
-  "main": "index.js",
-  "module": "es/index.js",
+  "main": "build/index.js",
+  "module": "build/es/index.js",
   "repository": "TheSoftwareHouse/react-packages",
   "author": "Rafał Kucharski <rafal.kucharski@thesoftwarehouse.pl>",
   "publishConfig": {
