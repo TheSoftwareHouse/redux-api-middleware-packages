@@ -4,6 +4,7 @@
   "description": "",
   "main": "build/index.js",
   "module": "build/es/index.js",
+  "typings": "typings/index.d.ts",
   "repository": "TheSoftwareHouse/react-packages",
   "author": "Rafał Kucharski <rafal.kucharski@thesoftwarehouse.pl>",
   "publishConfig": {
