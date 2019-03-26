@@ -6,6 +6,8 @@ type Options = {
     currentPageKey?: string;
     pageChangeCallbackKey?: string;
     pageParamName?: string;
+    itemsPerPageParamName?: string;
+    defaultItemsPerPage?: number;
 };
 
 type RenderProps = {
