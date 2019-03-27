@@ -45,29 +45,31 @@ describe('react-router-pagination', () => {
 
     wrapper.setProps({ location: { search: '' } });
 
-    expect(wrapper.props().history.push).toHaveBeenCalledWith({ search: '?page=1' });
+    expect(wrapper.props().history.push).toHaveBeenCalledWith({ search: '?page=1&itemsPerPage=10' });
   });
 
-  it('fetches page with param from URL', () => {
+  it('fetches page and itemsPerPage with params from URL', () => {
     const props = {
       location: {
-        search: '?page=2',
+        search: '?page=2&itemsPerPage=5',
       },
-      onPageChange: jest.fn(),
     };
-    const wrapper = mount(<ComponentWithPagination {...props} />);
+    const wrapper = mount(<ComponentWithPagination {...wrappedComponentProps} {...props} />);
 
-    expect(wrapper.props().onPageChange).toHaveBeenCalledWith({ page: 2 });
+    expect(wrapper.props().onPageChange).toHaveBeenCalledWith({ page: 2, itemsPerPage: 5 });
   });
 
-  it('fetches new page when page param changes', () => {
+  it('fetches new page when page or itemsPerPage param changes', () => {
     const wrapper = mount(<ComponentWithPagination {...wrappedComponentProps} />);
 
-    wrapper.setProps({ location: { search: '?page=2' } });
-    expect(wrapper.props().onPageChange).toHaveBeenCalledWith({ page: 2 });
+    wrapper.setProps({ location: { search: '?page=2&itemsPerPage=10' } });
+    expect(wrapper.props().onPageChange).toHaveBeenCalledWith({ page: 2, itemsPerPage: 10 });
 
-    wrapper.setProps({ location: { search: '?page=3' } });
-    expect(wrapper.props().onPageChange).toHaveBeenCalledWith({ page: 3 });
+    wrapper.setProps({ location: { search: '?page=3&itemsPerPage=10' } });
+    expect(wrapper.props().onPageChange).toHaveBeenCalledWith({ page: 3, itemsPerPage: 10 });
+
+    wrapper.setProps({ location: { search: '?page=3&itemsPerPage=8' } });
+    expect(wrapper.props().onPageChange).toHaveBeenCalledWith({ page: 3, itemsPerPage: 8 });
   });
 
   it('changes history when handle click in pagination component', () => {
@@ -75,7 +77,7 @@ describe('react-router-pagination', () => {
     const paginationWrapper = mount(
       wrapper.find(WrappedComponent).prop('pagination')({
         onChange: page => wrapper.instance().updateCurrentURL(page),
-      })
+      }),
     );
 
     paginationWrapper.instance().handleClick(1);
