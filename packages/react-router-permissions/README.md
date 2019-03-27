@@ -270,11 +270,11 @@ class Header extends React.Component {
 | --------------------- | --------------------------------- | -------- | ----------------------------------------------------------------------------------------------------- |
 | path                  | `string`                          | `true`   | Path that when accessed in by browser, will trigger authorization attempt                             |
 | requires              | `*`                               | `false`  | Requirement that will be used in access attempt call                                                  |
-| authorizationStrategy | `(permissions, requirement) => *` | `true`   | Function that if passed will override `authorizationStrategy` passed to nearest `PermissionsProvider` |
+| authorizationStrategy | `(permissions, requirement) => *` | `false`  | Function that if passed will override `authorizationStrategy` passed to nearest `PermissionsProvider` |
 
 ### AuthorizedSection
 
 | Property name         | Type                              | Required | Description                                                                                           |
 | --------------------- | --------------------------------- | -------- | ----------------------------------------------------------------------------------------------------- |
-| requires              | `*`                               | `false`  | Requirement that will be used in access attempt call                                                  |
-| authorizationStrategy | `(permissions, requirement) => *` | `true`   | Function that if passed will override `authorizationStrategy` passed to nearest `PermissionsProvider` |
+| requires              | `*`                               | `true`   | Requirement that will be used in access attempt call                                                  |
+| authorizationStrategy | `(permissions, requirement) => *` | `false`  | Function that if passed will override `authorizationStrategy` passed to nearest `PermissionsProvider` |
