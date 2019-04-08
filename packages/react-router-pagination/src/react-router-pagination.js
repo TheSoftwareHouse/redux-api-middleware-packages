@@ -8,7 +8,13 @@ import type { ComponentType } from 'react';
 
 export const connectRouterWithPagination = (
   RenderComponent: ComponentType<any>,
-  { currentPageKey = 'currentPage', pageChangeCallbackKey = 'onChange', pageParamName = 'page' }: ConfigOptions = {}
+  {
+    currentPageKey = 'currentPage',
+    pageChangeCallbackKey = 'onChange',
+    pageParamName = 'page',
+    itemsPerPageParamName = 'itemsPerPage',
+    defaultItemsPerPage = 10,
+  }: ConfigOptions = {},
 ) => (WrappedComponent: ComponentType<any>) => {
   return class extends Component<PaginationProps> {
     updateCurrentURL = (page: number) => {
@@ -22,29 +28,36 @@ export const connectRouterWithPagination = (
 
     setDefaultPageParam = (params: { [string]: string | number }) => {
       params[pageParamName] = 1;
+      params[itemsPerPageParamName] = defaultItemsPerPage;
       this.props.history.push({ search: '?' + stringify(params) });
     };
 
     componentDidMount() {
       const queryParams = this.parseQueryParamsToObject();
 
-      if (!queryParams[pageParamName]) {
+      if (!queryParams[pageParamName] || !queryParams[itemsPerPageParamName]) {
         return this.setDefaultPageParam(queryParams);
       }
       this.props.onPageChange({
         page: +queryParams[pageParamName],
+        itemsPerPage: +queryParams[itemsPerPageParamName],
       });
     }
 
     componentDidUpdate(prevProps: PaginationProps) {
       const queryParams = this.parseQueryParamsToObject();
 
-      if (prevProps.location.search !== this.props.location.search && queryParams[pageParamName]) {
+      if (
+        prevProps.location.search !== this.props.location.search &&
+        queryParams[pageParamName] &&
+        queryParams[itemsPerPageParamName]
+      ) {
         this.props.onPageChange({
           page: +queryParams[pageParamName],
+          itemsPerPage: +queryParams[itemsPerPageParamName],
         });
       }
-      if (!queryParams[pageParamName]) {
+      if (!queryParams[pageParamName] || !queryParams[itemsPerPageParamName]) {
         this.setDefaultPageParam(queryParams);
       }
     }

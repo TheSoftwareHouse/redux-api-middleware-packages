@@ -30,7 +30,7 @@ import { PaginationComponent } from '../pagination.component';
 const mapStateToProps = () => ({ ... })
 
 const mapDispatchToProps = dispatch => ({
-    onPageChange: (params) => dispatch(fetchUsers(params)); // `onPageChange` method will dispatch your redux action when page changes
+    onPageChange: (params) => dispatch(fetchUsers(params)) // `onPageChange` method will dispatch your redux action when page changes
 });
 
 //And now, connect your store with list component
@@ -44,7 +44,9 @@ export const ListContainer = compose(
         // Second parameter (optional) is an object and allow you to pass config options
         pageChangeCallbackKey: "pageChangeCallback",
         currentPageKey: "page",
-        pageParamName: "usersListPage"
+        pageParamName: "usersListPage",
+        itemsPerPageParamName: "itemsNumber",
+        defaultItemsPerPage: 8
         // See list of available options below..
     }
   )
@@ -74,12 +76,14 @@ export class ListComponent extends Component {
 }
 ```
 
-This package is working with `page` parameter which is included in URL. If `page` param is missing, it will be set as default with value `1`.
+This package is working with `page` and `itemsPerPage` parameters which are included in URL. If `page` param is missing, it will be set as default with value `1`. If `itemsPerPage` param is missing, it will be initialized with value of `defaultItemsPerPage` from config options or with value of `10`.
 
 ## Config options
 
-| Option name           | Default value | Type     | Role                                                                                                   |
-| --------------------- | ------------- | -------- | ------------------------------------------------------------------------------------------------------ |
-| currentPageKey        | `currentPage` | `string` | Name of prop which is passed to pagination component to point on current page.                         |
-| pageChangeCallbackKey | `onChange`    | `string` | Name of callback function which is called when you click on navigation button in pagination component. |
-| pageParamName         | `page`        | `string` | Determines what is the name of page param which is displaying in URL; e.g. `/users?page=1`.            |
+| Option name           | Default value  | Type     | Role                                                                                                   |
+| --------------------- | -------------- | -------- | ------------------------------------------------------------------------------------------------------ |
+| currentPageKey        | `currentPage`  | `string` | Name of prop which is passed to pagination component to point on current page.                         |
+| pageChangeCallbackKey | `onChange`     | `string` | Name of callback function which is called when you click on navigation button in pagination component. |
+| pageParamName         | `page`         | `string` | Determines what is the name of page param which is displayed in URL; e.g. `/users?page=1`.             |
+| itemsPerPageParamName | `itemsPerPage` | `string` | Determines what is the name of items per page param displayed in URL; e.g. `/users?itemsPerPage=10`    |
+| defaultItemsPerPage   | `10`           | `number` | Determines initial and default value of number of items per page.                                      |
