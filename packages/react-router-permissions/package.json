@@ -1,6 +1,6 @@
 {
   "name": "@tshio/react-router-permissions",
-  "version": "1.0.2",
+  "version": "1.1.0",
   "description": "",
   "main": "build/index.js",
   "module": "build/es/index.js",
