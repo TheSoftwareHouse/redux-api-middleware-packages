@@ -1,9 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`Translations provider factory creates translations provider correctly 1`] = `
-<span>
-  en.foobar
-</span>
-`;
-
-exports[`Translations provider factory throws an error if no locale is specified 1`] = `"You must provide at least one locale"`;

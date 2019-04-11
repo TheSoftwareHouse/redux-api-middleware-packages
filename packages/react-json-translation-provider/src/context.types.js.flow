@@ -1,6 +1,0 @@
-// @flow
-
-export type Locale = {
-  update: Function,
-  value: string,
-};
