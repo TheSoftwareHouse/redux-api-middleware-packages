@@ -62,9 +62,9 @@ describe('Auth middleware', () => {
   it('should create an action to set the token', () => {
     const expectedAction = {
       type: SET_TOKEN,
-      payload: { authToken, refreshToken },
+      payload: { auth_token: authToken, refresh_token: refreshToken },
     };
-    expect(setTokenAction({ authToken, refreshToken })).toEqual(expectedAction);
+    expect(setTokenAction({ auth_token: authToken, refresh_token: refreshToken })).toEqual(expectedAction);
   });
 
   it('should create an action to clear the token', () => {
@@ -91,10 +91,12 @@ describe('Auth middleware', () => {
   });
 
   it('should handle set token action', () => {
-    expect(authReducer({}, { type: SET_TOKEN, payload: { authToken, refreshToken } })).toEqual({
+    expect(
+      authReducer({}, { type: SET_TOKEN, payload: { auth_token: authToken, refresh_token: refreshToken } }),
+    ).toEqual({
       authToken,
       refreshToken,
-      expires: calculateJWTTokenExpirationDate({ authToken }),
+      expires: calculateJWTTokenExpirationDate({ auth_token: authToken }),
     });
   });
 
@@ -107,10 +109,12 @@ describe('Auth middleware', () => {
   });
 
   it('should handle refresh token success action', () => {
-    expect(authReducer({}, { type: REFRESH_TOKEN_SUCCESS, payload: { authToken, refreshToken } })).toEqual({
+    expect(
+      authReducer({}, { type: REFRESH_TOKEN_SUCCESS, payload: { auth_token: authToken, refresh_token: refreshToken } }),
+    ).toEqual({
       authToken,
       refreshToken,
-      expires: calculateJWTTokenExpirationDate({ authToken }),
+      expires: calculateJWTTokenExpirationDate({ auth_token: authToken }),
     });
   });
 
@@ -142,21 +146,21 @@ describe('Auth middleware', () => {
 
   it('should calculate JWT token expiration properly', () => {
     expect(isTokenExpired()).toBeTruthy();
-    expect(isTokenExpired(calculateJWTTokenExpirationDate({ authToken }))).toBeFalsy();
-    expect(isTokenExpired(calculateJWTTokenExpirationDate({ authToken: expiredAuthToken }))).toBeTruthy();
+    expect(isTokenExpired(calculateJWTTokenExpirationDate({ auth_token: authToken }))).toBeFalsy();
+    expect(isTokenExpired(calculateJWTTokenExpirationDate({ auth_token: expiredAuthToken }))).toBeTruthy();
     expect(isTokenExpired('Not Valid Token')).toBeFalsy();
   });
 
   it('should parse JWT', () => {
-    expect(parseJWTPayload(authToken)).toEqual({ exp: 3600, iat: 4133980799 });
+    expect(parseJWTPayload(authToken)).toEqual({ exp: 4426644036, iat: 1555053636, iss: 'test', sub: '', aud: '' });
     expect(parseJWTPayload()).toEqual(null);
   });
 
   it('should calculate JWT expiration date', () => {
     const badToken =
       'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1MTYyMzkwMjJ9.tbDepxpstvGdW8TC3G8zg4B6rUYAOvfzdceoH48wgRQ';
-    expect(calculateJWTTokenExpirationDate({ authToken })).toEqual(4133980799 + 3600);
-    expect(calculateJWTTokenExpirationDate({ authToken: badToken })).toEqual(0);
+    expect(calculateJWTTokenExpirationDate({ auth_token: authToken })).toEqual(4426644036);
+    expect(calculateJWTTokenExpirationDate({ auth_token: badToken })).toEqual(0);
     expect(calculateJWTTokenExpirationDate('foo')).toEqual(0);
     expect(calculateJWTTokenExpirationDate()).toEqual(0);
   });
@@ -245,8 +249,8 @@ describe('Auth middleware', () => {
       },
     };
     fetchMock.mock(refreshEndpoint, {
-      authToken,
-      refreshToken,
+      auth_token: authToken,
+      refresh_token: refreshToken,
     });
     fetchMock.mock(apiEndpoint, 200);
     await store.dispatch(action);
@@ -278,8 +282,8 @@ describe('Auth middleware', () => {
       },
     };
     fetchMock.mock(refreshEndpoint, {
-      authToken,
-      refreshToken,
+      auth_token: authToken,
+      refresh_token: refreshToken,
     });
     fetchMock.mock(apiEndpoint, 200);
     await store.dispatch(action);

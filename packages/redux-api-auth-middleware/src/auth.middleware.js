@@ -50,7 +50,11 @@ export default function({
           if (refreshConfig && isTokenExpired(expires)) {
             if (!refreshPromise) {
               refreshPromise = store
-                .dispatch(refreshTokenAction({ refreshToken: refreshToken, endpoint: refreshConfig.endpoint }))
+                .dispatch(
+                  refreshConfig.actionDefinition
+                    ? refreshConfig.actionDefinition({ refreshToken: refreshToken, endpoint: refreshConfig.endpoint })
+                    : refreshTokenAction({ refreshToken: refreshToken, endpoint: refreshConfig.endpoint }),
+                )
                 .then(apiCall => {
                   refreshPromise = null;
                   return apiCall;

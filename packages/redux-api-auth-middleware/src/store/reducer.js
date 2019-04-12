@@ -16,15 +16,15 @@ export default function({
       case SET_TOKEN:
         return {
           ...state,
-          authToken: action.payload?.authToken,
-          refreshToken: action.payload?.refreshToken,
+          authToken: action.payload?.auth_token,
+          refreshToken: action.payload?.refresh_token,
           expires: getExpirationTimestamp(action.payload),
         };
       case REFRESH_TOKEN_SUCCESS:
         return {
           ...state,
-          authToken: action.payload?.authToken,
-          refreshToken: action.payload?.refreshToken,
+          authToken: action.payload?.auth_token,
+          refreshToken: action.payload?.refresh_token,
           expires: getExpirationTimestamp(action.payload),
         };
       case CLEAR_TOKEN:

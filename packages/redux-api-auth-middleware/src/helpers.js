@@ -3,7 +3,7 @@
 import type { AnyObject } from './types';
 
 export function timestampNow() {
-  return Math.floor(+new Date() / 1000); // equal to timestampNow()
+  return Math.floor(+new Date() / 1000);
 }
 
 export function parseJWTPayload(token: string): AnyObject | null {
@@ -16,11 +16,17 @@ export function parseJWTPayload(token: string): AnyObject | null {
 }
 
 export function calculateJWTTokenExpirationDate(payload: AnyObject): number {
-  if (!payload || !payload.authToken) return 0;
-  const token = parseJWTPayload(payload.authToken);
-  if (!token) return 0;
-  const { iat, exp } = token;
-  return iat && exp ? Number(iat) + Number(exp) : 0;
+  if (!payload || !payload.auth_token) {
+    return 0;
+  }
+
+  const token = parseJWTPayload(payload.auth_token);
+
+  if (!token) {
+    return 0;
+  }
+
+  return token.exp ? Number(token.exp) : 0;
 }
 
 export function calculateOauthTokenExpirationDate(payload: AnyObject): number {
