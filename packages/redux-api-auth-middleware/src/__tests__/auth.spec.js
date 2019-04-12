@@ -161,6 +161,7 @@ describe('Auth middleware', () => {
       'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1MTYyMzkwMjJ9.tbDepxpstvGdW8TC3G8zg4B6rUYAOvfzdceoH48wgRQ';
     expect(calculateJWTTokenExpirationDate({ auth_token: authToken })).toEqual(4426644036);
     expect(calculateJWTTokenExpirationDate({ auth_token: badToken })).toEqual(0);
+    expect(calculateJWTTokenExpirationDate({ auth_token: 'bad' })).toEqual(0);
     expect(calculateJWTTokenExpirationDate('foo')).toEqual(0);
     expect(calculateJWTTokenExpirationDate()).toEqual(0);
   });
