@@ -22,7 +22,7 @@ import {
   REFRESH_TOKEN_SUCCESS,
 } from '../store/types';
 
-import { authToken, refreshToken, expiredAuthToken, oAuthToken } from './const';
+import { accessToken, refreshToken, expiredAuthToken, oAuthToken } from './const';
 
 const refreshEndpoint = 'https://example.com/refresh-token';
 const apiEndpoint = 'https://example.com/users';
@@ -42,7 +42,7 @@ const flushPromises = () => new Promise(resolve => setImmediate(resolve));
 let next, store;
 
 describe('Auth middleware', () => {
-  const authHeaders = { Authorization: `Bearer ${authToken}` };
+  const authHeaders = { Authorization: `Bearer ${accessToken}` };
 
   beforeEach(() => {
     global.fetch = nodeFetch;
@@ -50,7 +50,7 @@ describe('Auth middleware', () => {
 
     store = {
       dispatch: jest.fn(() => new Promise(resolve => resolve({ error: true }))),
-      getState: () => ({ auth: { authToken, refreshToken, expires: 999999999999999 } }),
+      getState: () => ({ auth: { accessToken, refreshToken, expires: 999999999999999 } }),
     };
   });
 
@@ -62,9 +62,9 @@ describe('Auth middleware', () => {
   it('should create an action to set the token', () => {
     const expectedAction = {
       type: SET_TOKEN,
-      payload: { auth_token: authToken, refresh_token: refreshToken },
+      payload: { access_token: accessToken, refresh_token: refreshToken },
     };
-    expect(setTokenAction({ auth_token: authToken, refresh_token: refreshToken })).toEqual(expectedAction);
+    expect(setTokenAction({ access_token: accessToken, refresh_token: refreshToken })).toEqual(expectedAction);
   });
 
   it('should create an action to clear the token', () => {
@@ -92,17 +92,17 @@ describe('Auth middleware', () => {
 
   it('should handle set token action', () => {
     expect(
-      authReducer({}, { type: SET_TOKEN, payload: { auth_token: authToken, refresh_token: refreshToken } }),
+      authReducer({}, { type: SET_TOKEN, payload: { access_token: accessToken, refresh_token: refreshToken } }),
     ).toEqual({
-      authToken,
+      accessToken,
       refreshToken,
-      expires: calculateJWTTokenExpirationDate({ auth_token: authToken }),
+      expires: calculateJWTTokenExpirationDate({ access_token: accessToken }),
     });
   });
 
   it('should handle clear token action', () => {
     expect(authReducer({}, { type: CLEAR_TOKEN })).toEqual({
-      authToken: null,
+      accessToken: null,
       refreshToken: null,
       expires: 0,
     });
@@ -110,17 +110,20 @@ describe('Auth middleware', () => {
 
   it('should handle refresh token success action', () => {
     expect(
-      authReducer({}, { type: REFRESH_TOKEN_SUCCESS, payload: { auth_token: authToken, refresh_token: refreshToken } }),
+      authReducer(
+        {},
+        { type: REFRESH_TOKEN_SUCCESS, payload: { access_token: accessToken, refresh_token: refreshToken } },
+      ),
     ).toEqual({
-      authToken,
+      accessToken,
       refreshToken,
-      expires: calculateJWTTokenExpirationDate({ auth_token: authToken }),
+      expires: calculateJWTTokenExpirationDate({ access_token: accessToken }),
     });
   });
 
   it('should handle refresh token failure action', () => {
     expect(authReducer({}, { type: REFRESH_TOKEN_FAILURE })).toEqual({
-      authToken: null,
+      accessToken: null,
       refreshToken: null,
       expires: 0,
     });
@@ -146,22 +149,22 @@ describe('Auth middleware', () => {
 
   it('should calculate JWT token expiration properly', () => {
     expect(isTokenExpired()).toBeTruthy();
-    expect(isTokenExpired(calculateJWTTokenExpirationDate({ auth_token: authToken }))).toBeFalsy();
-    expect(isTokenExpired(calculateJWTTokenExpirationDate({ auth_token: expiredAuthToken }))).toBeTruthy();
+    expect(isTokenExpired(calculateJWTTokenExpirationDate({ access_token: accessToken }))).toBeFalsy();
+    expect(isTokenExpired(calculateJWTTokenExpirationDate({ access_token: expiredAuthToken }))).toBeTruthy();
     expect(isTokenExpired('Not Valid Token')).toBeFalsy();
   });
 
   it('should parse JWT', () => {
-    expect(parseJWTPayload(authToken)).toEqual({ exp: 4426644036, iat: 1555053636, iss: 'test', sub: '', aud: '' });
+    expect(parseJWTPayload(accessToken)).toEqual({ exp: 4426644036, iat: 1555053636, iss: 'test', sub: '', aud: '' });
     expect(parseJWTPayload()).toEqual(null);
   });
 
   it('should calculate JWT expiration date', () => {
     const badToken =
       'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE1MTYyMzkwMjJ9.tbDepxpstvGdW8TC3G8zg4B6rUYAOvfzdceoH48wgRQ';
-    expect(calculateJWTTokenExpirationDate({ auth_token: authToken })).toEqual(4426644036);
-    expect(calculateJWTTokenExpirationDate({ auth_token: badToken })).toEqual(0);
-    expect(calculateJWTTokenExpirationDate({ auth_token: 'bad' })).toEqual(0);
+    expect(calculateJWTTokenExpirationDate({ access_token: accessToken })).toEqual(4426644036);
+    expect(calculateJWTTokenExpirationDate({ access_token: badToken })).toEqual(0);
+    expect(calculateJWTTokenExpirationDate({ access_token: 'bad' })).toEqual(0);
     expect(calculateJWTTokenExpirationDate('foo')).toEqual(0);
     expect(calculateJWTTokenExpirationDate()).toEqual(0);
   });
@@ -227,8 +230,8 @@ describe('Auth middleware', () => {
     expect(next).toHaveBeenCalledWith(action);
   });
 
-  it('should skip auth headers when there is no authToken', () => {
-    const store = mockStore({ auth: { authToken: null, refreshToken: null, expires: 0 } });
+  it('should skip auth headers when there is no accessToken', () => {
+    const store = mockStore({ auth: { accessToken: null, refreshToken: null, expires: 0 } });
     const action = {
       [RSAA]: {
         body: {
@@ -241,7 +244,7 @@ describe('Auth middleware', () => {
   });
 
   it('should dispatch API request when token is valid', async () => {
-    const store = mockStore({ auth: { authToken, refreshToken, expires: 4133984399 } });
+    const store = mockStore({ auth: { accessToken, refreshToken, expires: 4133984399 } });
     const action = {
       [RSAA]: {
         endpoint: apiEndpoint,
@@ -250,7 +253,7 @@ describe('Auth middleware', () => {
       },
     };
     fetchMock.mock(refreshEndpoint, {
-      auth_token: authToken,
+      access_token: accessToken,
       refresh_token: refreshToken,
     });
     fetchMock.mock(apiEndpoint, 200);
@@ -259,7 +262,7 @@ describe('Auth middleware', () => {
   });
 
   it('should dispatch failed action when there is 401 response status for token refresh endpoint', async () => {
-    const store = mockStore({ auth: { authToken: expiredAuthToken, refreshToken, expires: 1516325422 } });
+    const store = mockStore({ auth: { accessToken: expiredAuthToken, refreshToken, expires: 1516325422 } });
     const action = {
       [RSAA]: {
         endpoint: apiEndpoint,
@@ -274,7 +277,7 @@ describe('Auth middleware', () => {
   });
 
   it('should dispatch failed action when there is 401 response status for token refresh endpoint', async () => {
-    const store = mockStore({ auth: { authToken: expiredAuthToken, refreshToken, expires: 1516325422 } });
+    const store = mockStore({ auth: { accessToken: expiredAuthToken, refreshToken, expires: 1516325422 } });
     const action = {
       [RSAA]: {
         endpoint: apiEndpoint,
@@ -283,7 +286,7 @@ describe('Auth middleware', () => {
       },
     };
     fetchMock.mock(refreshEndpoint, {
-      auth_token: authToken,
+      access_token: accessToken,
       refresh_token: refreshToken,
     });
     fetchMock.mock(apiEndpoint, 200);

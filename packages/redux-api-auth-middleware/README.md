@@ -59,14 +59,14 @@ export default combineReducers({
 
 ## Usage
 
-To use this middleware you have to save your `authToken` and `refreshToken` using `setTokenAction`.
+To use this middleware you have to save your `accessToken` and `refreshToken` using `setTokenAction`.
 
 ```js
 import { setTokenAction } from '@tshio/redux-api-auth-middleware';
 import Component from './component';
 
 const mapDispatchToProps = dispatch => ({
-  onSignIn: ({authToken, refreshToken}) => dispatch(setTokenAction({ auth_token: authToken, refresh_token: refreshToken, expires_in: 1555055916 }));
+  onSignIn: ({accessToken, refreshToken}) => dispatch(setTokenAction({ access_token: accessToken, refresh_token: refreshToken, expires_in: 1555055916 }));
 }
 
 export default connect(
@@ -144,13 +144,13 @@ There are two built in functions for calculating token expiration timestamp, one
 
 #### JWT Example
 
-Function takes payload below, parses the `auth_token` and looks for `iat` and `exp` keys to sum them. If they are not there it returns 0.
+Function takes payload below, parses the `access_token` and looks for `iat` and `exp` keys to sum them. If they are not there it returns 0.
 
 API Payload
 
 ```json
 {
-  "auth_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjQxMzM5ODA3OTksImV4cCI6MzYwMH0.XzogySsPK2_KU4uceVR1rwwKa31_5Ur9zhqCaBYVzUw",
+  "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjQxMzM5ODA3OTksImV4cCI6MzYwMH0.XzogySsPK2_KU4uceVR1rwwKa31_5Ur9zhqCaBYVzUw",
   "refresh_token": "..."
 }
 ```

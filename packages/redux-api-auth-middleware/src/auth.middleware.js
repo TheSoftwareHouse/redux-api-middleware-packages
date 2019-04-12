@@ -31,7 +31,7 @@ export default function({
               typeof action[RSAA].headers !== 'function'
                 ? {
                     ...action[RSAA].headers,
-                    [authConfig.header]: `${authConfig.type} ${store.getState().auth.authToken}`,
+                    [authConfig.header]: `${authConfig.type} ${store.getState().auth.accessToken}`,
                   }
                 : action[RSAA].headers,
           },
@@ -44,9 +44,9 @@ export default function({
           return next(action);
         }
 
-        const { authToken, refreshToken, expires } = store.getState().auth;
+        const { accessToken, refreshToken, expires } = store.getState().auth;
 
-        if (authToken) {
+        if (accessToken) {
           if (refreshConfig && isTokenExpired(expires)) {
             if (!refreshPromise) {
               refreshPromise = store

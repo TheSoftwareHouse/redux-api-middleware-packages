@@ -1,4 +1,4 @@
-export const authToken =
+export const accessToken =
   'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0ZXN0IiwiaWF0IjoxNTU1MDUzNjM2LCJleHAiOjQ0MjY2NDQwMzYsImF1ZCI6IiIsInN1YiI6IiJ9.-kIuG3rnBOBxjwy2go1e6wag8I3oM_9EYFD9ROD2LvQ';
 
 export const expiredAuthToken =

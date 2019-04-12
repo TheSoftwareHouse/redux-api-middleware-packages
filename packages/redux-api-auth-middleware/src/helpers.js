@@ -16,11 +16,11 @@ export function parseJWTPayload(token: string): AnyObject | null {
 }
 
 export function calculateJWTTokenExpirationDate(payload: AnyObject): number {
-  if (!payload || !payload.auth_token) {
+  if (!payload || !payload.access_token) {
     return 0;
   }
 
-  const token = parseJWTPayload(payload.auth_token);
+  const token = parseJWTPayload(payload.access_token);
 
   if (!token) {
     return 0;

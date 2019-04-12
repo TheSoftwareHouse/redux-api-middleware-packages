@@ -3,7 +3,7 @@ import { CLEAR_TOKEN, REFRESH_TOKEN_FAILURE, REFRESH_TOKEN_SUCCESS, SET_TOKEN } 
 import type { GetExpirationTimestamp, SetTokenAction, State } from '../types';
 
 export const initialState: State = {
-  authToken: null,
+  accessToken: null,
   refreshToken: null,
   expires: 0,
 };
@@ -16,14 +16,14 @@ export default function({
       case SET_TOKEN:
         return {
           ...state,
-          authToken: action.payload?.auth_token,
+          accessToken: action.payload?.access_token,
           refreshToken: action.payload?.refresh_token,
           expires: getExpirationTimestamp(action.payload),
         };
       case REFRESH_TOKEN_SUCCESS:
         return {
           ...state,
-          authToken: action.payload?.auth_token,
+          accessToken: action.payload?.access_token,
           refreshToken: action.payload?.refresh_token,
           expires: getExpirationTimestamp(action.payload),
         };

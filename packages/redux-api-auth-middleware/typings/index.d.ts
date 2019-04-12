@@ -29,13 +29,13 @@ type ReducerOptions = {
 };
 
 type TokenActionType = {
-  auth_token: string;
+  access_token: string;
   refresh_token?: string;
   expires_in?: number;
 };
 
 type AuthState = {
-  authToken: null | string;
+  accessToken: null | string;
   refreshToken: null | string;
   expires: number;
 };

@@ -3,17 +3,17 @@ import { CLEAR_TOKEN, REFRESH_TOKEN_FAILURE, REFRESH_TOKEN_REQUEST, REFRESH_TOKE
 import type { Action } from '../types';
 
 export function setTokenAction({
-  auth_token,
+  access_token,
   refresh_token,
   expires_in,
 }: {
-  auth_token: string,
+  access_token: string,
   refresh_token?: string,
   expires_in?: number,
 }): Action {
   return {
     type: SET_TOKEN,
-    payload: { auth_token, refresh_token, expires_in },
+    payload: { access_token, refresh_token, expires_in },
   };
 }
 
