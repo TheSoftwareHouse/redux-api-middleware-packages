@@ -2,10 +2,18 @@ import { RSAA } from 'redux-api-middleware';
 import { CLEAR_TOKEN, REFRESH_TOKEN_FAILURE, REFRESH_TOKEN_REQUEST, REFRESH_TOKEN_SUCCESS, SET_TOKEN } from './types';
 import type { Action } from '../types';
 
-export function setTokenAction({ authToken, refreshToken }: { authToken: string, refreshToken: string }): Action {
+export function setTokenAction({
+  access_token,
+  refresh_token,
+  expires_in,
+}: {
+  access_token: string,
+  refresh_token?: string,
+  expires_in?: number,
+}): Action {
   return {
     type: SET_TOKEN,
-    payload: { authToken, refreshToken },
+    payload: { access_token, refresh_token, expires_in },
   };
 }
 

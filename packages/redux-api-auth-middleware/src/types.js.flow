@@ -7,7 +7,7 @@ export type AnyObject = {
 };
 
 export type State = {
-  authToken: ?string,
+  accessToken: ?string,
   refreshToken: ?string,
   expirationDate: ?number,
 };
@@ -29,6 +29,7 @@ export type AuthConfig = {
 export type RefreshConfig = {
   endpoint: string,
   failedAction: AnyAction,
+  actionDefinition: ({refreshToken: string, endpoint: string}) => Object,
 };
 
 export type SetTokenAction = {
@@ -37,8 +38,8 @@ export type SetTokenAction = {
 };
 
 export type TokenPayload = {
-  authToken: ?string,
-  refreshToken: ?string,
+  access_token: ?string,
+  refresh_token: ?string,
   expires_in?: number
 };
 

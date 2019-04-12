@@ -31,7 +31,7 @@ export default function({
               typeof action[RSAA].headers !== 'function'
                 ? {
                     ...action[RSAA].headers,
-                    [authConfig.header]: `${authConfig.type} ${store.getState().auth.authToken}`,
+                    [authConfig.header]: `${authConfig.type} ${store.getState().auth.accessToken}`,
                   }
                 : action[RSAA].headers,
           },
@@ -44,13 +44,17 @@ export default function({
           return next(action);
         }
 
-        const { authToken, refreshToken, expires } = store.getState().auth;
+        const { accessToken, refreshToken, expires } = store.getState().auth;
 
-        if (authToken) {
+        if (accessToken) {
           if (refreshConfig && isTokenExpired(expires)) {
             if (!refreshPromise) {
               refreshPromise = store
-                .dispatch(refreshTokenAction({ refreshToken: refreshToken, endpoint: refreshConfig.endpoint }))
+                .dispatch(
+                  refreshConfig.actionDefinition
+                    ? refreshConfig.actionDefinition({ refreshToken: refreshToken, endpoint: refreshConfig.endpoint })
+                    : refreshTokenAction({ refreshToken: refreshToken, endpoint: refreshConfig.endpoint }),
+                )
                 .then(apiCall => {
                   refreshPromise = null;
                   return apiCall;
