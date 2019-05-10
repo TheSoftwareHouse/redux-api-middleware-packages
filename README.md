@@ -1,3 +1,7 @@
+# Status
+
+[![Build Status](https://travis-ci.org/TheSoftwareHouse/redux-api-middleware-packages.svg?branch=master)](https://travis-ci.org/TheSoftwareHouse/redux-api-middleware-packages) [![Code Coverage](https://codecov.io/gh/TheSoftwareHouse/redux-api-middleware-packages/branch/master/graph/badge.svg)](https://codecov.io/gh/TheSoftwareHouse/redux-api-middleware-packages) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/TheSoftwareHouse/redux-api-middleware-packages/blob/master/LICENSE.md)
+
 # redux-api-middleware-packages
 
 Ready to use packages for redux-api-middleware library.
@@ -18,7 +22,7 @@ This repository used to contain more libraries, which have been moved to:
 
 - [`react-intl-json-provider`](https://github.com/TheSoftwareHouse/react-intl-json-provider)
 - [`react-router-pagination`](https://github.com/TheSoftwareHouse/react-router-pagination)
-- [`react-router-permissions`](https://github.com/TheSoftwareHouse/react-router-permissions)
+- [`redux-api-middleware-packages`](https://github.com/TheSoftwareHouse/redux-api-middleware-packages)
 
 ## Development
 
