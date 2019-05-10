@@ -1,6 +1,6 @@
-# React Packages
+# redux-api-middleware-packages
 
-React reusable packages repository
+Ready to use packages for redux-api-middleware library.
 
 ## Packages
 
@@ -14,7 +14,7 @@ That means that [several packages](/packages) are published to npm from the same
 | [`redux-api-endpoint-middleware`](/packages/redux-api-endpoint-middleware) | ![version](https://img.shields.io/npm/v/@tshio/redux-api-endpoint-middleware.svg) | Endpoint prefixing middleware to [redux-api-middleware](https://github.com/agraboso/redux-api-middleware)           |
 | [`redux-api-params-middleware`](/packages/redux-api-params-middleware)     | ![version](https://img.shields.io/npm/v/@tshio/redux-api-params-middleware.svg)   | Adding query params to request endpoint to [redux-api-middleware](https://github.com/agraboso/redux-api-middleware) |
 
-React Packages used to contain more libraries, which have been moved to separate repositories:
+This repository used to contain more libraries, which have been moved to:
 
 - [`react-intl-json-provider`](https://github.com/TheSoftwareHouse/react-intl-json-provider)
 - [`react-router-pagination`](https://github.com/TheSoftwareHouse/react-router-pagination)
@@ -22,5 +22,5 @@ React Packages used to contain more libraries, which have been moved to separate
 
 ## Development
 
-We welcome all contributions. Please read our [CONTRIBUTING.md](https://github.com/TheSoftwareHouse/react-packages/blob/master/CONTRIBUTING.md) first.
-You can submit any ideas as [GitHub issues](https://github.com/TheSoftwareHouse/react-packages/issues).
+We welcome all contributions. Please read our [CONTRIBUTING.md](https://github.com/TheSoftwareHouse/redux-api-middleware-packages/blob/master/CONTRIBUTING.md) first.
+You can submit any ideas as [GitHub issues](https://github.com/TheSoftwareHouse/redux-api-middleware-packages/issues).

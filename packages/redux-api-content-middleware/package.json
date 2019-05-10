@@ -3,7 +3,7 @@
   "version": "1.1.0",
   "description": "",
   "license": "MIT",
-  "repository": "TheSoftwareHouse/react-packages",
+  "repository": "TheSoftwareHouse/redux-api-middleware-packages",
   "author": "Łukasz Golder <lukasz.golder@tsh.io>",
   "main": "index.js",
   "module": "es/index.js",
