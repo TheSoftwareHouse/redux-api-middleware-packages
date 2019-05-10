@@ -1,6 +1,6 @@
 {
   "name": "@tshio/redux-api-auth-middleware",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "",
   "license": "MIT",
   "repository": "TheSoftwareHouse/redux-api-middleware-packages",
