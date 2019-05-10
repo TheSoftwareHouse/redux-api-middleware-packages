@@ -22,7 +22,7 @@ This repository used to contain more libraries, which have been moved to:
 
 - [`react-intl-json-provider`](https://github.com/TheSoftwareHouse/react-intl-json-provider)
 - [`react-router-pagination`](https://github.com/TheSoftwareHouse/react-router-pagination)
-- [`redux-api-middleware-packages`](https://github.com/TheSoftwareHouse/redux-api-middleware-packages)
+- [`react-router-permissions`](https://github.com/TheSoftwareHouse/react-router-permissions)
 
 ## Development
 
