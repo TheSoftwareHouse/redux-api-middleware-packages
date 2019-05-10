@@ -3,7 +3,7 @@
   "version": "2.0.0",
   "description": "",
   "license": "MIT",
-  "repository": "TheSoftwareHouse/react-packages",
+  "repository": "TheSoftwareHouse/redux-api-middleware-packages",
   "author": "Bartosz Magier <bartosz.magier@tsh.io>",
   "main": "index.js",
   "module": "es/index.js",

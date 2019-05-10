@@ -1,6 +1,10 @@
-# React Packages
+# Status
 
-React reusable packages repository
+[![Build Status](https://travis-ci.org/TheSoftwareHouse/redux-api-middleware-packages.svg?branch=master)](https://travis-ci.org/TheSoftwareHouse/redux-api-middleware-packages) [![Code Coverage](https://codecov.io/gh/TheSoftwareHouse/redux-api-middleware-packages/branch/master/graph/badge.svg)](https://codecov.io/gh/TheSoftwareHouse/redux-api-middleware-packages) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/TheSoftwareHouse/redux-api-middleware-packages/blob/master/LICENSE.md)
+
+# redux-api-middleware-packages
+
+Ready to use packages for redux-api-middleware library.
 
 ## Packages
 
@@ -14,13 +18,13 @@ That means that [several packages](/packages) are published to npm from the same
 | [`redux-api-endpoint-middleware`](/packages/redux-api-endpoint-middleware) | ![version](https://img.shields.io/npm/v/@tshio/redux-api-endpoint-middleware.svg) | Endpoint prefixing middleware to [redux-api-middleware](https://github.com/agraboso/redux-api-middleware)           |
 | [`redux-api-params-middleware`](/packages/redux-api-params-middleware)     | ![version](https://img.shields.io/npm/v/@tshio/redux-api-params-middleware.svg)   | Adding query params to request endpoint to [redux-api-middleware](https://github.com/agraboso/redux-api-middleware) |
 
-React Packages used to contain more libraries, which have been moved to separate repositories:
+This repository used to contain more libraries, which have been moved to:
 
 - [`react-intl-json-provider`](https://github.com/TheSoftwareHouse/react-intl-json-provider)
 - [`react-router-pagination`](https://github.com/TheSoftwareHouse/react-router-pagination)
-- [`react-router-permissions`](https://github.com/TheSoftwareHouse/react-router-permissions)
+- [`redux-api-middleware-packages`](https://github.com/TheSoftwareHouse/redux-api-middleware-packages)
 
 ## Development
 
-We welcome all contributions. Please read our [CONTRIBUTING.md](https://github.com/TheSoftwareHouse/react-packages/blob/master/CONTRIBUTING.md) first.
-You can submit any ideas as [GitHub issues](https://github.com/TheSoftwareHouse/react-packages/issues).
+We welcome all contributions. Please read our [CONTRIBUTING.md](https://github.com/TheSoftwareHouse/redux-api-middleware-packages/blob/master/CONTRIBUTING.md) first.
+You can submit any ideas as [GitHub issues](https://github.com/TheSoftwareHouse/redux-api-middleware-packages/issues).

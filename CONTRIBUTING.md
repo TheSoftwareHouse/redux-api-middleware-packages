@@ -1,15 +1,15 @@
 # Contributing
 
-The following is a set of guidelines for contributing to @tshio/react-packages. Please spend several minutes in reading these guidelines before you create an issue or pull request.
+The following is a set of guidelines for contributing to @tshio/redux-api-middleware-packages. Please spend several minutes in reading these guidelines before you create an issue or pull request.
 We are open to, and grateful for, any contributions made by the community.
 
 ## Open Development
 
-All work on @tshio/react-packages happens directly on [GitHub](https://github.com/TheSoftwareHouse/react-packages). Both core team members and external contributors send pull requests which go through the same review process.
+All work on @tshio/redux-api-middleware-packages happens directly on [GitHub](https://github.com/TheSoftwareHouse/redux-api-middleware-packages). Both core team members and external contributors send pull requests which go through the same review process.
 
 ## Bugs
 
-We are using [GitHub Issues](https://github.com/TheSoftwareHouse/react-packages/issues) for bug tracing.
+We are using [GitHub Issues](https://github.com/TheSoftwareHouse/redux-api-middleware-packages/issues) for bug tracing.
 
 Before opening an issue, please search the issue tracker to make sure your issue hasn’t already been reported.
 
@@ -49,7 +49,7 @@ After you have submitted your pull request, we’ll try to get back to you as so
 
 ## Development Workflow
 
-After cloning @tshio/react-packages, run `yarn` to fetch its dependencies. Then, you can run several commands:
+After cloning @tshio/redux-api-middleware-packages, run `yarn` to fetch its dependencies. Then, you can run several commands:
 
 1. `yarn bootstrap` installs all of packages dependencies.
 1. `yarn test` checks the tests.
